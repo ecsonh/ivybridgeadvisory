@@ -24,3 +24,7 @@ Site content is still a preview: noindex remains enabled, sample cases and brand
 ## Blog
 
 There is no CMS or database in this version. New articles can be added as HTML pages and linked from insights.html. An editorial CMS or static content generator can be introduced separately.
+
+## Vercel Web Analytics
+
+All Chinese and English HTML pages include the standard static HTML queue and deferred `/_vercel/insights/script.js` script. No npm or framework build is required. Enable Web Analytics for this project in the Vercel dashboard before deployment. After deployment, visit a page without a content blocker and check the Analytics dashboard. This change adds page-view analytics only; it does not add custom form events or record form fields.
