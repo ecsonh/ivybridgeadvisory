@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>案例展示｜IvyBridge 領航留學</title>
+  <link rel="stylesheet" href="assets/site.css"><meta name="description" content="案例展示：美國碩士申請規劃、服務內容與留學準備資訊。">
+  
+  <!-- Structured Data / JSON-LD for Organic SEO -->
+  <!-- Tailwind CSS & Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>
+    /* Smooth transitions & subtle scrollbar */
+    html { scroll-behavior: smooth; }
+    ::selection { background-color: #C5A880; color: #0A2540; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #F8FAFC; }
+    ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
+    
+    .border-subtle { border-color: rgba(226, 232, 240, 0.85); }
+    .hero-gradient { background: radial-gradient(circle at 50% 0%, rgba(235, 242, 249, 0.8) 0%, rgba(255, 255, 255, 1) 75%); }
+    .badge-gold { background-color: #FAF8F5; color: #946C2D; border: 1px solid #D8C2A5; }
+  </style>
+<meta name="robots" content="noindex, nofollow"><link rel="stylesheet" href="assets/fixes.css"></head>
+<body class="bg-[#FFFFFF] text-slate-800 font-sans antialiased selection:bg-gold-500 selection:text-white">
+
+  <a href="#main-content" class="skip-link">跳至主要內容</a><aside class="preview-notice">網站預覽：案例、錄取數據、顧問資歷與服務承諾尚待品牌方核實；示意內容不代表實際成果。聯絡與預約尚未啟用。</aside><!-- TOP BAR: Quick Notice & Direct Contact -->
+  <aside aria-label="Announcement" class="bg-ivy-900 text-slate-300 text-xs py-2 px-4 border-b border-ivy-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center space-x-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="font-medium text-slate-200">2027 Fall 美國碩士深度評估啟動</span>
+        <span class="text-slate-400 hidden md:inline">｜ 堅持 1:5 極致師生比，各梯次額滿即止</span>
+      </div>
+      <div class="flex items-center space-x-6 text-slate-300">
+        <button type="button" id="top-line-btn" class="hover:text-gold-400 transition flex items-center gap-1.5 focus:outline-none">
+          <svg class="w-3.5 h-3.5 text-emerald-400" viewbox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349.002.634.286.636.634v.013c0 4.962-4.037 9-9 9-1.282 0-2.502-.271-3.606-.759l-4.704 1.344 1.373-4.604C3.411 14.364 3 12.872 3 11.272c0-4.962 4.038-9 9-9 4.962 0 9 4.038 9 9.002v.004l-.001.004c-.002.32-.266.579-.587.581h-1.047z"></path></svg>
+          官方 LINE: 帳號待確認
+        </button>
+        <span class="text-slate-600 hidden sm:inline">|</span>
+        <span class="hover:text-gold-400 transition hidden sm:inline-flex items-center gap-1">正式聯絡方式待確認</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- STICKY HEADER -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- LOGO -->
+      <a href="ivybridge.html" class="flex items-center space-x-3 group">
+        <div class="w-11 h-11 rounded-lg bg-ivy-800 flex items-center justify-center text-white shadow-sm group-hover:bg-ivy-900 transition">
+          <span class="font-display font-bold text-xl text-gold-400 tracking-wider">IB</span>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-1.5">
+            <span class="text-xl font-bold tracking-tight text-ivy-800 font-serif">IvyBridge</span>
+            <span class="text-base font-semibold text-slate-800">領航留學</span>
+          </div>
+          <span class="text-[10px] tracking-widest text-slate-500 uppercase font-sans">Bespoke US Admissions</span>
+        </div>
+      </a>
+
+      <!-- DESKTOP NAV -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600 desktop-navigation" aria-label="主要導覽">
+        <a href="why-us.html" class="hover:text-ivy-800 transition py-2 border-b-2 border-transparent hover:border-gold-500">留學美國優勢</a>
+        <a href="services.html" class="hover:text-ivy-800 transition py-2 border-b-2 border-transparent hover:border-gold-500">服務與責任邊界</a>
+        <a href="cases.html" class="hover:text-ivy-800 transition py-2 border-b-2 border-transparent hover:border-gold-500" aria-current="page">成功案例牆</a>
+        <a href="insights.html" class="hover:text-ivy-800 transition py-2 border-b-2 border-transparent hover:border-gold-500">時程與專欄</a>
+        <a href="about.html" class="hover:text-ivy-800 transition py-2 border-b-2 border-transparent hover:border-gold-500">關於我們</a>
+      </nav>
+
+      <!-- CTA BUTTONS -->
+      <div class="hidden md:flex items-center space-x-4 desktop-actions">
+        <button type="button" id="open-line-modal-btn" class="text-xs font-medium text-ivy-800 hover:text-gold-700 px-3 py-2 border border-slate-200 rounded-md hover:bg-slate-50 transition flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-emerald-600" viewbox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.03 2 11c0 2.87 1.5 5.41 3.84 7.02l-.98 3.63 3.9-1.28C9.8 20.72 10.88 21 12 21c5.52 0 10-4.03 10-9s-4.48-9-10-9z"></path></svg>
+          LINE 快速詢問
+        </button>
+        <a href="contact.html" class="inline-flex items-center justify-center text-xs font-semibold px-4 py-2.5 rounded-md bg-ivy-800 text-white hover:bg-ivy-900 shadow-sm transition">
+          預約 1-on-1 落點評估
+        </a>
+      </div>
+
+      <!-- MOBILE HAMBURGER -->
+      <div class="md:hidden flex items-center compact-menu-toggle">
+        <button type="button" id="mobile-menu-btn" aria-label="開啟導覽選單" class="p-2 rounded-md text-slate-700 hover:text-ivy-800 hover:bg-slate-100 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" viewbox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- MOBILE MENU DRAWER -->
+    <div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3">
+      <a href="why-us.html" class="block py-2 text-base font-medium text-slate-700 hover:text-ivy-800 mobile-nav-link">留學美國優勢</a>
+      <a href="services.html" class="block py-2 text-base font-medium text-slate-700 hover:text-ivy-800 mobile-nav-link">服務項目與責任邊界</a>
+      <a href="cases.html" class="block py-2 text-base font-medium text-slate-700 hover:text-ivy-800 mobile-nav-link" aria-current="page">成功案例牆</a>
+      <a href="insights.html" class="block py-2 text-base font-medium text-slate-700 hover:text-ivy-800 mobile-nav-link">時程與專欄</a>
+      <a href="about.html" class="block py-2 text-base font-medium text-slate-700 hover:text-ivy-800 mobile-nav-link">關於我們</a>
+      <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+        <button type="button" id="mobile-line-btn" class="w-full text-center py-2.5 px-4 text-sm font-medium border border-slate-300 rounded-md text-slate-800 hover:bg-slate-50">
+          LINE 官方帳號諮詢 (帳號待確認)
+        </button>
+        <a href="contact.html" class="w-full text-center py-2.5 px-4 text-sm font-semibold bg-ivy-800 text-white rounded-md hover:bg-ivy-900 mobile-nav-link">
+          預約 1-on-1 落點評估
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main id="main-content" tabindex="-1"><section id="cases" class="py-16 sm:py-24 bg-white border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12">
+          <div>
+            <span class="text-xs font-semibold tracking-widest text-gold-700 uppercase">Proven Track Record</span>
+            <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-ivy-900 font-serif mt-2">
+              真實錄取案例庫
+            </h1>
+            <p class="text-slate-600 text-sm mt-2">
+              不分起點，皆有破局之道。點擊案例可查看原始痛點、定製策略與錄取詳情。
+            </p>
+          </div>
+          <span class="text-xs text-slate-500 font-medium">共收錄最新 待核實 筆名校錄取精選</span>
+        </div>
+
+        <!-- DUAL FILTER CONTROLS -->
+        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 mb-8 space-y-3">
+          <!-- Filter Row 1: Disciplines -->
+          <div class="flex flex-wrap items-center gap-2 text-xs">
+            <span class="font-bold text-slate-700 mr-2 shrink-0">領域分類：</span>
+            <button type="button" class="filter-field-btn px-3 py-1.5 rounded-md bg-ivy-800 text-white font-medium transition" data-field="all">全部領域</button>
+            <button type="button" class="filter-field-btn px-3 py-1.5 rounded-md bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 font-medium transition" data-field="stem">STEM &amp; 電資工程</button>
+            <button type="button" class="filter-field-btn px-3 py-1.5 rounded-md bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 font-medium transition" data-field="business">商學院 &amp; 商業分析</button>
+            <button type="button" class="filter-field-btn px-3 py-1.5 rounded-md bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 font-medium transition" data-field="humanities">人文社科與設計</button>
+          </div>
+          <!-- Filter Row 2: Backgrounds -->
+          <div class="flex flex-wrap items-center gap-2 text-xs border-t border-slate-200/60 pt-2.5">
+            <span class="font-bold text-slate-700 mr-2 shrink-0">背景特質：</span>
+            <button type="button" class="filter-bg-btn px-3 py-1.5 rounded-md bg-slate-800 text-white font-medium transition" data-bg="all">全部背景</button>
+            <button type="button" class="filter-bg-btn px-3 py-1.5 rounded-md bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 font-medium transition" data-bg="taiwan">台灣頂大/本地大學</button>
+            <button type="button" class="filter-bg-btn px-3 py-1.5 rounded-md bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 font-medium transition" data-bg="us">在美本科 (美本)</button>
+            <button type="button" class="filter-bg-btn px-3 py-1.5 rounded-md bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 font-medium transition" data-bg="switch">跨領域轉專業</button>
+            <button type="button" class="filter-bg-btn px-3 py-1.5 rounded-md bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 font-medium transition" data-bg="low-gpa">低 GPA 逆襲 (&lt;3.2)</button>
+          </div>
+        </div>
+
+        <!-- CASE CARDS GRID -->
+        <div id="case-cards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- CASE 1 -->
+          <div class="case-card bg-white rounded-lg border border-slate-200 p-6 shadow-sm hover:border-ivy-800 hover:shadow-md transition cursor-pointer flex flex-col justify-between" data-field="stem" data-bg="taiwan switch" data-id="1" role="button" tabindex="0" aria-haspopup="dialog">
+            <div>
+              <div class="flex justify-between items-start mb-3">
+                <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-blue-50 text-blue-700 border border-blue-100">STEM 電資</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-50 text-emerald-700">台大機械 ➔ CMU CS</span>
+              </div>
+              <h3 class="text-base font-bold text-ivy-900">Carnegie Mellon University (CMU)</h3>
+              <p class="text-xs font-semibold text-slate-700">Master of Science in Computer Science</p>
+              
+              <div class="my-4 py-3 border-y border-slate-100 text-xs space-y-1.5 text-slate-600">
+                <div class="flex justify-between"><span>原始背景：</span><strong class="text-slate-800">台大機械系學士 (GPA 3.65)</strong></div>
+                <div class="flex justify-between"><span>標化成績：</span><span>TOEFL 108 / GRE 328</span></div>
+                <div class="flex justify-between"><span>獎學金：</span><span class="text-gold-700 font-semibold">$15,000 Merit Award</span></div>
+              </div>
+
+              <p class="text-xs text-slate-500 line-clamp-2">
+                非本科轉 CS 最大挑戰在於算法與底層系統專案缺乏。顧問協助重整 GitHub 開源專案與機械控制代碼關聯性，SOP 打造強大計算動機。
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 text-xs font-semibold text-ivy-800 flex items-center justify-between">
+              <span>查看破局策略</span>
+              <span>→</span>
+            </div>
+          </div>
+
+          <!-- CASE 2 -->
+          <div class="case-card bg-white rounded-lg border border-slate-200 p-6 shadow-sm hover:border-ivy-800 hover:shadow-md transition cursor-pointer flex flex-col justify-between" data-field="stem" data-bg="taiwan low-gpa" data-id="2" role="button" tabindex="0" aria-haspopup="dialog">
+            <div>
+              <div class="flex justify-between items-start mb-3">
+                <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-amber-50 text-amber-700 border border-amber-100">低 GPA 逆襲</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-700">私大 ➔ 哥倫比亞大學</span>
+              </div>
+              <h3 class="text-base font-bold text-ivy-900">Columbia University (常春藤名校)</h3>
+              <p class="text-xs font-semibold text-slate-700">MS in Electrical Engineering</p>
+              
+              <div class="my-4 py-3 border-y border-slate-100 text-xs space-y-1.5 text-slate-600">
+                <div class="flex justify-between"><span>原始背景：</span><strong class="text-slate-800">輔仁大學電機系 (GPA 2.97)</strong></div>
+                <div class="flex justify-between"><span>標化成績：</span><span>TOEFL 102 / GRE Waiver</span></div>
+                <div class="flex justify-between"><span>破局亮點：</span><span class="text-emerald-700 font-semibold">WES 認證重算 3.24</span></div>
+              </div>
+
+              <p class="text-xs text-slate-500 line-clamp-2">
+                GPA 不足 3.0 曾被三家大型代辦拒絕。IvyBridge 透過 WES 認證去除通識重算，並挖掘其在半導體封裝實習中的專利成果，成功打動常春藤評審委員。
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 text-xs font-semibold text-ivy-800 flex items-center justify-between">
+              <span>查看破局策略</span>
+              <span>→</span>
+            </div>
+          </div>
+
+          <!-- CASE 3 -->
+          <div class="case-card bg-white rounded-lg border border-slate-200 p-6 shadow-sm hover:border-ivy-800 hover:shadow-md transition cursor-pointer flex flex-col justify-between" data-field="business" data-bg="us" data-id="3" role="button" tabindex="0" aria-haspopup="dialog">
+            <div>
+              <div class="flex justify-between items-start mb-3">
+                <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-purple-50 text-purple-700 border border-purple-100">商學院</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-700">美本 ➔ MIT Sloan</span>
+              </div>
+              <h3 class="text-base font-bold text-ivy-900">MIT Sloan School of Management</h3>
+              <p class="text-xs font-semibold text-slate-700">Master of Business Analytics (MBAn)</p>
+              
+              <div class="my-4 py-3 border-y border-slate-100 text-xs space-y-1.5 text-slate-600">
+                <div class="flex justify-between"><span>原始背景：</span><strong class="text-slate-800">UC San Diego 經濟與數理 (GPA 3.82)</strong></div>
+                <div class="flex justify-between"><span>標化成績：</span><span>GRE 332 / 免托福 (美本)</span></div>
+                <div class="flex justify-between"><span>獎學金：</span><span class="text-gold-700 font-semibold">$25,000 Fellowship</span></div>
+              </div>
+
+              <p class="text-xs text-slate-500 line-clamp-2">
+                雖然美本背景語言無虞，但 MIT MBAn 全球錄取率僅約 4%。顧問針對面試 Video Question 與 1 頁美式商業格式進行 6 輪高壓模擬，脫穎而出。
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 text-xs font-semibold text-ivy-800 flex items-center justify-between">
+              <span>查看破局策略</span>
+              <span>→</span>
+            </div>
+          </div>
+
+          <!-- CASE 4 -->
+          <div class="case-card bg-white rounded-lg border border-slate-200 p-6 shadow-sm hover:border-ivy-800 hover:shadow-md transition cursor-pointer flex flex-col justify-between" data-field="business" data-bg="taiwan switch" data-id="4" role="button" tabindex="0" aria-haspopup="dialog">
+            <div>
+              <div class="flex justify-between items-start mb-3">
+                <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-purple-50 text-purple-700 border border-purple-100">商業分析</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-700">政大企管 ➔ UT Austin</span>
+              </div>
+              <h3 class="text-base font-bold text-ivy-900">UT Austin (McCombs)</h3>
+              <p class="text-xs font-semibold text-slate-700">MS in Information Technology &amp; Management</p>
+              
+              <div class="my-4 py-3 border-y border-slate-100 text-xs space-y-1.5 text-slate-600">
+                <div class="flex justify-between"><span>原始背景：</span><strong class="text-slate-800">政治大學企管系 (GPA 3.51)</strong></div>
+                <div class="flex justify-between"><span>標化成績：</span><span>TOEFL 105 / GMAT 710</span></div>
+                <div class="flex justify-between"><span>就業優勢：</span><span class="text-blue-700 font-semibold">奧斯汀科技重鎮 STEM</span></div>
+              </div>
+
+              <p class="text-xs text-slate-500 line-clamp-2">
+                文商學生跨考科技管理。顧問引導補充 Python 與 SQL 證照先修課，精準鎖定奧斯汀科技聚落（Tesla、Dell、Apple）在地就業優勢。
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 text-xs font-semibold text-ivy-800 flex items-center justify-between">
+              <span>查看破局策略</span>
+              <span>→</span>
+            </div>
+          </div>
+
+          <!-- CASE 5 -->
+          <div class="case-card bg-white rounded-lg border border-slate-200 p-6 shadow-sm hover:border-ivy-800 hover:shadow-md transition cursor-pointer flex flex-col justify-between" data-field="humanities" data-bg="taiwan" data-id="5" role="button" tabindex="0" aria-haspopup="dialog">
+            <div>
+              <div class="flex justify-between items-start mb-3">
+                <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-rose-50 text-rose-700 border border-rose-100">人文社科</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-700">師大外文 ➔ NYU</span>
+              </div>
+              <h3 class="text-base font-bold text-ivy-900">New York University (NYU)</h3>
+              <p class="text-xs font-semibold text-slate-700">MA in Media, Culture, and Communication</p>
+              
+              <div class="my-4 py-3 border-y border-slate-100 text-xs space-y-1.5 text-slate-600">
+                <div class="flex justify-between"><span>原始背景：</span><strong class="text-slate-800">台灣師範大學英語系 (GPA 3.70)</strong></div>
+                <div class="flex justify-between"><span>標化成績：</span><span>TOEFL 112 / GRE 325</span></div>
+                <div class="flex justify-between"><span>特色交付：</span><span class="text-slate-800 font-semibold">Writing Sample 論文精修</span></div>
+              </div>
+
+              <p class="text-xs text-slate-500 line-clamp-2">
+                社科極其看重 Writing Sample 學術論文深度。由前常春藤教授團隊逐字雕琢批判性論點，擊敗多國申請者獲全獎提名。
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 text-xs font-semibold text-ivy-800 flex items-center justify-between">
+              <span>查看破局策略</span>
+              <span>→</span>
+            </div>
+          </div>
+
+          <!-- CASE 6 -->
+          <div class="case-card bg-white rounded-lg border border-slate-200 p-6 shadow-sm hover:border-ivy-800 hover:shadow-md transition cursor-pointer flex flex-col justify-between" data-field="stem" data-bg="us low-gpa" data-id="6" role="button" tabindex="0" aria-haspopup="dialog">
+            <div>
+              <div class="flex justify-between items-start mb-3">
+                <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-blue-50 text-blue-700 border border-blue-100">STEM 工程</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-50 text-emerald-700">美本 ➔ USC 逆襲</span>
+              </div>
+              <h3 class="text-base font-bold text-ivy-900">University of Southern California (USC)</h3>
+              <p class="text-xs font-semibold text-slate-700">MS in Data Informatics</p>
+              
+              <div class="my-4 py-3 border-y border-slate-100 text-xs space-y-1.5 text-slate-600">
+                <div class="flex justify-between"><span>原始背景：</span><strong class="text-slate-800">UW Seattle 大學部 (GPA 3.08)</strong></div>
+                <div class="flex justify-between"><span>標化成績：</span><span>免托福 / GRE 322</span></div>
+                <div class="flex justify-between"><span>錄取成果：</span><span class="text-emerald-700 font-semibold">USC Viterbi 工學院直錄</span></div>
+              </div>
+
+              <p class="text-xs text-slate-500 line-clamp-2">
+                GPA 剛過 3.0 的美本學生常有就業與留美焦慮。顧問協助發掘其在非營利組織的大數據志工專案，展現社會影響力，成功獲工學院正取。
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 text-xs font-semibold text-ivy-800 flex items-center justify-between">
+              <span>查看破局策略</span>
+              <span>→</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <div id="case-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="案例詳情（示意）">
+      <div class="bg-white rounded-xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative animate-in fade-in zoom-in-95 duration-150">
+        <button type="button" id="close-modal-btn" aria-label="Close modal" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 p-1 rounded-md">
+          <svg class="w-6 h-6" fill="none" viewbox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+
+        <div id="modal-content">
+          <!-- Dynamically populated -->
+        </div>
+
+        <div class="mt-8 pt-4 border-t border-slate-100 flex justify-end gap-3">
+          <button type="button" id="modal-close-action" class="px-4 py-2 text-xs font-medium text-slate-600 hover:bg-slate-100 rounded-md">關閉</button>
+          <a href="contact.html" id="modal-eval-btn" class="px-5 py-2 text-xs font-semibold bg-ivy-800 text-white rounded-md hover:bg-ivy-900">我也想評估類似方案</a>
+        </div>
+      </div>
+    </div>
+
+    </main><!-- FOOTER -->
+  <footer class="bg-ivy-900 text-slate-400 py-16 border-t border-ivy-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-ivy-800/80">
+        
+        <div class="space-y-4 md:col-span-1">
+          <div class="flex items-center space-x-2">
+            <div class="w-8 h-8 rounded bg-gold-500 text-ivy-900 flex items-center justify-center font-bold font-display text-sm">
+              IB
+            </div>
+            <span class="text-base font-bold text-white font-serif tracking-tight">IvyBridge 領航留學</span>
+          </div>
+          <p class="text-slate-400 leading-relaxed text-xs">
+            專攻全美 Top 30 與高投報率 STEM 研究所申請的精品留學顧問品牌。以策略引領，用陪伴圓夢。
+          </p>
+          <p class="text-[11px] text-slate-500">
+            © 2026 IvyBridge Admissions Consulting. All Rights Reserved.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-slate-200 font-semibold mb-3 tracking-wide">申請專攻路徑</h4>
+          <ul class="space-y-2">
+            <li><a href="services.html" class="hover:text-gold-400 transition">常春藤 &amp; Top 30 菁英衝刺</a></li>
+            <li><a href="services.html" class="hover:text-gold-400 transition">跨考轉專業 STEM 躍遷</a></li>
+            <li><a href="services.html" class="hover:text-gold-400 transition">低 GPA 逆襲與 Pathway</a></li>
+            <li><a href="services.html" class="hover:text-gold-400 transition">美本留學生專屬深造方案</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-slate-200 font-semibold mb-3 tracking-wide">核心交付與資源</h4>
+          <ul class="space-y-2">
+            <li><a href="why-us.html" class="hover:text-gold-400 transition">留學美國 OPT / CPT 優勢</a></li>
+            <li><a href="cases.html" class="hover:text-gold-400 transition" aria-current="page">2026 名校成功案例庫</a></li>
+            <li><a href="insights.html" class="hover:text-gold-400 transition">18 個月留學申請甘特時程</a></li>
+            <li><a href="insights.html" class="hover:text-gold-400 transition">美國各區學費與生活費試算</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-slate-200 font-semibold mb-3 tracking-wide">官方諮詢與預約</h4>
+          <ul class="space-y-2 text-slate-400">
+            <li>諮詢專線：電話待確認</li>
+            <li>LINE 官方：帳號待確認</li>
+            <li>諮詢信箱：Email 待確認</li>
+            <li>諮詢空間：地址待確認</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-500 gap-4">
+        <div>
+          嚴正聲明：IvyBridge 為獨立高階顧問工作室，非任何外國學校之代理招生機構，100% 絕不收受海外佣金回扣。
+        </div>
+        <div class="flex space-x-6">
+          <button type="button" id="privacy-link" class="hover:text-slate-300 transition">隱私權政策與服務責任條款</button>
+          <a href="#main-content" class="hover:text-slate-300 transition">回到頂部 ↑</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- MODAL: LINE / PRIVACY / NOTICE MODAL -->
+  <div id="general-notice-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="資訊提示">
+    <div class="bg-white rounded-xl max-w-md w-full p-6 shadow-2xl border border-slate-200 text-left">
+      <h3 id="notice-modal-title" class="text-base font-bold text-ivy-900 font-serif mb-2">LINE 官方帳號諮詢</h3>
+      <div id="notice-modal-body" class="text-xs text-slate-600 leading-relaxed space-y-2">
+        <p>歡迎直接於 LINE 搜尋官方 ID：<strong class="text-ivy-800">帳號待確認</strong>（包含 @ 符號）</p>
+        <p>或掃描頁面上的 QR Code，加入後請傳送「您的目前學校、預計申請領域與目標年份」，主案顧問將在 24 小時內親自為您安排 30 分鐘免費評估。</p>
+      </div>
+      <div class="mt-6 flex justify-end">
+        <button type="button" id="close-notice-modal" class="px-4 py-2 bg-ivy-800 text-white rounded text-xs font-semibold hover:bg-ivy-900">
+          了解，我知道了
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT: Full Interaction Logic -->
+  <script src="assets/app.js" defer></script></body>
+</html>
