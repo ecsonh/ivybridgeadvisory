@@ -177,6 +177,7 @@
 
         modalContent.innerHTML = `
           <div class="space-y-4">
+            <p role="note" class="text-xs font-semibold text-ivy-900 border border-slate-300 rounded p-3">申請策略示例（虛構情境）：以下學校、獎學金、背景及引言均非已驗證的 IvyBridge 學員成果。</p>
             <div class="inline-block px-2.5 py-1 bg-gold-50 text-gold-700 border border-gold-200 rounded text-xs font-semibold">
               ${data.highlight}
             </div>
