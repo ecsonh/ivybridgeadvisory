@@ -28,3 +28,16 @@ There is no CMS or database in this version. New articles can be added as HTML p
 ## Vercel Web Analytics
 
 All Chinese and English HTML pages include the standard static HTML queue and deferred `/_vercel/insights/script.js` script. No npm or framework build is required. Enable Web Analytics for this project in the Vercel dashboard before deployment. After deployment, visit a page without a content blocker and check the Analytics dashboard. This change adds page-view analytics only; it does not add custom form events or record form fields.
+
+## Service plans and custom requests
+
+- Edit `data/plans.json` for the authoritative USD prices, additional-program fees and bilingual deliverables. Run `python3 scripts/render-plans.py`, review the resulting HTML changes, then commit both data and generated markup. Homepage summaries intentionally omit prices. Service pages include prices and responsibilities. The generated markers preserve the surrounding layout.
+- `custom-services.html` and `en/custom-services.html` let visitors select services, describe their needs and prepare, copy or download a plain-text summary. There is no network submission, automatic email or booking confirmation. No draft is persisted in local storage. Contact details are optional.
+- Package links preselect the matching service in the consultation questionnaire. Package 1 is applicant-operated; packages 2/3 include form preparation and submission coordination, subject to the applicant's required personal confirmations. Package 3 includes visa form/document assistance.
+- New requests use `assets/service-requests.js`; category previews and English scenario filters use `assets/site-structure.js`.
+
+## Content architecture and remaining launch dependencies
+
+Home → Why USA → Services → Case Studies → Insights → About → Contact remain separate pages, with the master’s guide as an additional resource and custom services as a secondary service route. Homepages feature a manually scrollable case-category preview, not a live results feed. Existing Chinese cases and the new English scenarios remain explicitly illustrative.
+
+Before enabling real inquiries, provide a verified receiving email or approved form endpoint, official LINE/WeChat details and booking link. A live admissions feed needs verified results and publication consent. Founder/team biographies and any staffing or outcome claims require brand verification. No verified contact destination or factual client results have been invented. The broader English site still uses separate HTML page shells; only the service-plan content is generated from a shared bilingual source in this update.

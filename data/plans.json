@@ -1,0 +1,85 @@
+[
+  {
+    "id": "essential",
+    "price": 2500,
+    "extra": 500,
+    "programs": 3,
+    "mock_interviews": 1,
+    "zh": {
+      "name": "基礎申請指導",
+      "items": [
+        "3 個碩士項目申請文書",
+        "背景分析與選校建議",
+        "文書構思、架構與修改指導",
+        "1 次模擬面試",
+        "學生自行填寫及提交網上申請"
+      ]
+    },
+    "en": {
+      "name": "Essential · Guided Admissions",
+      "items": [
+        "Application essays for 3 master’s programs",
+        "Profile assessment and program selection",
+        "Essay brainstorming, structure and revision guidance",
+        "1 mock interview",
+        "Applicant completes and submits application forms"
+      ]
+    }
+  },
+  {
+    "id": "comprehensive",
+    "price": 4800,
+    "extra": 700,
+    "programs": 5,
+    "mock_interviews": 1,
+    "zh": {
+      "name": "全程申請顧問",
+      "items": [
+        "5 個碩士項目申請文書",
+        "背景分析與選校建議",
+        "文書構思、架構與修改指導",
+        "1 次模擬面試",
+        "協助填寫全部網申資料、整理文件與送件流程"
+      ]
+    },
+    "en": {
+      "name": "Comprehensive · Full-Service Admissions",
+      "items": [
+        "Application essays for 5 master’s programs",
+        "Profile assessment and program selection",
+        "Essay brainstorming, structure and revision guidance",
+        "1 mock interview",
+        "Full application form completion, document organization and submission coordination"
+      ]
+    }
+  },
+  {
+    "id": "elite",
+    "price": 9800,
+    "extra": 1000,
+    "programs": 12,
+    "mock_interviews": 3,
+    "zh": {
+      "name": "菁英多國申請",
+      "items": [
+        "最多 12 個碩士項目申請文書，可多國連申",
+        "背景分析與跨國選校建議",
+        "逐項目文書構思、架構與修改指導",
+        "3 次模擬面試",
+        "協助填寫全部網申資料、整理文件與送件流程",
+        "簽證申請資料填寫與準備協助"
+      ]
+    },
+    "en": {
+      "name": "Elite · Multi-Country Admissions",
+      "items": [
+        "Application essays for up to 12 master’s programs across multiple countries",
+        "Profile assessment and cross-country program selection",
+        "Program-specific essay brainstorming and revision guidance",
+        "3 mock interviews",
+        "Full application form completion and submission coordination",
+        "Visa application form and document preparation assistance"
+      ]
+    }
+  }
+]

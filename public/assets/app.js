@@ -296,7 +296,7 @@
         const twdMax = Math.round((totalMax * rate) / 10000);
 
         costOutputUsd.textContent = `$${totalMin.toLocaleString()} ~ $${totalMax.toLocaleString()} USD`;
-        costOutputTwd.textContent = `折合新台幣約：NT$ ${twdMin} 萬 ~ ${twdMax} 萬元／年（含學費與基本食宿保險）`;
+        costOutputTwd.textContent = document.documentElement.lang === "en" ? `Approximately NT$ ${(twdMin*10000).toLocaleString()}–${(twdMax*10000).toLocaleString()} per year (tuition and basic living / insurance).` : `折合新台幣約：NT$ ${twdMin} 萬 ~ ${twdMax} 萬元／年（含學費與基本食宿保險）`;
       }
 
       if (costRegion && costType && costMajor) {
@@ -313,9 +313,9 @@
         const data = Object.fromEntries(new FormData(form));
         const blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
         const url = URL.createObjectURL(blob); const link = document.createElement('a');
-        link.href=url; link.download='IvyBridge-諮詢資料.json'; link.click();
+        link.href=url; link.download=document.documentElement.lang === 'en'?'IvyBridge-consultation.json':'IvyBridge-諮詢資料.json'; link.click();
         setTimeout(()=>URL.revokeObjectURL(url),1000);
-        document.getElementById('form-status').textContent='已產生下載檔案，請確認瀏覽器下載結果。資料尚未傳送，也尚未成立預約。';
+        document.getElementById('form-status').textContent=document.documentElement.lang === 'en'?'Download prepared. Check your browser downloads. Nothing has been sent and no booking has been made.':'已產生下載檔案，請確認瀏覽器下載結果。資料尚未傳送，也尚未成立預約。';
       });
       // 8. GENERAL NOTICE MODAL (LINE / PRIVACY / CALENDLY)
       const noticeModal = document.getElementById('general-notice-modal');
