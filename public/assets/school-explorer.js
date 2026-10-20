@@ -74,4 +74,7 @@
   school.addEventListener('change', update);
   field.addEventListener('change', update);
   buildOptions();
+  // Start on the one STEM master's program with a directly verified, public rate.
+  school.value = 'Stanford University';
+  update();
 })();
