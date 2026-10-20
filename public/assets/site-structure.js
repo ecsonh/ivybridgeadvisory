@@ -48,7 +48,7 @@
   for(const el of headings){if(el.id)continue;let id='ib-section-'+slug(el.textContent.trim()),seq=2;while(ids.has(id))id='ib-section-'+slug(el.textContent.trim())+'-'+seq++;el.id=id;ids.add(id)}
   // Keep full-width hero/banner OUTSIDE the two-column reading layout.
   // This matches the established U.S. master's guide: banner first, TOC beside content.
-  const hero=[...main.children].find(el=>el.matches?.('.ib-why-hero,.ib-explorer-hero,.ib-standalone-hero'));
+  const hero=[...main.children].find(el=>el.matches?.('.ib-why-hero,.ib-explorer-hero,.guide-hero,.hero-gradient,.ib-standalone-hero'));
   if(hero && hero===main.firstElementChild){
    main.parentNode.insertBefore(hero,main);
    hero.classList.add('ib-banner-outside-grid');
