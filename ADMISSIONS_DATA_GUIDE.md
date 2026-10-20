@@ -39,3 +39,73 @@ Valid example:
 The authoritative list is in `public/assets/admissions-data.js`: search for `"stem": null` or `"business": null`.
 This is intentional; many graduate programs do not publish rates.
 Prioritize STEM-specific **residential** master's programs and non-MBA business master's (MSBA, MS Finance) to improve fit to IvyBridge's clients. For every manual addition, cite the year, exact program, and source.
+
+## Research completion status (2026-10-20)
+
+- Universities in selector: **50**.
+- Schools with a documented STEM master's program rate: **3**. Missing STEM records: **47**.
+- Schools with a documented Business MBA rate: **41**. Missing business records: **9**. These MBA results must **not** be misrepresented as MSBA or finance master's rates.
+
+### STEM records still missing (null)
+
+- Brown University
+- California Institute of Technology
+- Carnegie Mellon University
+- Case Western Reserve University
+- Columbia University
+- Cornell University
+- Dartmouth College
+- Duke University
+- Emory University
+- Georgetown University
+- Georgia Institute of Technology
+- Harvard University
+- Johns Hopkins University
+- Massachusetts Institute of Technology
+- New York University
+- Northwestern University
+- Princeton University
+- Purdue University
+- Rice University
+- Tufts University
+- University of California, Berkeley
+- University of California, Davis
+- University of California, Irvine
+- University of California, San Diego
+- University of California, Santa Barbara
+- University of Chicago
+- University of Florida
+- University of Illinois Urbana-Champaign
+- University of Maryland, College Park
+- University of Michigan, Ann Arbor
+- University of Minnesota, Twin Cities
+- University of North Carolina at Chapel Hill
+- University of Notre Dame
+- University of Pennsylvania
+- University of Pittsburgh
+- University of Rochester
+- University of Southern California
+- University of Texas at Austin
+- University of Virginia
+- University of Wisconsin–Madison
+- Vanderbilt University
+- Wake Forest University
+- Washington University in St. Louis
+- Yale University
+- Boston University
+- Northeastern University
+- Texas A&M University
+
+### Business records still missing (null)
+
+- Brown University
+- California Institute of Technology
+- Johns Hopkins University
+- Princeton University
+- Purdue University
+- Tufts University
+- University of California, Santa Barbara
+- University of Illinois Urbana-Champaign
+- Wake Forest University
+
+**To add manually:** edit `public/assets/admissions-data.js` and replace the specific `null` field with a sourced rate object, keeping the other field and the rest of the file unchanged. The selector updates automatically when the script is deployed.
