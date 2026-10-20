@@ -1,8 +1,8 @@
 # IvyBridge Advisory · Success Stories + About Us Redesign Specification
-**Status:** Owner-approved design direction / implementation plan only  
+**Status:** Implemented in PR #10; awaiting Vercel visual review, owner-supplied facts and approval  
 **Date:** 2026-10-20  
 **Base:** `main` at `18f66d9b17d7e1f0b9e6f67a8885c0fe2a8cc070`  
-**Implementation:** not yet performed. Do not merge this spec branch into `main` without explicit approval.
+**Implementation:** bilingual pages, reusable CSS, case data + interactions committed on this branch. Do not merge into `main` without explicit approval.
 
 > Read `AGENTS.md`, `AI_SITE_RULES.md`, `IVYBRIDGE_WEBSITE_PLAYBOOK.md` before editing code. The current approved direction is **Success Stories = selected stories + case-study directory**, **About Us = founder story + advisor profiles + Why IvyBridge**. Preserve the site's existing nav, white/navy/muted-gold palette, Chinese/English counterparts, and one left-side chapter TOC per page.
 
@@ -120,7 +120,7 @@ Short text, not a fake office or map: serving U.S.-based international undergrad
 
 **Do not collect student private records in public repository.** Store only approved anonymized public-safe narratives and references to evidence kept privately.
 
-## 5. Proposed file changes during implementation (not performed yet)
+## 5. Implemented file changes (review on PR #10)
 
 1. `public/cases.html`, `public/en/cases.html` — layout and accessible real/illustrative case displays.
 2. `public/about.html`, `public/en/about.html` — bilingual founder/team/advantages design.
@@ -149,3 +149,9 @@ Short text, not a fake office or map: serving U.S.-based international undergrad
 - **Stage 4**: revisions on the PR; merge only after explicit approval.
 
 **Success condition:** A premium editorial case-study experience and a credible human-centered About page, with transparent sourcing and all existing site interactions preserved.
+
+## 8. Implementation status, known limitations (2026-10-20)
+- **Implemented**: new bilingual editorial layouts for Success Stories and About Us, accessible filters/detail modal, public-safe scenario data, founder/advisor verification placeholders, reusable editorial CSS.
+- **Removed**: old unverified six admissions case detail records from the shared app script. No real names, admission outcomes or scholarship awards were carried into the new story browser.
+- **Static checks**: 10 Chinese + 10 English pages; 505 local/internal hrefs checked, zero missing HTML destinations/hash anchors; new main markup balanced, JS parses, section IDs unique.
+- **Still required before release**: real Vercel Preview visual/mobile walkthrough and proof/approval for founder degrees, actual advisors, authentic case results. Current case data is illustrative only. Existing forms are not connected to a sending service.
