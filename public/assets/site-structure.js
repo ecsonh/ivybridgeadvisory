@@ -40,6 +40,9 @@
    }
    footer.parentNode.insertBefore(main,footer);
   }
+  // Pages such as the original Master's Guide already provide their own accessible chapter TOC.
+  // Never inject a second sidebar or wrap its existing two-column reading layout.
+  if(main.querySelector('.guide-toc,.ib-page-sidebar'))return;
   const all=[...main.querySelectorAll('h1,h2')].filter(el=>el.textContent.trim().length>3 && !el.closest('.ib-page-sidebar,.ib-explorer-grid,.ib-bottom-cta'));
   const headings=all.filter(el=>el.tagName==='H2').slice(0,9);
   if(!headings.length)return;
