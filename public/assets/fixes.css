@@ -116,3 +116,6 @@ body{font-size:17px;line-height:1.8}main p,main li,main dd{line-height:1.9}main 
 @media(max-width:1200px){.ib-page-shell{grid-template-columns:1fr}.ib-page-sidebar{position:relative;top:auto;max-height:none;padding:14px 20px;margin:16px 16px 0;border:1px solid #e0e6ec;border-left:3px solid #c5a880;border-radius:8px}.ib-toc-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.ib-page-sidebar summary{padding-bottom:4px}}
 @media(max-width:680px){.ib-toc-links{grid-template-columns:1fr}.ib-why-grid,.ib-checklist{grid-template-columns:1fr}.ib-page-sidebar{margin:12px}.ib-article-last{padding:32px 12px}.ib-why-hero{padding:40px 22px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
+
+/* Shared sidebar supersedes legacy inline chapter menus without hiding budget notes. */
+.ib-page-shell nav.page-toc{display:none}
