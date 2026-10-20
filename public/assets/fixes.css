@@ -151,3 +151,42 @@ body{font-size:17px;line-height:1.8}main p,main li,main dd{line-height:1.9}main 
 html[lang="en"] .ib-detail-grid>.ib-detail[data-plan="comprehensive"]::before{content:"RECOMMENDED PLAN"}
 .ib-page-shell .ib-detail-grid{padding-top:12px}
 @media(max-width:680px){.ib-service-hero{padding:44px 20px}.ib-service-hero-actions{align-items:flex-start;flex-direction:column;gap:13px}.ib-detail-grid>.ib-detail[data-plan="comprehensive"]{margin-top:8px}}
+
+
+/* Services-only refinement: white reading canvas, lighter cards and separated custom CTA. */
+/* Scoped to .ib-services-main so homepage plan cards and other pages are untouched. */
+.ib-services-main #plan-details{background:#fff;color:#112e4a}
+.ib-services-main #plan-details .ib-plans-inner{padding:3px 0}
+.ib-services-main #plan-details>.ib-plans-inner>h2{margin-bottom:14px}
+.ib-services-main #plan-details .ib-lead{margin-bottom:31px}
+.ib-services-main #plan-details .ib-detail-grid{gap:clamp(19px,2vw,28px);align-items:stretch;padding:15px 1px 3px}
+.ib-services-main #plan-details .ib-detail{
+ background:#fff;border:1px solid #dee6ec;border-radius:12px;
+ padding:30px 29px 26px;box-shadow:0 3px 14px rgba(17,46,74,.035);
+}
+.ib-services-main #plan-details .ib-detail h3{margin:3px 0 13px;font-size:20px;line-height:1.4}
+.ib-services-main #plan-details .ib-detail-price{margin:0 0 6px}
+.ib-services-main #plan-details .ib-extra{margin:0 0 15px}
+.ib-services-main #plan-details .ib-detail ul{margin:10px 0 18px;padding-left:19px}
+.ib-services-main #plan-details .ib-detail li{margin:9px 0;line-height:1.65}
+.ib-services-main #plan-details .ib-detail .ib-plan-link{margin-top:auto}
+.ib-services-main #plan-details .ib-detail[data-plan="comprehensive"]{
+ background:#fffdf9;border:1.5px solid #b9955e;
+ box-shadow:0 6px 20px rgba(177,142,84,.10)
+}
+.ib-services-main #plan-details .ib-detail[data-plan="comprehensive"]::before{background:#fffdf9}
+.ib-services-main #plan-details .ib-custom-callout{
+ margin:34px 0 5px;padding:23px 26px;
+ border:1px solid #e3e9ee;border-left:3px solid #c5a880;border-radius:10px;
+ background:#f7f9fb;
+}
+.ib-services-main #plan-details .ib-custom-callout h2,
+.ib-services-main #plan-details .ib-custom-callout h3{margin:0 0 5px;font-size:19px}
+.ib-services-main #plan-details .ib-custom-callout p{margin:4px 0 9px;font-size:14px}
+.ib-services-main #plan-details .ib-custom-callout .ib-plan-link{display:inline-block;margin-top:2px}
+.ib-services-main #plan-details .ib-boundary{margin-top:38px}
+@media(max-width:850px){
+ .ib-services-main #plan-details .ib-detail-grid{gap:20px}
+ .ib-services-main #plan-details .ib-detail{padding:24px 22px}
+ .ib-services-main #plan-details .ib-custom-callout{padding:20px;margin-top:28px}
+}
