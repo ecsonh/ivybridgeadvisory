@@ -41,18 +41,25 @@
    footer.parentNode.insertBefore(main,footer);
   }
   const all=[...main.querySelectorAll('h1,h2')].filter(el=>el.textContent.trim().length>3 && !el.closest('.ib-page-sidebar,.ib-explorer-grid,.ib-bottom-cta'));
-  const headings=all.filter((el,i)=>i===0 || el.tagName==='H2').slice(0,11);
+  const headings=all.filter(el=>el.tagName==='H2').slice(0,9);
   if(!headings.length)return;
   const ids=new Set([...document.querySelectorAll('[id]')].map(n=>n.id));
   function slug(s){return s.toLowerCase().replace(/[^a-z0-9\u4e00-\u9fff]+/g,'-').replace(/^-|-$/g,'').slice(0,60)||'chapter'}
   for(const el of headings){if(el.id)continue;let id='ib-section-'+slug(el.textContent.trim()),seq=2;while(ids.has(id))id='ib-section-'+slug(el.textContent.trim())+'-'+seq++;el.id=id;ids.add(id)}
+  // Keep full-width hero/banner OUTSIDE the two-column reading layout.
+  // This matches the established U.S. master's guide: banner first, TOC beside content.
+  const hero=[...main.children].find(el=>el.matches?.('.ib-why-hero,.ib-explorer-hero,.ib-standalone-hero'));
+  if(hero && hero===main.firstElementChild){
+   main.parentNode.insertBefore(hero,main);
+   hero.classList.add('ib-banner-outside-grid');
+  }
   const shell=document.createElement('div');shell.className='ib-page-shell';
   main.parentNode.insertBefore(shell,main);
   const aside=document.createElement('aside');aside.className='ib-page-sidebar';aside.setAttribute('aria-label',en?'On this page':'本頁目錄');
   const details=document.createElement('details');details.className='ib-toc-details';details.open=true;
   const summary=document.createElement('summary');summary.textContent=en?'On this page':'本頁目錄';details.appendChild(summary);
   const nav=document.createElement('nav');nav.className='ib-toc-links';
-  for(const el of headings){const link=document.createElement('a');link.href='#'+encodeURIComponent(el.id);link.textContent=el.textContent.trim().replace(/\s+/g,' ').slice(0,52);nav.appendChild(link)}
+  for(const el of headings){const link=document.createElement('a');link.href='#'+encodeURIComponent(el.id);link.textContent=el.textContent.trim().replace(/\s+/g,' ').slice(0,24);nav.appendChild(link)}
   details.appendChild(nav);aside.appendChild(details);shell.append(aside,main);
   const links=[...nav.querySelectorAll('a')];
   function active(id){for(const a of links)a.setAttribute('aria-current',String(decodeURIComponent(a.hash.slice(1))===id))}
