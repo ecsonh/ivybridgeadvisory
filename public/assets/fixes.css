@@ -152,22 +152,21 @@ html[lang="en"] .ib-detail-grid>.ib-detail[data-plan="comprehensive"]::before{co
 .ib-page-shell .ib-detail-grid{padding-top:12px}
 @media(max-width:680px){.ib-service-hero{padding:44px 20px}.ib-service-hero-actions{align-items:flex-start;flex-direction:column;gap:13px}.ib-detail-grid>.ib-detail[data-plan="comprehensive"]{margin-top:8px}}
 
-
-/* Homepage only: extend the soft-blue Plans section to both viewport edges.
-   Keep the original section content width, cards, TOC and surrounding sections intact. */
-.ib-page-shell #plans.ib-plans{
-  background:#f7f9fc;
-  box-shadow:0 0 0 100vmax #f7f9fc;
-  clip-path:inset(0 -100vmax);
+/* Homepage overview (plans, proof points, strategy): ONE shared full-bleed surface.
+   Keep markup centered by .ib-page-shell; paint the side gutters without changing
+   content width or adding extra wrappers/duplicate per-section shadows. */
+.ib-page-shell .ib-home-overview {
+  --ib-home-overview-bg: #f7f9fc;
+  background: var(--ib-home-overview-bg);
+  box-shadow: 0 0 0 100vmax var(--ib-home-overview-bg);
+  clip-path: inset(0 -100vmax);
 }
-.ib-page-shell:has(#plans) > .ib-page-sidebar{
-  z-index:1;
+.ib-page-shell .ib-home-overview > section {
+  background: transparent;
 }
-
-/* Continue the homepage full-width treatment for the separate strategy section.
-   Keep content width/TOC unchanged; only paint the surrounding viewport gutters. */
-.ib-page-shell #strategy-pathways{
-  background:#f8fafc;
-  box-shadow:0 0 0 100vmax #f8fafc;
-  clip-path:inset(0 -100vmax);
+.ib-page-shell .ib-home-overview > section + section {
+  border-top: 1px solid #e4eaf0;
+}
+.ib-page-shell:has(.ib-home-overview) > .ib-page-sidebar {
+  z-index: 1;
 }
