@@ -31,9 +31,13 @@ Valid example:
 - UCLA MS Computer Science (Fall 2022; 140/3,200): https://www.cs.ucla.edu/graduate-admission-frequently-asked-questions/
 - University of Washington MSIM Residential (2025): https://ischool.uw.edu/programs/msim/statistics
 - Harvard Business School MBA FY2025: https://www.hbs.edu/about/annualreport/2025/key-metrics
-- NYU Stern Full-time MBA Class of 2027: https://www.stern.nyu.edu/programs-admissions/full-time-mba/community/class-profile
+- NYU Stern Full-time MBA 2025 (23.6%, P&Q table): https://poetsandquants.com/2026/08/02/acceptance-rates-yield-apps-at-the-top-100-u-s-mba-programs-for-2026/2/
 - Other university-specific 2025 MBA figures: https://poetsandquants.com/2026/08/02/acceptance-rates-yield-apps-at-the-top-100-u-s-mba-programs-for-2026/2/
 - MIT graduate-wide 2025 data (not STEM master's specific, must NOT display as such): https://facts.mit.edu/graduate-student-admission/
+
+## Edit and validation
+- Follow [IVYBRIDGE_WEBSITE_PLAYBOOK.md](IVYBRIDGE_WEBSITE_PLAYBOOK.md) for visual/brand and merge guardrails.
+- Verify that any rate sourced from a third party matches the correct admissions cycle and exact graduate program. NYU Stern's 2025 MBA acceptance rate is **23.6%** in the cited P&Q table; an earlier draft incorrectly listed 32%, which was corrected.
 
 ## Pending school/field records
 The authoritative list is in `public/assets/admissions-data.js`: search for `"stem": null` or `"business": null`.
