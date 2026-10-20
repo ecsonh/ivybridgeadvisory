@@ -110,21 +110,59 @@
   </header>
 
   <!-- MAIN CONTENT CONTAINER -->
-  <main id="main-content" tabindex="-1"><section class="ib-explorer-hero" aria-label="留學探索工具"><div class="ib-plans-inner"><p class="ib-eyebrow">STUDY & CAREER EXPLORER</p><h1>留學探索中心</h1><p>用互動工具把選校、預算、申請時程與未來職涯連結起來。數據是規劃參考，不等同錄取承諾。</p><nav class="ib-explorer-grid" aria-label="探索工具"><a href="#ib-school-explorer"><span>01 · 選校</span><strong>碩士錄取率探索</strong><small>50 所美國大學 · STEM／商科</small></a><a href="#topic-1"><span>02 · 費用</span><strong>留學費用試算</strong><small>學費與生活預算</small></a><a href="#topic-0"><span>03 · 時程</span><strong>申請進度規劃</strong><small>18 個月準備時間表</small></a><a href="#career-explorer"><span>04 · 職涯</span><strong>工作與薪資探索</strong><small>職業方向與 BLS 資料</small></a></nav></div></section><section class="ib-upgrade ib-upgrade-muted" id="ib-school-explorer"><div class="ib-plans-inner"><p class="ib-eyebrow">GRADUATE ADMISSIONS DATA</p><h2>探索 50 所美國大學的碩士招生資訊</h2><p class="ib-lead">精選 50 所常見申請目標學校（並非官方排名 Top 50）。選擇 STEM 或商科，再選學校。只有校方公開且能核對口徑的碩士項目錄取率才會顯示數字。</p><div class="ib-explorer-two"><div class="ib-explorer-panel"><label for="ib-field-choice">探索領域</label><select id="ib-field-choice" class="ib-tool-select"><option value="stem">STEM / 科學與工程</option><option value="business">商科／管理</option></select><label for="ib-school-choice">選擇大學</label><select id="ib-school-choice" class="ib-tool-select"></select><p id="ib-school-count" class="ib-fine" aria-live="polite"></p><p class="ib-fine">注意：同一大學不同碩士項目可能差異極大；多數大學並未完整公開研究所 Program 錄取率。</p></div><div class="ib-explorer-panel ib-result-panel" aria-live="polite"><p class="ib-eyebrow">校方碩士項目錄取率</p><div id="ib-school-metric" class="ib-metric">—</div><p id="ib-school-subtitle" class="ib-metric-subtitle"></p><a id="ib-school-source" class="ib-plan-link" href="https://msande.stanford.edu/academics-admissions/graduate/admission/ms-admission-statistics" target="_blank" rel="noopener noreferrer" hidden>查看校方統計 ↗</a><p id="ib-school-note" class="ib-fine"></p><a id="ib-school-compare" class="ib-plan-link" href="https://facts.mit.edu/graduate-student-admission/" target="_blank" rel="noopener noreferrer" hidden>查看全校研究所統計（非領域錄取率）↗</a><div class="ib-brand-stat"><span>IvyBridge 申請成果 · 待核實</span><strong>85% <span class="ib-unverified-tag">待核實</span></strong><small>尚待核實：未提供樣本數、統計期間與「至少一個錄取」或「申請項目錄取」的定義，不能直接與個別學校錄取率比較。</small></div></div></div><p class="ib-source-note">資料更新依校方來源；「未公開／待核實」表示本工具沒有可信的對應碩士 Program 數字，並非錄取率為零。 <a href="https://msande.stanford.edu/academics-admissions/graduate/admission/ms-admission-statistics" target="_blank" rel="noopener noreferrer">Stanford MS&E (2025)</a> · <a href="https://facts.mit.edu/graduate-student-admission/" target="_blank" rel="noopener noreferrer">MIT Graduate Admissions (2025)</a></p></div></section><nav aria-label="本頁目錄" class="page-toc"><strong>本頁目錄</strong><a href="#topic-0">18 個月美國碩士申請全景時程導引</a><a href="#topic-1">美國研究所年開銷即時試算器</a></nav><section id="insights" class="py-16 sm:py-24 bg-slate-50 border-b border-slate-200">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="max-w-3xl mb-12">
-          <span class="text-xs font-semibold tracking-widest text-gold-700 uppercase">Knowledge Base</span>
-          <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-ivy-900 font-serif mt-2">
-            工具操作與留學準備指南
-          </h1>
-          <p class="text-slate-600 text-sm sm:text-base mt-3">
-            查看完整的申請時程、年度成本估算，以及留學與職涯準備方向。各項資料僅供探索，請以學校及官方資訊為準。
-          </p>
-        </div>
+  <main id="main-content" tabindex="-1"><section class="ib-explorer-hero" aria-label="留學探索工具"><div class="ib-plans-inner"><p class="ib-eyebrow">STUDY & CAREER EXPLORER</p><h1>留學探索中心</h1><p>用互動工具把選校、預算、申請時程與未來職涯連結起來。數據是規劃參考，不等同錄取承諾。</p><nav class="ib-explorer-grid" aria-label="探索工具"><a href="#ib-school-explorer"><span>01 · 選校</span><strong>碩士錄取率探索</strong><small>50 所美國大學 · STEM／商科</small></a><a href="#budget-explorer"><span>02 · 費用</span><strong>留學費用試算</strong><small>學費與生活預算</small></a><a href="#application-planning"><span>03 · 時程</span><strong>申請進度規劃</strong><small>18 個月準備時間表</small></a><a href="#career-explorer"><span>04 · 職涯</span><strong>工作與薪資探索</strong><small>職業方向與 BLS 資料</small></a></nav></div></section><section class="ib-upgrade ib-upgrade-muted" id="ib-school-explorer"><div class="ib-plans-inner"><p class="ib-eyebrow">GRADUATE ADMISSIONS DATA</p><h2>探索 50 所美國大學的碩士招生資訊</h2><p class="ib-lead">精選 50 所常見申請目標學校（並非官方排名 Top 50）。選擇 STEM 或商科，再選學校。只有校方公開且能核對口徑的碩士項目錄取率才會顯示數字。</p><div class="ib-explorer-two"><div class="ib-explorer-panel"><label for="ib-field-choice">探索領域</label><select id="ib-field-choice" class="ib-tool-select"><option value="stem">STEM / 科學與工程</option><option value="business">商科／管理</option></select><label for="ib-school-choice">選擇大學</label><select id="ib-school-choice" class="ib-tool-select"></select><p id="ib-school-count" class="ib-fine" aria-live="polite"></p><p class="ib-fine">注意：同一大學不同碩士項目可能差異極大；多數大學並未完整公開研究所 Program 錄取率。</p></div><div class="ib-explorer-panel ib-result-panel" aria-live="polite"><p class="ib-eyebrow">校方碩士項目錄取率</p><div id="ib-school-metric" class="ib-metric">—</div><p id="ib-school-subtitle" class="ib-metric-subtitle"></p><a id="ib-school-source" class="ib-plan-link" href="https://msande.stanford.edu/academics-admissions/graduate/admission/ms-admission-statistics" target="_blank" rel="noopener noreferrer" hidden>查看校方統計 ↗</a><p id="ib-school-note" class="ib-fine"></p><a id="ib-school-compare" class="ib-plan-link" href="https://facts.mit.edu/graduate-student-admission/" target="_blank" rel="noopener noreferrer" hidden>查看全校研究所統計（非領域錄取率）↗</a><div class="ib-brand-stat"><span>IvyBridge 申請成果 · 待核實</span><strong>85% <span class="ib-unverified-tag">待核實</span></strong><small>尚待核實：未提供樣本數、統計期間與「至少一個錄取」或「申請項目錄取」的定義，不能直接與個別學校錄取率比較。</small></div></div></div><p class="ib-source-note">資料更新依校方來源；「未公開／待核實」表示本工具沒有可信的對應碩士 Program 數字，並非錄取率為零。 <a href="https://msande.stanford.edu/academics-admissions/graduate/admission/ms-admission-statistics" target="_blank" rel="noopener noreferrer">Stanford MS&E (2025)</a> · <a href="https://facts.mit.edu/graduate-student-admission/" target="_blank" rel="noopener noreferrer">MIT Graduate Admissions (2025)</a></p></div></section><section class="ib-upgrade ib-upgrade-muted" id="budget-explorer"><div class="ib-plans-inner"><p class="ib-eyebrow">02 · STUDY BUDGET</p><h2>規劃留學成本與預算</h2><p class="ib-lead">了解學費與生活費的大致範圍，並以各學校官方報價核實。</p><div class="bg-white rounded-lg border border-slate-200 p-6 sm:p-8 mb-12 shadow-sm">
+          <div class="border-b border-slate-100 pb-4 mb-6">
+            <h3 class="text-lg font-bold text-ivy-900 font-serif" id="topic-1">美國研究所年開銷即時試算器</h3>
+            <p class="text-xs text-slate-500">依據不同地理區域、學校屬性與科系，即時估算 1 年學費與生活費（美金/台幣）</p>
+          </div>
 
-        <!-- INTERACTIVE TIMELINE ACCORDION TOOL -->
-        <div class="bg-white rounded-lg border border-slate-200 p-6 sm:p-8 mb-12 shadow-sm">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
+            <div>
+              <label class="block font-semibold text-slate-700 mb-2" for="cost-region">目標區域 (Location)：</label>
+              <select id="cost-region" class="w-full p-2.5 bg-slate-50 border border-slate-300 rounded-md text-slate-800 focus:outline-none focus:ring-1 focus:ring-ivy-800">
+                <option value="east">美東 (紐約、波士頓等 - 生活費最高)</option>
+                <option value="west">美西 (加州矽谷、西雅圖等 - 生活費高)</option>
+                <option value="central">中部/南部 (德州、伊利諾等 - 生活費實惠)</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block font-semibold text-slate-700 mb-2" for="cost-type">學校性質 (Type)：</label>
+              <select id="cost-type" class="w-full p-2.5 bg-slate-50 border border-slate-300 rounded-md text-slate-800 focus:outline-none focus:ring-1 focus:ring-ivy-800">
+                <option value="private">私立大學 (如 Columbia, USC, NYU, CMU)</option>
+                <option value="public">公立大學 (如 UC Berkeley, UIUC, UT Austin)</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block font-semibold text-slate-700 mb-2" for="cost-major">申請科系學門 (Major)：</label>
+              <select id="cost-major" class="w-full p-2.5 bg-slate-50 border border-slate-300 rounded-md text-slate-800 focus:outline-none focus:ring-1 focus:ring-ivy-800">
+                <option value="stem">工學院 / STEM (CS, EE, Data, MSBA)</option>
+                <option value="mba">頂尖商學院 (MBA, 專項金融碩士)</option>
+                <option value="other">人文社科 / 教育 / 傳播設計</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- DYNAMIC CALCULATION RESULT BOX -->
+          <div class="mt-6 p-5 bg-ivy-50 rounded-lg border border-ivy-200/80 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+              <span class="text-[11px] font-semibold text-ivy-700 uppercase tracking-wide">預估年開銷範圍 (Annual Estimate)</span>
+              <div class="text-2xl sm:text-3xl font-bold text-ivy-900 mt-0.5" id="cost-output-usd">
+                $68,000 ~ $88,000 USD
+              </div>
+              <p class="text-xs text-slate-600 mt-1" id="cost-output-twd">
+                折合新台幣約：NT$ 2,176,000 ~ 2,816,000 元／年（含學費與基本食宿保險）
+              </p>
+            <p class="page-toc">試算僅為預算情境，非即時報價；固定假設匯率 1 USD = 32 TWD，非即時匯率。請依各校官方費用核實。</p></div>
+            <a href="contact.html" class="px-5 py-2.5 bg-ivy-800 text-white rounded text-xs font-semibold hover:bg-ivy-900 transition shrink-0">
+              索取專屬預算與獎學金方案
+            </a>
+          </div>
+
+        </div></div></section>
+
+    <section class="ib-plans" id="career-explorer"><div class="ib-plans-inner"><p class="ib-eyebrow">職涯規劃互動工具</p><h2>美國碩士畢業職涯薪資探索</h2><p class="ib-lead">選擇科系與工作地區，探索相關職業與薪資研究方向。不同公司、年資與職位的薪酬差異很大。</p><div class="ib-detail-grid"><div class="ib-detail"><label for="ib-major">碩士專業領域</label><select id="ib-major" class="ib-tool-select"><option value="cs">資訊工程／電腦科學</option><option value="data">資料科學／分析</option><option value="business">商管／金融</option><option value="engineering">工程</option><option value="health">公共衛生／健康管理</option></select><label for="ib-region">工作地區</label><select id="ib-region" class="ib-tool-select"><option value="national">美國全國</option><option value="ny">紐約地區</option><option value="ca">加州</option><option value="wa">華盛頓州</option></select></div><div class="ib-detail"><h3 id="ib-career-role">軟體開發人員</h3><p id="ib-career-note">職業與薪資資料請參考美國勞工統計局的最新資料。</p><a id="ib-career-source" class="ib-plan-link" href="https://www.bls.gov/oes/" target="_blank" rel="noopener">查看 BLS 職業薪資資料 ↗</a><p class="ib-fine">目前不顯示未經核實的公司薪資數字。下列公司僅為相關產業的代表企業，並不代表正在招聘或提供特定薪酬。<div class="ib-company-examples"><strong>相關領域的知名企業</strong><ul id="ib-company-examples"></ul></div></p></div><div class="ib-detail"><h3>畢業後求職顧問</h3><p>除了美國研究所申請，IvyBridge 也規劃提供履歷、求職策略與面試準備等畢業後諮詢服務。</p><p class="ib-fine">此為獨立諮詢項目，並非所有升學方案均包含。</p><a href="contact.html" class="ib-plan-link">詢問職涯諮詢 →</a></div></div></div></section><script>(function(){const m=document.getElementById('ib-major'),r=document.getElementById('ib-region'),out=document.getElementById('ib-career-role'),note=document.getElementById('ib-career-note');if(!m||!r)return;const employers={cs:['Google','Microsoft','Amazon','IBM'],data:['Microsoft','Amazon','Databricks','NVIDIA'],business:['JPMorgan Chase','Goldman Sachs','Morgan Stanley','Deloitte'],engineering:['Tesla','Boeing','Siemens','GE Aerospace'],health:['UnitedHealth Group','CVS Health','Mayo Clinic','Kaiser Permanente']};const companyList=document.getElementById('ib-company-examples');const roles={cs:'軟體開發人員（Software Developers）',data:'資料科學家（Data Scientists）',business:'財務分析師（Financial Analysts）',engineering:'機械工程師（Mechanical Engineers）',health:'醫療與健康服務經理（Medical and Health Services Managers）'};function sync(){out.textContent=roles[m.value];if(companyList){companyList.replaceChildren();for(const name of employers[m.value]){const li=document.createElement('li');li.textContent=name;companyList.appendChild(li)}}note.textContent='請至 BLS 查詢'+r.options[r.selectedIndex].text+'的職業薪資中位數及分位數；薪資不等於新鮮人起薪，也不保證就業。';}m.addEventListener('change',sync);r.addEventListener('change',sync);sync();})();</script><section class="ib-upgrade" id="application-planning"><div class="ib-plans-inner"><p class="ib-eyebrow">04 · APPLICATION TIMELINE</p><h2>你的研究所申請時間線</h2><p class="ib-lead">開啟每個階段，查看關鍵任務與需注意的文件。</p><div class="bg-white rounded-lg border border-slate-200 p-6 sm:p-8 mb-12 shadow-sm">
           <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-slate-100 pb-4 mb-6">
             <div>
               <h3 class="text-lg font-bold text-ivy-900 font-serif" id="topic-0">18 個月美國碩士申請全景時程導引</h3>
@@ -200,63 +238,7 @@
             </div>
 
           </div>
-        </div>
-
-        <!-- TUITION & LIVING COST CALCULATOR TOOL -->
-        <div class="bg-white rounded-lg border border-slate-200 p-6 sm:p-8 mb-12 shadow-sm">
-          <div class="border-b border-slate-100 pb-4 mb-6">
-            <h3 class="text-lg font-bold text-ivy-900 font-serif" id="topic-1">美國研究所年開銷即時試算器</h3>
-            <p class="text-xs text-slate-500">依據不同地理區域、學校屬性與科系，即時估算 1 年學費與生活費（美金/台幣）</p>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
-            <div>
-              <label class="block font-semibold text-slate-700 mb-2" for="cost-region">目標區域 (Location)：</label>
-              <select id="cost-region" class="w-full p-2.5 bg-slate-50 border border-slate-300 rounded-md text-slate-800 focus:outline-none focus:ring-1 focus:ring-ivy-800">
-                <option value="east">美東 (紐約、波士頓等 - 生活費最高)</option>
-                <option value="west">美西 (加州矽谷、西雅圖等 - 生活費高)</option>
-                <option value="central">中部/南部 (德州、伊利諾等 - 生活費實惠)</option>
-              </select>
-            </div>
-
-            <div>
-              <label class="block font-semibold text-slate-700 mb-2" for="cost-type">學校性質 (Type)：</label>
-              <select id="cost-type" class="w-full p-2.5 bg-slate-50 border border-slate-300 rounded-md text-slate-800 focus:outline-none focus:ring-1 focus:ring-ivy-800">
-                <option value="private">私立大學 (如 Columbia, USC, NYU, CMU)</option>
-                <option value="public">公立大學 (如 UC Berkeley, UIUC, UT Austin)</option>
-              </select>
-            </div>
-
-            <div>
-              <label class="block font-semibold text-slate-700 mb-2" for="cost-major">申請科系學門 (Major)：</label>
-              <select id="cost-major" class="w-full p-2.5 bg-slate-50 border border-slate-300 rounded-md text-slate-800 focus:outline-none focus:ring-1 focus:ring-ivy-800">
-                <option value="stem">工學院 / STEM (CS, EE, Data, MSBA)</option>
-                <option value="mba">頂尖商學院 (MBA, 專項金融碩士)</option>
-                <option value="other">人文社科 / 教育 / 傳播設計</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- DYNAMIC CALCULATION RESULT BOX -->
-          <div class="mt-6 p-5 bg-ivy-50 rounded-lg border border-ivy-200/80 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <div>
-              <span class="text-[11px] font-semibold text-ivy-700 uppercase tracking-wide">預估年開銷範圍 (Annual Estimate)</span>
-              <div class="text-2xl sm:text-3xl font-bold text-ivy-900 mt-0.5" id="cost-output-usd">
-                $68,000 ~ $88,000 USD
-              </div>
-              <p class="text-xs text-slate-600 mt-1" id="cost-output-twd">
-                折合新台幣約：NT$ 2,176,000 ~ 2,816,000 元／年（含學費與基本食宿保險）
-              </p>
-            <p class="page-toc">試算僅為預算情境，非即時報價；固定假設匯率 1 USD = 32 TWD，非即時匯率。請依各校官方費用核實。</p></div>
-            <a href="contact.html" class="px-5 py-2.5 bg-ivy-800 text-white rounded text-xs font-semibold hover:bg-ivy-900 transition shrink-0">
-              索取專屬預算與獎學金方案
-            </a>
-          </div>
-
-        </div>
-
-        <!-- BLOG ARTICLES (專欄文章清單 - 支援搜尋與側邊推薦) -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        </div></div></section><section class="ib-article-last" id="explorer-articles"><div class="ib-plans-inner"><p class="ib-eyebrow">ADDITIONAL READING</p><h2>留學知識與申請文章</h2><p class="ib-note-small">以下為待出版主題，尚未發布完整文章。</p><div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           
           <article class="bg-white rounded-lg border border-slate-200 p-6 shadow-sm hover:shadow-md transition flex flex-col justify-between">
             <div>
@@ -306,12 +288,7 @@
             </div>
           </article>
 
-        </div>
-
-      </div>
-    </section>
-
-    <section class="ib-plans" id="career-explorer"><div class="ib-plans-inner"><p class="ib-eyebrow">職涯規劃互動工具</p><h2>美國碩士畢業職涯薪資探索</h2><p class="ib-lead">選擇科系與工作地區，探索相關職業與薪資研究方向。不同公司、年資與職位的薪酬差異很大。</p><div class="ib-detail-grid"><div class="ib-detail"><label for="ib-major">碩士專業領域</label><select id="ib-major" class="ib-tool-select"><option value="cs">資訊工程／電腦科學</option><option value="data">資料科學／分析</option><option value="business">商管／金融</option><option value="engineering">工程</option><option value="health">公共衛生／健康管理</option></select><label for="ib-region">工作地區</label><select id="ib-region" class="ib-tool-select"><option value="national">美國全國</option><option value="ny">紐約地區</option><option value="ca">加州</option><option value="wa">華盛頓州</option></select><label for="ib-company">目標公司（探索方向）</label><select id="ib-company" class="ib-tool-select"><option>不指定公司</option><option>Google</option><option>Microsoft</option><option>Amazon</option><option>IBM</option><option>JPMorgan Chase</option></select></div><div class="ib-detail"><h3 id="ib-career-role">軟體開發人員</h3><p id="ib-career-note">職業與薪資資料請參考美國勞工統計局的最新資料。</p><a id="ib-career-source" class="ib-plan-link" href="https://www.bls.gov/oes/" target="_blank" rel="noopener">查看 BLS 職業薪資資料 ↗</a><p class="ib-fine">目前不顯示未經核實的公司薪資數字。選擇公司僅用於規劃求職方向，並不代表該公司正在招聘或提供特定薪酬。</p></div><div class="ib-detail"><h3>畢業後求職顧問</h3><p>除了美國研究所申請，IvyBridge 也規劃提供履歷、求職策略與面試準備等畢業後諮詢服務。</p><p class="ib-fine">此為獨立諮詢項目，並非所有升學方案均包含。</p><a href="contact.html" class="ib-plan-link">詢問職涯諮詢 →</a></div></div></div></section><script>(function(){const m=document.getElementById('ib-major'),r=document.getElementById('ib-region'),out=document.getElementById('ib-career-role'),note=document.getElementById('ib-career-note');if(!m||!r)return;const roles={cs:'軟體開發人員（Software Developers）',data:'資料科學家（Data Scientists）',business:'財務分析師（Financial Analysts）',engineering:'機械工程師（Mechanical Engineers）',health:'醫療與健康服務經理（Medical and Health Services Managers）'};function sync(){out.textContent=roles[m.value];note.textContent='請至 BLS 查詢'+r.options[r.selectedIndex].text+'的職業薪資中位數及分位數；薪資不等於新鮮人起薪，也不保證就業。';}m.addEventListener('change',sync);r.addEventListener('change',sync);sync();})();</script><section class="ib-plans ib-detail-section" id="planning-catalog"><div class="ib-plans-inner ib-reading"><h2>出國大小事：從選校到出發</h2><nav class="page-toc"><a href="#topic-0">申請時程</a> · <a href="#topic-1">費用試算</a> · <a href="us-masters-guide.html">科系與申請指南</a> · <a href="#departure-guide">簽證與生活</a></nav><article id="departure-guide"><h3>錄取後的準備清單</h3><ul><li>比較項目總成本、課程與錄取條件，再確認入學與押金期限。</li><li>依學校指示備妥入學文件與財力證明，核對姓名與護照資料。</li><li>透過官方管道確認學生簽證流程，個人申報與面談由本人完成。</li><li>比較住宿租約、保險範圍、交通與抵達預算，保留緊急聯絡資訊。</li></ul><p><a href="https://educationusa.state.gov/your-5-steps-us-study" target="_blank" rel="noopener">EducationUSA — 五步驟留學規劃</a></p></article></div></section></main><!-- FOOTER -->
+        </div></div></section></main><!-- FOOTER -->
   <footer class="bg-ivy-900 text-slate-400 py-16 border-t border-ivy-800 text-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
