@@ -30,7 +30,7 @@ Valid example:
 - Stanford MS Management Science & Engineering (2025): https://msande.stanford.edu/academics-admissions/graduate/admission/ms-admission-statistics
 - UCLA MS Computer Science (Fall 2022; 140/3,200): https://www.cs.ucla.edu/graduate-admission-frequently-asked-questions/
 - University of Washington MSIM Residential (2025): https://ischool.uw.edu/programs/msim/statistics
-- Harvard Business School MBA FY2025: https://www.hbs.edu/about/annualreport/2025/key-metrics
+- Harvard Business School MBA FY2025: https://www.hbs.edu/about/annualreport/2025/year-in-review
 - NYU Stern Full-time MBA 2025 (23.6%, P&Q table): https://poetsandquants.com/2026/08/02/acceptance-rates-yield-apps-at-the-top-100-u-s-mba-programs-for-2026/2/
 - Other university-specific 2025 MBA figures: https://poetsandquants.com/2026/08/02/acceptance-rates-yield-apps-at-the-top-100-u-s-mba-programs-for-2026/2/
 - MIT graduate-wide 2025 data (not STEM master's specific, must NOT display as such): https://facts.mit.edu/graduate-student-admission/
