@@ -144,12 +144,12 @@ window.IVYBRIDGE_ADMISSIONS_DATA = {
     "New York University": {
       "stem": null,
       "business": {
-        "rate": 32,
+        "rate": 23.6,
         "program": "Stern Full-time MBA · Class of 2027",
         "year": 2025,
-        "source": "https://www.stern.nyu.edu/programs-admissions/full-time-mba/community/class-profile",
-        "quality": "official",
-        "note": "Official class profile: 1,309 admitted from 4,131 applications (rounded 32%)."
+        "source": "https://poetsandquants.com/2026/08/02/acceptance-rates-yield-apps-at-the-top-100-u-s-mba-programs-for-2026/2/",
+        "quality": "secondary",
+        "note": "Poets&Quants reports 23.6% for the 2025 Stern Full-time MBA admissions cycle; not an MSBA/MFin rate."
       }
     },
     "Northwestern University": {
