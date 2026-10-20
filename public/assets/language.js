@@ -1,1 +1,95 @@
-(function(){'use strict';const en=location.pathname.includes('/en/');const file=location.pathname.split('/').pop()||'index.html';const canonical=file==='ivybridge.html'?'index.html':file;const base=en?'../':'';const zhHref=en?'../'+canonical:canonical;const enHref=en?canonical:'en/'+canonical;document.documentElement.lang=en?'en':'zh-Hant';try{localStorage.setItem('ivybridge-language',en?'en':'zh')}catch(e){}document.querySelectorAll('.ib-lang-wrap').forEach(el=>el.remove());const holder=document.createElement('div');holder.className='ib-lang-wrap';holder.innerHTML='<nav class="ib-lang-switch" aria-label="Language / 語言"><a href="'+zhHref+location.hash+'" lang="zh-Hant"'+(!en?' aria-current="page"':'')+'>繁中</a><a href="'+enHref+location.hash+'" lang="en"'+(en?' aria-current="page"':'')+'>EN</a></nav>';document.body.appendChild(holder);if(en){document.querySelectorAll('a[href]').forEach(a=>{const raw=a.getAttribute('href');if(!raw||raw.startsWith('#')||/^(https?:|mailto:|tel:|javascript:)/i.test(raw)||a.closest('.ib-lang-switch'))return;const m=raw.match(/^(?:\.\.\/)?([\w-]+\.html)(.*)$/);if(m&&m[1]!=='ivybridge.html')a.setAttribute('href',m[1]+m[2]);else if(m&&m[1]==='ivybridge.html')a.setAttribute('href','index.html'+m[2]);});}else{document.querySelectorAll('a[href="ivybridge.html"]').forEach(a=>a.setAttribute('href','index.html'));}function selectPlan(){const id=decodeURIComponent(location.hash.slice(1));document.querySelectorAll('.ib-detail').forEach(el=>el.classList.toggle('is-selected',el.id===id));if(['essential','comprehensive','elite'].includes(id)){const card=document.getElementById(id);if(card){requestAnimationFrame(()=>card.scrollIntoView({block:'center',behavior:'auto'}));}}}window.addEventListener('hashchange',selectPlan);selectPlan();})();
+/* IvyBridge bilingual navigation: preserve plan queries and only use valid target anchors. */
+(function () {
+  'use strict';
+
+  const isEnglish = location.pathname.split('/').includes('en');
+  const originalFile = location.pathname.split('/').pop() || 'index.html';
+  const file = originalFile === 'ivybridge.html' ? 'index.html' : originalFile;
+  const query = location.search;
+  const rawHash = decodeURIComponent(location.hash.slice(1));
+
+  // Anchor ids that exist in both language versions.
+  const shared = {
+    'index.html': ['plans', 'admissions-wall'],
+    'services.html': ['plan-details', 'essential', 'comprehensive', 'elite', 'service-paths'],
+    'contact.html': [],
+    'custom-services.html': [],
+    'cases.html': [],
+    'why-us.html': ['quality', 'practice', 'flexibility', 'support'],
+    'insights.html': ['planning-catalog', 'departure-guide'],
+    'about.html': [],
+    'us-masters-guide.html': []
+  };
+
+  const enMainAnchor = ['services.html', 'custom-services.html', 'why-us.html'].includes(file) ? 'main-content' : 'content';
+
+  function counterpartHash(targetEnglish) {
+    if (!rawHash) return '';
+    let anchor = rawHash;
+
+    if (rawHash === 'main-content' || rawHash === 'content') {
+      anchor = targetEnglish ? enMainAnchor : 'main-content';
+    } else if (file === 'insights.html') {
+      const toEnglish = {'topic-0': 'application-timeline', 'topic-1': 'cost-planner'};
+      const toChinese = {'application-timeline': 'topic-0', 'cost-planner': 'topic-1'};
+      anchor = targetEnglish ? (toEnglish[rawHash] || rawHash) : (toChinese[rawHash] || rawHash);
+      if (!['topic-0', 'topic-1', 'application-timeline', 'cost-planner', 'planning-catalog', 'departure-guide'].includes(anchor)) {
+        anchor = targetEnglish ? enMainAnchor : 'main-content';
+      }
+    } else if (!(shared[file] || []).includes(rawHash)) {
+      // The English master's guide does not have corresponding section anchors.
+      anchor = targetEnglish ? enMainAnchor : 'main-content';
+    }
+
+    return anchor ? '#' + encodeURIComponent(anchor) : '';
+  }
+
+  document.documentElement.lang = isEnglish ? 'en' : 'zh-Hant';
+  try { localStorage.setItem('ivybridge-language', isEnglish ? 'en' : 'zh'); } catch (_) {}
+
+  document.querySelectorAll('.ib-lang-wrap').forEach(node => node.remove());
+  const zhHref = (isEnglish ? '../' : '') + file + query + counterpartHash(false);
+  const enHref = (isEnglish ? '' : 'en/') + file + query + counterpartHash(true);
+  const wrap = document.createElement('div');
+  wrap.className = 'ib-lang-wrap';
+  const nav = document.createElement('nav');
+  nav.className = 'ib-lang-switch';
+  nav.setAttribute('aria-label', 'Language / 語言');
+  for (const [label, href, code, selected] of [
+    ['繁中', zhHref, 'zh-Hant', !isEnglish],
+    ['EN', enHref, 'en', isEnglish]
+  ]) {
+    const a = document.createElement('a');
+    a.href = href;
+    a.lang = code;
+    a.textContent = label;
+    if (selected) a.setAttribute('aria-current', 'page');
+    nav.appendChild(a);
+  }
+  wrap.appendChild(nav);
+  document.body.appendChild(wrap);
+
+  // Keep relative HTML navigation inside /en rather than jumping to the Chinese site.
+  if (isEnglish) {
+    document.querySelectorAll('a[href]').forEach(a => {
+      if (a.closest('.ib-lang-switch')) return;
+      const href = a.getAttribute('href');
+      if (!href || href.startsWith('#') || /^(?:https?:|mailto:|tel:|javascript:|\/\/)/i.test(href)) return;
+      const match = href.match(/^(?:\.\.\/)?([\w-]+\.html)(.*)$/);
+      if (match) a.setAttribute('href', (match[1] === 'ivybridge.html' ? 'index.html' : match[1]) + match[2]);
+    });
+  } else {
+    document.querySelectorAll('a[href="ivybridge.html"]').forEach(a => a.setAttribute('href', 'index.html'));
+  }
+
+  function selectPlan() {
+    const id = decodeURIComponent(location.hash.slice(1));
+    document.querySelectorAll('.ib-detail').forEach(node => node.classList.toggle('is-selected', node.id === id));
+    if (['essential', 'comprehensive', 'elite'].includes(id)) {
+      const target = document.getElementById(id);
+      if (target) requestAnimationFrame(() => target.scrollIntoView({block: 'center', behavior: 'auto'}));
+    }
+  }
+  window.addEventListener('hashchange', selectPlan);
+  selectPlan();
+})();
