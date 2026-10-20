@@ -110,16 +110,16 @@
   </header>
 
   <!-- MAIN CONTENT CONTAINER -->
-  <main id="main-content" tabindex="-1"><nav aria-label="本頁目錄" class="page-toc"><strong>本頁目錄</strong><a href="#topic-0">18 個月美國碩士申請全景時程導引</a><a href="#topic-1">美國研究所年開銷即時試算器</a></nav><section id="insights" class="py-16 sm:py-24 bg-slate-50 border-b border-slate-200">
+  <main id="main-content" tabindex="-1"><section class="ib-explorer-hero" aria-label="留學探索工具"><div class="ib-plans-inner"><p class="ib-eyebrow">STUDY & CAREER EXPLORER</p><h1>留學探索中心</h1><p>用互動工具把選校、預算、申請時程與未來職涯連結起來。數據是規劃參考，不等同錄取承諾。</p><nav class="ib-explorer-grid" aria-label="探索工具"><a href="#ib-school-explorer"><span>01 · 選校</span><strong>碩士錄取率探索</strong><small>50 所美國大學 · STEM／商科</small></a><a href="#topic-1"><span>02 · 費用</span><strong>留學費用試算</strong><small>學費與生活預算</small></a><a href="#topic-0"><span>03 · 時程</span><strong>申請進度規劃</strong><small>18 個月準備時間表</small></a><a href="#career-explorer"><span>04 · 職涯</span><strong>工作與薪資探索</strong><small>職業方向與 BLS 資料</small></a></nav></div></section><section class="ib-upgrade ib-upgrade-muted" id="ib-school-explorer"><div class="ib-plans-inner"><p class="ib-eyebrow">GRADUATE ADMISSIONS DATA</p><h2>探索 50 所美國大學的碩士招生資訊</h2><p class="ib-lead">精選 50 所常見申請目標學校（並非官方排名 Top 50）。選擇 STEM 或商科，再選學校。只有校方公開且能核對口徑的碩士項目錄取率才會顯示數字。</p><div class="ib-explorer-two"><div class="ib-explorer-panel"><label for="ib-field-choice">探索領域</label><select id="ib-field-choice" class="ib-tool-select"><option value="stem">STEM / 科學與工程</option><option value="business">商科／管理</option></select><label for="ib-school-search">搜尋學校</label><input id="ib-school-search" class="ib-tool-select" type="search" placeholder="輸入學校名稱（英文）" autocomplete="off"><label for="ib-school-choice">選擇大學</label><select id="ib-school-choice" class="ib-tool-select"></select><p id="ib-school-count" class="ib-fine" aria-live="polite"></p><p class="ib-fine">注意：同一大學不同碩士項目可能差異極大；多數大學並未完整公開研究所 Program 錄取率。</p></div><div class="ib-explorer-panel ib-result-panel" aria-live="polite"><p class="ib-eyebrow">校方碩士項目錄取率</p><div id="ib-school-metric" class="ib-metric">—</div><p id="ib-school-subtitle" class="ib-metric-subtitle"></p><a id="ib-school-source" class="ib-plan-link" href="https://msande.stanford.edu/academics-admissions/graduate/admission/ms-admission-statistics" target="_blank" rel="noopener noreferrer" hidden>查看校方統計 ↗</a><p id="ib-school-note" class="ib-fine"></p><a id="ib-school-compare" class="ib-plan-link" href="https://facts.mit.edu/graduate-student-admission/" target="_blank" rel="noopener noreferrer" hidden>查看全校研究所統計（非領域錄取率）↗</a><div class="ib-brand-stat"><span>IvyBridge 品牌方提供數字</span><strong>85%</strong><small>尚待核實：未提供樣本數、統計期間與「至少一個錄取」或「申請項目錄取」的定義，不能直接與個別學校錄取率比較。</small></div></div></div><p class="ib-source-note">資料更新依校方來源；「未公開／待核實」表示本工具沒有可信的對應碩士 Program 數字，並非錄取率為零。 <a href="https://msande.stanford.edu/academics-admissions/graduate/admission/ms-admission-statistics" target="_blank" rel="noopener noreferrer">Stanford MS&E (2025)</a> · <a href="https://facts.mit.edu/graduate-student-admission/" target="_blank" rel="noopener noreferrer">MIT Graduate Admissions (2025)</a></p></div></section><nav aria-label="本頁目錄" class="page-toc"><strong>本頁目錄</strong><a href="#topic-0">18 個月美國碩士申請全景時程導引</a><a href="#topic-1">美國研究所年開銷即時試算器</a></nav><section id="insights" class="py-16 sm:py-24 bg-slate-50 border-b border-slate-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="max-w-3xl mb-12">
           <span class="text-xs font-semibold tracking-widest text-gold-700 uppercase">Knowledge Base</span>
           <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-ivy-900 font-serif mt-2">
-            留學專欄與申請實戰指南
+            工具操作與留學準備指南
           </h1>
           <p class="text-slate-600 text-sm sm:text-base mt-3">
-            由常春藤名校顧問團隊撰寫，涵蓋 18 個月時程規劃、學費生活費預算對照與熱門科系趨勢。
+            查看完整的申請時程、年度成本估算，以及留學與職涯準備方向。各項資料僅供探索，請以學校及官方資訊為準。
           </p>
         </div>
 
@@ -400,5 +400,5 @@
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
-<script defer src="assets/site-structure.js"></script></body>
+<script defer src="assets/site-structure.js"></script><script src="assets/school-explorer.js" defer></script></body>
 </html>
