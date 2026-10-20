@@ -151,3 +151,22 @@ body{font-size:17px;line-height:1.8}main p,main li,main dd{line-height:1.9}main 
 html[lang="en"] .ib-detail-grid>.ib-detail[data-plan="comprehensive"]::before{content:"RECOMMENDED PLAN"}
 .ib-page-shell .ib-detail-grid{padding-top:12px}
 @media(max-width:680px){.ib-service-hero{padding:44px 20px}.ib-service-hero-actions{align-items:flex-start;flex-direction:column;gap:13px}.ib-detail-grid>.ib-detail[data-plan="comprehensive"]{margin-top:8px}}
+
+/* Homepage overview (plans, proof points, strategy): ONE shared full-bleed surface.
+   Keep markup centered by .ib-page-shell; paint the side gutters without changing
+   content width or adding extra wrappers/duplicate per-section shadows. */
+.ib-page-shell .ib-home-overview {
+  --ib-home-overview-bg: #f7f9fc;
+  background: var(--ib-home-overview-bg);
+  box-shadow: 0 0 0 100vmax var(--ib-home-overview-bg);
+  clip-path: inset(0 -100vmax);
+}
+.ib-page-shell .ib-home-overview > section {
+  background: transparent;
+}
+.ib-page-shell .ib-home-overview > section + section {
+  border-top: 1px solid #e4eaf0;
+}
+.ib-page-shell:has(.ib-home-overview) > .ib-page-sidebar {
+  z-index: 1;
+}
