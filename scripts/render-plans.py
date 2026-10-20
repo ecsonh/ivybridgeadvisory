@@ -10,7 +10,7 @@ def render(lang,details=False):
  cards=''
  for p in PLANS:
   d=p[lang];id=p['id'];cls='ib-detail' if details else 'ib-plan';attrs=f' id="{id}" tabindex="-1"' if details else ''
-  price=f'<p class="ib-detail-price">US${p["price"]:,}</p><p class="ib-extra">'+t(f'每加申 1 個項目：US${p["extra"]:,}',f'Each additional program: US${p["extra"]:,}')+'</p>' if details else ''
+  price=f'<p class="ib-detail-price">US${p["price"]:,}</p><p class="ib-extra">'+(t(f'超過 12 個美國項目後，每增加 1 個：US${p["extra"]:,}',f'Additional U.S. programs beyond 12: US${p["extra"]:,}') if id=='elite' else t(f'每加申 1 個項目：US${p["extra"]:,}',f'Each additional program: US${p["extra"]:,}'))+'</p>' if details else ''
   items=''.join('<li>'+e(x)+'</li>' for x in d['items'])
   href=f'contact.html?plan={id}' if details else f'services.html#{id}'
   cards+=f'<article class="{cls}" data-plan="{id}"{attrs}><h3>{e(d["name"])}</h3>{price}<ul>{items}</ul><a class="ib-plan-link" href="{href}">'+t('預約方案諮詢 →' if details else '了解方案詳情 →','Discuss this plan →' if details else 'View plan details →')+'</a></article>'
