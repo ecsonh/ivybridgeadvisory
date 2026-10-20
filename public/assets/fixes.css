@@ -151,3 +151,15 @@ body{font-size:17px;line-height:1.8}main p,main li,main dd{line-height:1.9}main 
 html[lang="en"] .ib-detail-grid>.ib-detail[data-plan="comprehensive"]::before{content:"RECOMMENDED PLAN"}
 .ib-page-shell .ib-detail-grid{padding-top:12px}
 @media(max-width:680px){.ib-service-hero{padding:44px 20px}.ib-service-hero-actions{align-items:flex-start;flex-direction:column;gap:13px}.ib-detail-grid>.ib-detail[data-plan="comprehensive"]{margin-top:8px}}
+
+
+/* Homepage only: extend the soft-blue Plans section to both viewport edges.
+   Keep the original section content width, cards, TOC and surrounding sections intact. */
+.ib-page-shell #plans.ib-plans{
+  background:#f7f9fc;
+  box-shadow:0 0 0 100vmax #f7f9fc;
+  clip-path:inset(0 -100vmax);
+}
+.ib-page-shell:has(#plans) > .ib-page-sidebar{
+  z-index:1;
+}
