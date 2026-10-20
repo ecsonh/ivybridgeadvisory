@@ -1,5 +1,5 @@
 # Repository instructions for AI coding agents
-Read **[AI_SITE_RULES.md](AI_SITE_RULES.md)** and **[ADMISSIONS_DATA_GUIDE.md](ADMISSIONS_DATA_GUIDE.md)** before editing any page, source file or school data. These files are the owner-approved style, content, product, data and safety contracts.
+Read **[AI_SITE_RULES.md](AI_SITE_RULES.md)**, **[IVYBRIDGE_WEBSITE_PLAYBOOK.md](IVYBRIDGE_WEBSITE_PLAYBOOK.md)**, and **[ADMISSIONS_DATA_GUIDE.md](ADMISSIONS_DATA_GUIDE.md)** before editing any page, source file or school data. These files are the owner-approved style, content, product, data and safety contracts.
 
 ## Required workflow
 - Inspect existing site / latest main and active PR before modifying. Do not overwrite functional layouts, data, forms or translations.
@@ -11,4 +11,4 @@ Read **[AI_SITE_RULES.md](AI_SITE_RULES.md)** and **[ADMISSIONS_DATA_GUIDE.md](A
 - Existing contact forms only prepare/download data; do not pretend they submit or book.
 - Run static link/anchor, JavaScript, and UI interaction checks; report what was and was NOT actually tested.
 
-Treat `AI_SITE_RULES.md` as authoritative if a summary here is incomplete.
+Treat `AI_SITE_RULES.md` as authoritative for business facts and `IVYBRIDGE_WEBSITE_PLAYBOOK.md` for implementation, design and editorial patterns. Ask the owner when standards conflict.
