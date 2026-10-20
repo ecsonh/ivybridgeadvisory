@@ -120,7 +120,7 @@ window.IVYBRIDGE_ADMISSIONS_DATA = {
         "rate": 12,
         "program": "Harvard Business School Full-time MBA",
         "year": 2025,
-        "source": "https://www.hbs.edu/about/annualreport/2025/key-metrics",
+        "source": "https://www.hbs.edu/about/annualreport/2025/year-in-review",
         "quality": "official",
         "note": "Official FY2025 MBA admissions percentage."
       }
