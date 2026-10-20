@@ -19,3 +19,50 @@
  }));
  if(stories.length)update();
 })();
+
+
+/* Shared bilingual in-page chapter navigation (all site pages). */
+(function(){
+ 'use strict';
+ function init(){
+  const en=document.documentElement.lang==='en';
+  let main=document.querySelector('main');
+  if(!main){
+   const footer=document.querySelector('body > footer');
+   const header=document.querySelector('body > header');
+   if(!footer||!header)return;
+   main=document.createElement('main');main.id='main-content';
+   let node=header.nextSibling;
+   while(node&&node!==footer){
+    const next=node.nextSibling;
+    if(node.nodeType===1 && !['SCRIPT','STYLE'].includes(node.tagName))main.appendChild(node);
+    node=next;
+   }
+   footer.parentNode.insertBefore(main,footer);
+  }
+  const all=[...main.querySelectorAll('h1,h2')].filter(el=>el.textContent.trim().length>3 && !el.closest('.ib-page-sidebar,.ib-explorer-grid,.ib-bottom-cta'));
+  const headings=all.filter((el,i)=>i===0 || el.tagName==='H2').slice(0,11);
+  if(!headings.length)return;
+  const ids=new Set([...document.querySelectorAll('[id]')].map(n=>n.id));
+  function slug(s){return s.toLowerCase().replace(/[^a-z0-9\u4e00-\u9fff]+/g,'-').replace(/^-|-$/g,'').slice(0,60)||'chapter'}
+  for(const el of headings){if(el.id)continue;let id='ib-section-'+slug(el.textContent.trim()),seq=2;while(ids.has(id))id='ib-section-'+slug(el.textContent.trim())+'-'+seq++;el.id=id;ids.add(id)}
+  const shell=document.createElement('div');shell.className='ib-page-shell';
+  main.parentNode.insertBefore(shell,main);
+  const aside=document.createElement('aside');aside.className='ib-page-sidebar';aside.setAttribute('aria-label',en?'On this page':'本頁目錄');
+  const details=document.createElement('details');details.className='ib-toc-details';details.open=true;
+  const summary=document.createElement('summary');summary.textContent=en?'On this page':'本頁目錄';details.appendChild(summary);
+  const nav=document.createElement('nav');nav.className='ib-toc-links';
+  for(const el of headings){const link=document.createElement('a');link.href='#'+encodeURIComponent(el.id);link.textContent=el.textContent.trim().replace(/\s+/g,' ').slice(0,52);nav.appendChild(link)}
+  details.appendChild(nav);aside.appendChild(details);shell.append(aside,main);
+  const links=[...nav.querySelectorAll('a')];
+  function active(id){for(const a of links)a.setAttribute('aria-current',String(decodeURIComponent(a.hash.slice(1))===id))}
+  if(window.IntersectionObserver){
+   const observer=new IntersectionObserver(entries=>{const visible=entries.filter(x=>x.isIntersecting).sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top);if(visible[0])active(visible[0].target.id)},{rootMargin:'-16% 0px -65% 0px',threshold:0});
+   headings.forEach(el=>observer.observe(el));
+  }
+  nav.addEventListener('click',event=>{const a=event.target.closest('a[href^="#"]');if(a){active(decodeURIComponent(a.hash.slice(1)));if(matchMedia('(max-width: 1100px)').matches)details.open=false;}});
+  if(location.hash)active(decodeURIComponent(location.hash.slice(1)));else active(headings[0].id);
+  if(window.matchMedia){const media=matchMedia('(max-width: 1100px)');const update=()=>{details.open=!media.matches};update();media.addEventListener?.('change',update)}
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+})();
