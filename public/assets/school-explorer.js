@@ -21,8 +21,8 @@
    if(!item)return;
    const row=item[field.value];
    if(row&&typeof row.rate==='number'&&row.source){
-     metric.textContent=row.rate.toFixed(row.rate%1?2:0).replace(/\\.0+$/,'')+'%';
-     sub.textContent=row.program+' · '+row.year;
+     metric.textContent=new Intl.NumberFormat(en?'en-US':'zh-TW',{maximumFractionDigits:2}).format(row.rate)+'%';
+     sub.textContent=row.program+' · '+row.year+' · '+(row.quality==='secondary'?tr('第三方資料','Third-party source'):row.quality==='official-calculated'?tr('校方數據計算','Calculated from university figures'):tr('校方數據','University source'));
      source.hidden=false;
      source.href=row.source;
      source.textContent=(row.quality==='secondary'?tr('第三方研究資料 ↗','Third-party study ↗'):tr('校方資料 ↗','Official university source ↗'));
