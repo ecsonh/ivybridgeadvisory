@@ -11,12 +11,12 @@
   // Anchor ids that exist in both language versions.
   const shared = {
     'index.html': ['plans', 'admissions-wall'],
-    'services.html': ['plan-details', 'essential', 'comprehensive', 'elite', 'service-paths'],
+    'services.html': ['plan-details', 'essential', 'comprehensive', 'elite', 'service-paths', 'how-it-works', 'compare-plans', 'service-faq'],
     'contact.html': [],
     'custom-services.html': [],
     'cases.html': [],
     'why-us.html': ['quality', 'practice', 'flexibility', 'support'],
-    'insights.html': ['planning-catalog', 'departure-guide'],
+    'insights.html': ['planning-catalog', 'departure-guide', 'ib-school-explorer'],
     'about.html': [],
     'us-masters-guide.html': []
   };
@@ -30,10 +30,10 @@
     if (rawHash === 'main-content' || rawHash === 'content') {
       anchor = targetEnglish ? enMainAnchor : 'main-content';
     } else if (file === 'insights.html') {
-      const toEnglish = {'topic-0': 'application-timeline', 'topic-1': 'cost-planner'};
-      const toChinese = {'application-timeline': 'topic-0', 'cost-planner': 'topic-1'};
+      const toEnglish = {'topic-0': 'application-timeline', 'topic-1': 'cost-planner', 'career-explorer': 'career-resources'};
+      const toChinese = {'application-timeline': 'topic-0', 'cost-planner': 'topic-1', 'career-resources': 'career-explorer'};
       anchor = targetEnglish ? (toEnglish[rawHash] || rawHash) : (toChinese[rawHash] || rawHash);
-      if (!['topic-0', 'topic-1', 'application-timeline', 'cost-planner', 'planning-catalog', 'departure-guide'].includes(anchor)) {
+      if (!['topic-0', 'topic-1', 'application-timeline', 'cost-planner', 'planning-catalog', 'departure-guide', 'ib-school-explorer', 'career-explorer', 'career-resources'].includes(anchor)) {
         anchor = targetEnglish ? enMainAnchor : 'main-content';
       }
     } else if (!(shared[file] || []).includes(rawHash)) {
