@@ -78,3 +78,41 @@ body{font-size:17px;line-height:1.8}main p,main li,main dd{line-height:1.9}main 
 .ib-source-note{margin-top:20px}.ib-source-note a{color:#214b71}
 @media(max-width:980px){.ib-explorer-grid,.ib-process{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.ib-upgrade,.ib-explorer-hero{padding:42px 14px}.ib-explorer-grid,.ib-process,.ib-faq,.ib-explorer-two{grid-template-columns:1fr}.ib-explorer-grid a{padding:16px}.ib-bottom-cta{flex-direction:column;align-items:flex-start}.ib-cta-link{white-space:normal}.ib-compare th,.ib-compare td{padding:12px}.ib-explorer-panel{padding:17px}}
+
+
+/* Global section TOC and refreshed editorial layouts. */
+.ib-page-shell{display:grid;grid-template-columns:minmax(185px,220px) minmax(0,1fr);align-items:start;gap:22px;margin:0 auto;max-width:1600px}
+.ib-page-shell>main{min-width:0}
+.ib-page-sidebar{position:sticky;top:90px;max-height:calc(100vh - 110px);overflow:auto;padding:20px 0 20px 18px;border-left:2px solid #c5a880;margin:28px 0 0 14px;color:#112e4a}
+.ib-page-sidebar summary{font-size:14px;font-weight:800;cursor:pointer;padding:2px 0 14px;list-style:none}
+.ib-page-sidebar summary::-webkit-details-marker{display:none}
+.ib-toc-links{display:flex;flex-direction:column;gap:4px}
+.ib-toc-links a{display:block;padding:8px 10px;border-radius:6px;font-size:12px;line-height:1.45;color:#586b7c;text-decoration:none}
+.ib-toc-links a:hover,.ib-toc-links a:focus-visible{background:#f1f4f7;color:#112e4a}
+.ib-toc-links a[aria-current=true]{background:#f2f4f7;color:#112e4a;font-weight:750;border-left:3px solid #b48a4c}
+.ib-page-shell h1[id],.ib-page-shell h2[id],.ib-page-shell h3[id]{scroll-margin-top:100px}
+.ib-unverified-tag{display:inline-block;border:1px solid #bba37c;padding:3px 8px;border-radius:30px;font-size:11px;letter-spacing:0;vertical-align:middle;font-weight:600}
+.ib-brand-stat{background:#edf3f6;border-radius:12px;padding:20px!important;border:1px solid #d5e0e8!important}
+.ib-brand-stat strong{font-size:clamp(28px,3vw,41px)!important}
+.ib-why-hero{background:linear-gradient(125deg,#122f4a,#2b4b64);color:#fff;padding:65px clamp(20px,5vw,60px);border-radius:0 0 18px 18px}
+.ib-why-hero h1{color:#fff;font-family:Georgia,serif;font-size:clamp(30px,4vw,48px);margin:8px 0 14px}
+.ib-why-hero p{color:#dce7ef;max-width:800px;line-height:1.8}
+.ib-why-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:28px}
+.ib-why-grid article{background:#fff;border:1px solid #dce4eb;padding:25px;border-radius:13px}
+.ib-why-grid article h3{font-size:19px;font-weight:700;color:#112e4a;margin:8px 0}
+.ib-why-grid article p{font-size:14px;line-height:1.85;color:#526778}
+.ib-why-grid article span{display:inline-block;color:#ae8953;font-weight:700;font-size:12px;letter-spacing:.09em}
+.ib-checklist{list-style:none;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.ib-checklist li{padding:18px;border:1px solid #dce4eb;border-radius:9px;background:white;font-size:14px;line-height:1.75}
+.ib-checklist li::before{content:"✓";color:#94703d;font-weight:900;margin-right:9px}
+.ib-note-small{color:#687c8f;font-size:12px;line-height:1.7}
+.ib-company-examples{background:#f4f7f9;border-radius:9px;padding:14px;margin-top:16px}
+.ib-company-examples strong{font-size:14px;color:#112e4a}
+.ib-company-examples ul{display:flex;gap:8px;flex-wrap:wrap;list-style:none;margin:10px 0 0;padding:0}
+.ib-company-examples li{font-size:12px;border:1px solid #d8e1e7;border-radius:100px;padding:5px 10px;background:#fff;color:#3c5367}
+.ib-article-last{background:#f4f7fa;padding:55px 20px}
+.ib-article-last h2{font-family:Georgia,serif;color:#112e4a;margin:0 auto 24px;font-size:28px;max-width:1100px}
+.ib-article-last>.ib-plans-inner{max-width:1150px}
+@media(max-width:1200px){.ib-page-shell{grid-template-columns:1fr}.ib-page-sidebar{position:relative;top:auto;max-height:none;padding:14px 20px;margin:16px 16px 0;border:1px solid #e0e6ec;border-left:3px solid #c5a880;border-radius:8px}.ib-toc-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.ib-page-sidebar summary{padding-bottom:4px}}
+@media(max-width:680px){.ib-toc-links{grid-template-columns:1fr}.ib-why-grid,.ib-checklist{grid-template-columns:1fr}.ib-page-sidebar{margin:12px}.ib-article-last{padding:32px 12px}.ib-why-hero{padding:40px 22px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
