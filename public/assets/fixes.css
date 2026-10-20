@@ -163,3 +163,11 @@ html[lang="en"] .ib-detail-grid>.ib-detail[data-plan="comprehensive"]::before{co
 .ib-page-shell:has(#plans) > .ib-page-sidebar{
   z-index:1;
 }
+
+/* Continue the homepage full-width treatment for the separate strategy section.
+   Keep content width/TOC unchanged; only paint the surrounding viewport gutters. */
+.ib-page-shell #strategy-pathways{
+  background:#f8fafc;
+  box-shadow:0 0 0 100vmax #f8fafc;
+  clip-path:inset(0 -100vmax);
+}
