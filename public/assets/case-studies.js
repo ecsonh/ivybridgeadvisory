@@ -1,46 +1,98 @@
-/* Bilingual IvyBridge case explorer. Data and presentation separated. */
+/* IvyBridge shared story renderer: one dataset for featured, directory and detail pages. */
 (() => {
- 'use strict';
- const root=document.getElementById('ib-story-browser');if(!root)return;
- const en=document.documentElement.lang.startsWith('en'),lang=en?'en':'zh';
- const stories=window.IVYBRIDGE_STORIES||[];
- const list=root.querySelector('[data-story-list]'),status=root.querySelector('[data-story-status]'),modal=document.getElementById('ib-story-dialog');
- const content=modal?.querySelector('[data-dialog-content]');
- let field='all',bg='all',previousFocus=null;
- const el=(tag,cls,text)=>{const node=document.createElement(tag);if(cls)node.className=cls;if(text!==undefined)node.textContent=text;return node;};
- const label=(zh,eng)=>en?eng:zh;
- const clear=n=>n.replaceChildren();
- const badge=()=>label('策略示範 · 非真實錄取成果','Illustrative scenario · Not an admission result');
- function render(){
-   const filtered=stories.filter(s=>(field==='all'||s.field===field)&&(bg==='all'||s.bg===bg));
-   clear(list);
-   status.textContent=label('顯示 '+filtered.length+' 個策略情境（非真實錄取案例）','Showing '+filtered.length+' illustrative scenarios (not admission results)');
-   if(!filtered.length){list.appendChild(el('p','ib-story-empty',label('這個分類目前沒有案例，請選擇其他分類。','No scenarios match these filters. Try another selection.')));return;}
-   filtered.forEach(s=>{
-     const t=s[lang];const article=el('article','ib-editorial-story');
-     article.append(el('span','ib-story-badge',badge()),el('p','ib-story-meta',t.background),el('h3','',t.title),el('p','',t.challenge));
-     const btn=el('button','ib-story-open',label('閱讀策略分析 →','Read strategy analysis →'));btn.type='button';btn.addEventListener('click',()=>show(s,btn));article.appendChild(btn);list.appendChild(article);
-   });
- }
- function show(s,trigger){
-   if(!modal||!content)return;previousFocus=trigger;clear(content);
-   const t=s[lang];content.append(el('span','ib-story-badge',badge()),el('h2','',t.title));
-   for(const [heading,value] of [[label('背景','Background'),t.background],[label('挑戰','Challenge'),t.challenge],[label('策略','Approach'),t.strategy]]){
-     const sec=el('section');sec.append(el('h3','',heading),el('p','',value));content.appendChild(sec);
-   }
-   const sec=el('section');sec.appendChild(el('h3','',label('規劃步驟','Planning steps')));
-   const ul=el('ul');t.steps.forEach(step=>ul.appendChild(el('li','',step)));sec.appendChild(ul);content.appendChild(sec);
-   const last=el('section');last.append(el('h3','',label('給類似申請者的建議','For applicants with similar goals')),el('p','',t.advice));content.appendChild(last);
-   modal.hidden=false;document.body.classList.add('ib-modal-active');modal.querySelector('[data-dialog-close]')?.focus();
- }
- function close(){if(!modal)return;modal.hidden=true;document.body.classList.remove('ib-modal-active');previousFocus?.focus();}
- root.querySelectorAll('button[data-filter]').forEach(btn=>btn.addEventListener('click',()=>{
-   const type=btn.dataset.filter;if(type==='field')field=btn.dataset.value;else bg=btn.dataset.value;
-   root.querySelectorAll('button[data-filter="'+type+'"]').forEach(b=>b.setAttribute('aria-pressed',String(b===btn)));
-   render();
- }));
- modal?.querySelectorAll('[data-dialog-close]').forEach(btn=>btn.addEventListener('click',close));
- modal?.addEventListener('click',event=>{if(event.target===modal)close();});
- document.addEventListener('keydown',e=>{if(modal?.hidden===false){if(e.key==='Escape')close();else if(e.key==='Tab'){const nodes=[...modal.querySelectorAll('button:not([disabled]),a[href]')];if(nodes.length){const first=nodes[0],last=nodes[nodes.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}}}});
- render();
+  'use strict';
+  const stories = Array.isArray(window.IVYBRIDGE_STORIES) ? window.IVYBRIDGE_STORIES : [];
+  const en = document.documentElement.lang.startsWith('en'), lang = en ? 'en' : 'zh';
+  const t = (zh, english) => en ? english : zh;
+  const create = (tag, cls, value) => {
+    const node = document.createElement(tag);
+    if (cls) node.className = cls;
+    if (value !== undefined) node.textContent = value;
+    return node;
+  };
+  const linkTo = story => 'case.html?id=' + encodeURIComponent(story.id);
+  const verified = story => story.status === 'verified' && story.consentConfirmed === true
+    && Array.isArray(story.admittedPrograms) && story.admittedPrograms.length > 0;
+  const resultsLabel = story => verified(story)
+    ? story.admittedPrograms.map(p => p.school + (p.program ? ' · ' + p.program : '')).join(' / ')
+    : t('錄取學校：待提供真實資料', 'Admitted universities: awaiting verified data');
+  function storyCard(story, {compact=false} = {}) {
+    const entry = story[lang], article = create('article', 'ib-story-card');
+    const header=create('div', 'ib-story-card-head');
+    header.append(create('span','ib-story-impact-tag',entry.tag),
+      create('span','ib-story-index',story.id.replaceAll('-',' / ').toUpperCase()));
+    const disclosure = create('span','ib-story-verified',verified(story)
+      ? t('已核實案例','Verified result')
+      : t('策略情境示範 · 非真實錄取','Illustrative strategy · Not an admission result'));
+    const title=create('h3','',entry.title);
+    const background=create('p','ib-story-background',entry.background);
+    const challenge=create('p','ib-story-challenge',entry.challenge);
+    const strategyBox=create('div','ib-story-strategy');
+    strategyBox.append(create('span','ib-story-caption',t('規劃突破點','Strategic approach')),
+      create('p','',entry.strategy));
+    const results=create('div','ib-story-results');
+    results.append(create('span','ib-story-caption',t('錄取結果','Admissions outcome')),
+      create('p','',resultsLabel(story)));
+    const link=create('a','ib-story-read',t('查看完整分析 ↗','Read full analysis ↗'));
+    link.href=linkTo(story);link.setAttribute('aria-label',t('查看案例策略：','Read scenario: ')+entry.title);
+    article.append(header,disclosure,title,background,challenge);
+    if (!compact) article.append(strategyBox);
+    article.append(results,link);
+    return article;
+  }
+  document.querySelectorAll('[data-featured-cases]').forEach(node => {
+    node.replaceChildren(...stories.slice(0,2).map(s=>storyCard(s,{compact:true})));
+  });
+  const browser=document.getElementById('ib-story-browser');
+  if (browser) {
+    const list=browser.querySelector('[data-story-list]'),status=browser.querySelector('[data-story-status]');
+    let field='all',challenge='all';
+    function render() {
+      const matches=stories.filter(s=>(field==='all'||s.field===field)&&(challenge==='all'||s.bg===challenge));
+      list.replaceChildren(...matches.map(s=>storyCard(s)));
+      if (!matches.length) list.appendChild(create('p','ib-story-empty',t('此分類尚無案例，請嘗試其他條件。','No scenarios match your filters.')));
+      if (status) status.textContent=t('顯示 ','Showing ')+matches.length+t(' 個案例情境（未宣稱真實錄取）。',' illustrative scenarios (no admission outcomes implied).');
+    }
+    browser.querySelectorAll('button[data-filter]').forEach(button => button.addEventListener('click',()=>{
+      if(button.dataset.filter==='field')field=button.dataset.value;
+      else challenge=button.dataset.value;
+      browser.querySelectorAll('button[data-filter="'+button.dataset.filter+'"]').forEach(item =>
+        item.setAttribute('aria-pressed',String(item===button)));
+      render();
+    }));
+    render();
+  }
+  const detail=document.querySelector('[data-story-detail]');
+  if (detail) {
+    const id=new URLSearchParams(location.search).get('id');
+    const story=stories.find(s=>s.id===id);
+    detail.replaceChildren();
+    if (!story) {
+      detail.append(create('h2','',t('找不到此案例','Scenario not found')));
+      const back=create('a','ib-story-read',t('返回案例庫 →','Back to directory →'));
+      back.href='all-cases.html';detail.append(back);
+    } else {
+      const entry=story[lang];
+      document.title=entry.title+' | IvyBridge';
+      detail.append(create('span','ib-story-impact-tag',entry.tag),
+        create('p','ib-story-verified',verified(story)?t('已核實案例','Verified result'):t('申請策略情境示範，非真實錄取結果','Illustrative strategy, not a real admission outcome')),
+        create('h1','',entry.title));
+      for (const [heading,value] of [
+        [t('原始背景','Background'),entry.background],
+        [t('申請挑戰','Challenge'),entry.challenge],
+        [t('IvyBridge 策略思路','Strategic approach'),entry.strategy]]) {
+        const sect=create('section','ib-detail-chapter');
+        sect.append(create('h2','',heading),create('p','',value));detail.append(sect);
+      }
+      const steps=create('section','ib-detail-chapter');steps.append(create('h2','',t('建議準備步驟','Recommended steps')));
+      const ol=create('ol','ib-editorial-list');
+      entry.steps.forEach(step=>ol.appendChild(create('li','',step)));steps.append(ol);detail.append(steps);
+      const results=create('section','ib-detail-chapter');
+      results.append(create('h2','',t('錄取結果與學校','Admission results & universities')),
+        create('p','',resultsLabel(story)));detail.append(results);
+      const note=create('p','ib-editorial-note',entry.advice);detail.append(note);
+      const back=create('a','ib-story-read',t('← 返回完整案例庫','← Back to all scenarios'));
+      back.href='all-cases.html';detail.append(back);
+    }
+  }
 })();

@@ -100,3 +100,11 @@ When changing navigation or tools, verify **all 10 Chinese + 10 English routes**
 - Verify live mobile/browser interactions, bilingual parity and proper indexing only when ready to publish.
 
 **Future AI instruction:** If the owner hasn't approved changing a standard, keep it. If a fact cannot be verified, show a clearly labeled unknown rather than fabricate an attractive statistic.
+
+
+## 10. Approved banner and case-library extensions (2026-10-21)
+- Every major page type in Chinese and English uses the **same `ib-site-banner`** visual system in `public/assets/fixes.css`: navy `#112E4A`, muted gold eyebrow `#D7B77D`, serif headline, soft-white subhead, consistent spacing. Keep the banner above the page TOC, not squeezed beside it.
+- Success Stories retains the exact **HOW WE THINK** framework and adds six visual challenge-led cases (low GPA, no internships, modest English test performance, no full-time experience, changing fields, and non-elite undergraduate background).
+- The **shared case dataset** lives in `public/assets/case-studies-data.js`; the renderer in `public/assets/case-studies.js`; the library routes are `public/all-cases.html` and `public/en/all-cases.html`, and detail routes `case.html?id=<stable-id>`.
+- Do not show fake admitted universities, university logos, GPA/scholarship statistics or case testimonials. The current six cases are **illustrative planning scenarios** only. Replace admission placeholders after owner-supplied evidence and consent. See `docs/CASE_LIBRARY_CONTENT_GUIDE.md`.
+- Use no more than the restrained navy/white/gold brand system for challenge badges. Never vary all page banners independently or add another source of truth for outcomes.

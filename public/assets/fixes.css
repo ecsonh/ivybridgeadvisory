@@ -170,3 +170,44 @@ html[lang="en"] .ib-detail-grid>.ib-detail[data-plan="comprehensive"]::before{co
 .ib-page-shell:has(.ib-home-overview) > .ib-page-sidebar {
   z-index: 1;
 }
+
+
+/* Unified IvyBridge banners — same editorial navy, warm-gold eyebrow and title scale
+   on all 10 page types in both locales. Individual page content remains unchanged. */
+section.ib-site-banner.ib-site-banner{
+  background:#112e4a;
+  color:#fff;
+  padding:clamp(54px,6vw,78px) max(22px,calc((100vw - 1180px)/2));
+  border-color:#234763;
+  border-radius:0;
+  box-sizing:border-box;
+  min-height:0;
+  width:100%;
+  max-width:none;
+}
+section.ib-site-banner.ib-site-banner :is(h1,h1 span){
+  color:#fff;
+  font-family:Georgia,"Noto Serif TC",serif;
+  font-weight:600;
+  font-size:clamp(31px,3.6vw,48px);
+  line-height:1.28;
+  letter-spacing:-.025em;
+}
+section.ib-site-banner.ib-site-banner :is(.ib-eyebrow,.ib-editorial-eyebrow,.guide-eyebrow,.text-gold-700){
+  color:#d7b77d!important;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.15em;
+}
+section.ib-site-banner.ib-site-banner :is(p,.guide-intro,.ib-lead) {
+  color:#dbe5ed;
+  line-height:1.8;
+}
+section.ib-site-banner.ib-site-banner .hero-emphasis{color:#d7b77d!important}
+.ib-site-banner-inner{max-width:1180px;margin:0 auto}
+section.ib-site-banner.ib-site-banner .ib-explorer-grid a{color:#112e4a}
+section.ib-site-banner.ib-site-banner .ib-explorer-grid a :is(strong,small){color:inherit}
+@media(max-width:720px){
+ section.ib-site-banner.ib-site-banner{padding:42px 20px}
+ section.ib-site-banner.ib-site-banner h1{font-size:clamp(29px,7vw,38px)}
+}
