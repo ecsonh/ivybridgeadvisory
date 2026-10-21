@@ -1,0 +1,14 @@
+/* IvyBridge public-safe case-study examples.
+   ONLY status:'verified' with documented authorization may display admission outcomes.
+   Do not add private student records or unverified school/award claims. */
+window.IVYBRIDGE_STORIES = [
+  {id:"stem-transition",field:"stem",bg:"switch",status:"illustrative",
+   zh:{title:"從非資訊本科，規劃 STEM 碩士申請",background:"跨領域轉換 · 先修課規劃",challenge:"本科主修並非資訊領域，如何證明已具備目標學程要求的基礎？",strategy:"先確認各 Program 的先修課與專案條件，再整理能連結原專業與新方向的經歷，形成可信的學術動機。",steps:["盤點學分與先修課缺口","整理作品集與可驗證的專案","依課程要求分層選校"],advice:"跨領域申請不是只換一份文書；課程和專案證據同樣重要。"},
+   en:{title:"Planning a STEM Master's After a Different Major",background:"Changing fields · Prerequisite planning",challenge:"How can an applicant without a CS degree demonstrate preparation for technical graduate study?",strategy:"Review program prerequisites, gather concrete project evidence and connect prior academic experience to a credible graduate-school motivation.",steps:["Audit prerequisites and missing courses","Organize a relevant project portfolio","Build a balanced program list"],advice:"A convincing transition requires academic evidence—not only a different essay."}},
+  {id:"business-direction",field:"business",bg:"working",status:"illustrative",
+   zh:{title:"把工作經驗轉化為商科申請故事",background:"商科／管理 · 職涯方向",challenge:"經歷不少，卻難以說明為什麼需要這個碩士學位。",strategy:"挑選有數字、責任與成果的具體經歷，對應想學的課程能力與畢業後合理的職涯方向。",steps:["梳理工作與專案成果","比較 MBA、MSBA、MFin 等不同項目","建立具體而一致的申請敘事"],advice:"清楚的職涯方向比堆砌形容詞更有說服力。"},
+   en:{title:"Turning Professional Experience into a Business-School Narrative",background:"Business · Career direction",challenge:"How do you explain why graduate business study is the right next step?",strategy:"Connect measurable work achievements, course fit and realistic next-step career goals into a clear application story.",steps:["Identify concrete achievements","Compare MBA, MSBA and specialized master's programs","Connect skills gaps to your study objectives"],advice:"A specific reason for the degree is stronger than generic ambition."}},
+  {id:"humanities-focus",field:"other",bg:"academic",status:"illustrative",
+   zh:{title:"從研究興趣出發，建立人文社科選校策略",background:"人文／社科 · 研究方向",challenge:"興趣廣泛，卻沒有清楚的研究焦點或選校依據。",strategy:"界定具體問題意識，從師資、方法訓練、作品要求與課程結構判斷學程適配度。",steps:["精煉研究主題與寫作樣本","比較教授研究與課程安排","規劃推薦信與學術動機"],advice:"不是每一個名校項目都適合相同的研究方向。"},
+   en:{title:"Finding Program Fit for Humanities and Social Sciences",background:"Humanities · Academic focus",challenge:"How can broad interests become a coherent academic direction?",strategy:"Define a research question and evaluate faculty expertise, methodology, writing requirements and curriculum fit.",steps:["Refine interests and writing samples","Compare faculty and curriculum","Plan recommendations and academic motivation"],advice:"Ranking alone does not determine academic fit."}}
+];
