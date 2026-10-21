@@ -1,14 +1,201 @@
-/* IvyBridge public-safe case-study examples.
-   ONLY status:'verified' with documented authorization may display admission outcomes.
-   Do not add private student records or unverified school/award claims. */
+/* Public-safe case records. Add admittedPrograms ONLY after verifying evidence and publication consent. */
 window.IVYBRIDGE_STORIES = [
-  {id:"stem-transition",field:"stem",bg:"switch",status:"illustrative",
-   zh:{title:"從非資訊本科，規劃 STEM 碩士申請",background:"跨領域轉換 · 先修課規劃",challenge:"本科主修並非資訊領域，如何證明已具備目標學程要求的基礎？",strategy:"先確認各 Program 的先修課與專案條件，再整理能連結原專業與新方向的經歷，形成可信的學術動機。",steps:["盤點學分與先修課缺口","整理作品集與可驗證的專案","依課程要求分層選校"],advice:"跨領域申請不是只換一份文書；課程和專案證據同樣重要。"},
-   en:{title:"Planning a STEM Master's After a Different Major",background:"Changing fields · Prerequisite planning",challenge:"How can an applicant without a CS degree demonstrate preparation for technical graduate study?",strategy:"Review program prerequisites, gather concrete project evidence and connect prior academic experience to a credible graduate-school motivation.",steps:["Audit prerequisites and missing courses","Organize a relevant project portfolio","Build a balanced program list"],advice:"A convincing transition requires academic evidence—not only a different essay."}},
-  {id:"business-direction",field:"business",bg:"working",status:"illustrative",
-   zh:{title:"把工作經驗轉化為商科申請故事",background:"商科／管理 · 職涯方向",challenge:"經歷不少，卻難以說明為什麼需要這個碩士學位。",strategy:"挑選有數字、責任與成果的具體經歷，對應想學的課程能力與畢業後合理的職涯方向。",steps:["梳理工作與專案成果","比較 MBA、MSBA、MFin 等不同項目","建立具體而一致的申請敘事"],advice:"清楚的職涯方向比堆砌形容詞更有說服力。"},
-   en:{title:"Turning Professional Experience into a Business-School Narrative",background:"Business · Career direction",challenge:"How do you explain why graduate business study is the right next step?",strategy:"Connect measurable work achievements, course fit and realistic next-step career goals into a clear application story.",steps:["Identify concrete achievements","Compare MBA, MSBA and specialized master's programs","Connect skills gaps to your study objectives"],advice:"A specific reason for the degree is stronger than generic ambition."}},
-  {id:"humanities-focus",field:"other",bg:"academic",status:"illustrative",
-   zh:{title:"從研究興趣出發，建立人文社科選校策略",background:"人文／社科 · 研究方向",challenge:"興趣廣泛，卻沒有清楚的研究焦點或選校依據。",strategy:"界定具體問題意識，從師資、方法訓練、作品要求與課程結構判斷學程適配度。",steps:["精煉研究主題與寫作樣本","比較教授研究與課程安排","規劃推薦信與學術動機"],advice:"不是每一個名校項目都適合相同的研究方向。"},
-   en:{title:"Finding Program Fit for Humanities and Social Sciences",background:"Humanities · Academic focus",challenge:"How can broad interests become a coherent academic direction?",strategy:"Define a research question and evaluate faculty expertise, methodology, writing requirements and curriculum fit.",steps:["Refine interests and writing samples","Compare faculty and curriculum","Plan recommendations and academic motivation"],advice:"Ranking alone does not determine academic fit."}}
+  {
+    "id": "low-gpa",
+    "field": "stem",
+    "bg": "gpa",
+    "status": "illustrative",
+    "admittedPrograms": [],
+    "consentConfirmed": false,
+    "zh": {
+      "tag": "低 GPA",
+      "title": "成績不突出，如何建立可信的選校梯度？",
+      "background": "匿名申請策略情境",
+      "challenge": "GPA 沒有達到心中理想學校的常見水準，學生擔心第一關就被忽略。",
+      "strategy": "分析成績走勢與關鍵課程表現，選出能證明學術能力的專案，建立衝刺／匹配／保底校清單。",
+      "steps": [
+        "呈現課程能力",
+        "避免只強調總 GPA",
+        "事先核對硬性門檻"
+      ],
+      "advice": "結果仍取決於各校標準與申請者實際條件。此為策略示範，不代表已錄取。"
+    },
+    "en": {
+      "tag": "Low GPA",
+      "title": "Applying with a less competitive GPA",
+      "background": "Illustrative applicant scenario",
+      "challenge": "A less competitive GPA makes the applicant uncertain about program eligibility.",
+      "strategy": "Review grade trends, core courses and projects; build reach, match and safer program tiers.",
+      "steps": [
+        "Highlight relevant coursework",
+        "explain trends and check minimum requirements"
+      ],
+      "advice": "Admission outcomes depend on official requirements and the applicant's real profile; no result is implied."
+    }
+  },
+  {
+    "id": "no-internship",
+    "field": "stem",
+    "bg": "experience",
+    "status": "illustrative",
+    "admittedPrograms": [],
+    "consentConfirmed": false,
+    "zh": {
+      "tag": "沒有實習",
+      "title": "沒有大廠實習，專案能否成為申請亮點？",
+      "background": "匿名申請策略情境",
+      "challenge": "沒有正式實習或大型企業工作經驗，卻有課堂作品與自學成果。",
+      "strategy": "篩選技術深度與可驗證的作品，具體呈現問題、角色、方法與成果。",
+      "steps": [
+        "盤點學術專案",
+        "補足技術證據",
+        "用作品支持 SOP"
+      ],
+      "advice": "結果仍取決於各校標準與申請者實際條件。此為策略示範，不代表已錄取。"
+    },
+    "en": {
+      "tag": "No Internship",
+      "title": "Building a profile without internships",
+      "background": "Illustrative applicant scenario",
+      "challenge": "The applicant has no formal internship but does have coursework and independent projects.",
+      "strategy": "Choose evidence-rich projects and clearly describe the challenge, individual contribution and measurable results.",
+      "steps": [
+        "Review projects",
+        "strengthen evidence and connect work to the statement"
+      ],
+      "advice": "Admission outcomes depend on official requirements and the applicant's real profile; no result is implied."
+    }
+  },
+  {
+    "id": "low-test",
+    "field": "business",
+    "bg": "test",
+    "status": "illustrative",
+    "admittedPrograms": [],
+    "consentConfirmed": false,
+    "zh": {
+      "tag": "語言成績不突出",
+      "title": "TOEFL 不夠亮眼，如何規劃可行的申請路線？",
+      "background": "匿名申請策略情境",
+      "challenge": "語言成績接近部分項目最低門檻，但短期內難以大幅提升。",
+      "strategy": "先核對硬性語言標準與豁免政策，再安排補考優先級和可申請項目；不把文書當成門檻替代品。",
+      "steps": [
+        "標化門檻檢查",
+        "重考策略",
+        "避免無效申請"
+      ],
+      "advice": "結果仍取決於各校標準與申請者實際條件。此為策略示範，不代表已錄取。"
+    },
+    "en": {
+      "tag": "Language Score",
+      "title": "Planning around a lower English test score",
+      "background": "Illustrative applicant scenario",
+      "challenge": "English test performance is near some published minimums, with limited time to retake.",
+      "strategy": "Check institutional minimums and waiver policies, then prioritize retakes and eligible programs; essays cannot override firm requirements.",
+      "steps": [
+        "Verify policies",
+        "plan retakes and avoid ineligible applications"
+      ],
+      "advice": "Admission outcomes depend on official requirements and the applicant's real profile; no result is implied."
+    }
+  },
+  {
+    "id": "no-work",
+    "field": "business",
+    "bg": "experience",
+    "status": "illustrative",
+    "admittedPrograms": [],
+    "consentConfirmed": false,
+    "zh": {
+      "tag": "零工作經驗",
+      "title": "沒有全職工作經驗，也能說清楚商科動機嗎？",
+      "background": "匿名申請策略情境",
+      "challenge": "大學剛畢業，缺少全職經驗，仍希望申請分析或管理相關碩士。",
+      "strategy": "區分對年資有要求的 MBA 與適合早期職涯的專業碩士，以學術、專題與校內責任描述可轉移能力。",
+      "steps": [
+        "辨識學位差異",
+        "對應課程能力",
+        "建立務實職涯目標"
+      ],
+      "advice": "結果仍取決於各校標準與申請者實際條件。此為策略示範，不代表已錄取。"
+    },
+    "en": {
+      "tag": "No Work Experience",
+      "title": "Explaining business goals without full-time work",
+      "background": "Illustrative applicant scenario",
+      "challenge": "A recent graduate without full-time experience wants to apply to business-oriented master’s programs.",
+      "strategy": "Distinguish experience-heavy MBA programs from suitable early-career master’s programs, then demonstrate transferable skills through coursework and projects.",
+      "steps": [
+        "Choose appropriate degree types",
+        "show transferable skills and develop realistic goals"
+      ],
+      "advice": "Admission outcomes depend on official requirements and the applicant's real profile; no result is implied."
+    }
+  },
+  {
+    "id": "career-switch",
+    "field": "stem",
+    "bg": "switch",
+    "status": "illustrative",
+    "admittedPrograms": [],
+    "consentConfirmed": false,
+    "zh": {
+      "tag": "跨領域轉專業",
+      "title": "非本科申請 STEM，先修課缺口怎麼補？",
+      "background": "匿名申請策略情境",
+      "challenge": "本科主修非技術領域，卻希望轉往資料分析或軟體方向。",
+      "strategy": "逐一比對先修課條件，訂定補修與作品計畫，將原領域經驗連結新方向。",
+      "steps": [
+        "學分盤點",
+        "補修路線",
+        "跨領域敘事"
+      ],
+      "advice": "結果仍取決於各校標準與申請者實際條件。此為策略示範，不代表已錄取。"
+    },
+    "en": {
+      "tag": "Career Switch",
+      "title": "Making a credible interdisciplinary transition",
+      "background": "Illustrative applicant scenario",
+      "challenge": "An applicant from a nontechnical discipline wants to transition into analytics or software.",
+      "strategy": "Audit prerequisites, plan bridging coursework and projects, and connect previous experience to the new discipline.",
+      "steps": [
+        "Audit credits",
+        "plan preparation and explain the transition"
+      ],
+      "advice": "Admission outcomes depend on official requirements and the applicant's real profile; no result is implied."
+    }
+  },
+  {
+    "id": "ordinary-school",
+    "field": "other",
+    "bg": "academic",
+    "status": "illustrative",
+    "admittedPrograms": [],
+    "consentConfirmed": false,
+    "zh": {
+      "tag": "非名校背景",
+      "title": "非名校出身，如何讓研究能力被看見？",
+      "background": "匿名申請策略情境",
+      "challenge": "本科學校知名度不高，申請者擔心招生委員無法快速理解其能力。",
+      "strategy": "用具體課程、研究作品、寫作樣本與推薦人觀察建立可驗證證據，避免單純強調學校名氣。",
+      "steps": [
+        "作品與課程證據",
+        "推薦信要點",
+        "項目適配度"
+      ],
+      "advice": "結果仍取決於各校標準與申請者實際條件。此為策略示範，不代表已錄取。"
+    },
+    "en": {
+      "tag": "Non-elite Background",
+      "title": "Showing potential beyond university prestige",
+      "background": "Illustrative applicant scenario",
+      "challenge": "The applicant's university is less widely known, making academic preparation harder to convey at a glance.",
+      "strategy": "Use substantive courses, research or writing samples and credible references to demonstrate preparation.",
+      "steps": [
+        "Show academic work",
+        "actionable references and program fit"
+      ],
+      "advice": "Admission outcomes depend on official requirements and the applicant's real profile; no result is implied."
+    }
+  }
 ];
