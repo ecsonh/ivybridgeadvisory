@@ -211,3 +211,28 @@ section.ib-site-banner.ib-site-banner .ib-explorer-grid a :is(strong,small){colo
  section.ib-site-banner.ib-site-banner{padding:42px 20px}
  section.ib-site-banner.ib-site-banner h1{font-size:clamp(29px,7vw,38px)}
 }
+
+
+/* IvyBridge academic crest — replaces the legacy IB badge site-wide. */
+header a.group > div:first-child:has(> span:first-child) {
+  width: 52px !important;
+  height: 52px !important;
+  min-width: 52px;
+  flex: 0 0 52px;
+  background: #0b2135 url("ivybridge-crest.svg") center / contain no-repeat !important;
+  border-radius: 50% !important;
+  box-shadow: none !important;
+  overflow: hidden;
+}
+header a.group > div:first-child:has(> span:first-child) > span {
+  opacity: 0 !important;
+  font-size: 0 !important;
+}
+@media (max-width: 420px) {
+  header a.group > div:first-child:has(> span:first-child) {
+    width: 43px !important;
+    height: 43px !important;
+    min-width: 43px;
+    flex-basis: 43px;
+  }
+}
