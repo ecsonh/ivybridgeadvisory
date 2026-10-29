@@ -28,8 +28,10 @@ Website homepage highlights plans **without displaying package prices**. Details
 - If any existing page uses contradictory wording, flag and align after approval; avoid unrequested pricing changes.
 
 ## 4. Navigation, architecture and interaction
+
+**Owner-approved update (2026-10-29):** the unified `/study-guide.html` (and `/en/study-guide.html`) supersedes separate top-level guide/explorer entries. Use **留學指南 / Study Guide** immediately before Success Stories. The four-stage order and optional tools below replace the older Explorer ordering. Keep `/us-masters-guide.html` as deeper reading and `/study-basics.html` for study/life detail; legacy `/why-us.html` and `/insights.html` redirect to the hub, preserving queries and supported hashes.
 - Chinese routes: /index.html, /ivybridge.html (legacy alias), /services.html, /why-us.html, /cases.html, /insights.html, /about.html, /contact.html, /custom-services.html, /us-masters-guide.html. English analogues under /en/.
-- Navigation term: **留學探索中心 / Explorer** for insights.html. **美國留學指南 / Study in the USA** for why-us.html.
+- Navigation term: **留學指南 / Study Guide** for study-guide.html. Do not restore the old guide/explorer items as separate primary navigation entries.
 - Preserve `?plan=essential|comprehensive|elite|custom` when switching language; `services.html#essential|comprehensive|elite` must land on the matching plan. Keep valid fragment/anchor translation in `public/assets/language.js`.
 - Shared section navigation is implemented in `public/assets/site-structure.js`; do not duplicate 20 different TOC implementations. Ensure it does not cover CTAs or cause layout overflow. Accessible keyboard interactions and aria-current on active section are required.
 - On mobile, the TOC must collapse or become horizontally scrollable. Respect reduced-motion setting.
@@ -37,11 +39,13 @@ Website homepage highlights plans **without displaying package prices**. Details
 - **The consultation and custom forms are currently local-only preparation/downloads**. A verified receiving integration, contact address, availability, privacy terms and explicit owner consent are required to enable sending.
 - Preview pages use noindex: don't remove until the owner approves public launch.
 
-## 5. Study & Career Explorer: page sequence
-- Study Explorer → Master's admissions data → cost/budget calculator → career explorer (including notable employer examples) → application timeline → articles at the very bottom.
-- Remove duplicated search text box: use one school dropdown for 50 curated institutions (not officially ranked “Top 50”). STEM/Business selection is independent. Missing program data must not be manufactured.
-- Salary explorer should not have a redundant target-company dropdown. Employer examples are illustrative; no assertion of hiring or salary.
-- “出國大小事” / departure and post-admission checklist belongs under the American study guide (why-us.html), NOT the Explorer.
+## 5. Unified Study Guide: page sequence
+- Four concise chapters: **認識碩士 → 選校與職涯 → 費用預算 → 申請準備** (Understand study → Programs & careers → Budget → Preparation).
+- Consistent banner before the shared chapter navigation; one short introduction, no immediately expanded calculators or data tables.
+- School and career tools live under chapter 2, budget under chapter 3, timeline and post-offer/departure preparation under chapter 4. Close tools by default and preserve accessible deep links.
+- Keep the original 50-school selector, STEM/Business distinction, source/year/null display, career employer examples and calculator assumptions. Never invent data.
+- Longer introduction and study/life explanations are linked as deeper reading, not duplicated in full on the hub. Only published reading resources are clickable.
+- End with Success Stories then Consultation. No second competing chapter navigation.
 
 ## 6. Rates, sources and truthfulness
 - `public/assets/admissions-data.js` is the only published source for graduate program rates. Each non-null rate must include **school, field, exact program, year, percentage, source URL, quality** and relevant caveats. See `ADMISSIONS_DATA_GUIDE.md`.

@@ -6,10 +6,12 @@
   const originalFile = location.pathname.split('/').pop() || 'index.html';
   const file = originalFile === 'ivybridge.html' ? 'index.html' : originalFile;
   const query = location.search;
-  const rawHash = decodeURIComponent(location.hash.slice(1));
+  let rawHash = decodeURIComponent(location.hash.slice(1));
 
   // Anchor ids that exist in both language versions.
   const shared = {
+    'study-guide.html': ['guide-start','guide-schools','guide-budget','guide-application','guide-next','school-tool','career-tool','budget-tool','timeline-tool','departure-tool','ib-school-explorer','career-explorer','practical-training','arrival-checklist','explorer-articles','study-benefits','program-choices','study-intro','study-next-step','budget-explorer','cost-planner','topic-1','application-planning','application-timeline','topic-0','career-resources'],
+    'study-basics.html': ['study-intro','study-benefits','program-choices','practical-training','arrival-checklist','study-next-step'],
     'index.html': ['plans', 'admissions-wall'],
     'services.html': ['plan-details', 'essential', 'comprehensive', 'elite', 'service-paths', 'how-it-works', 'compare-plans', 'service-faq'],
     'contact.html': [],
@@ -18,10 +20,10 @@
     'why-us.html': ['study-intro', 'study-benefits', 'program-choices', 'practical-training', 'arrival-checklist', 'study-next-step'],
     'insights.html': ['ib-school-explorer', 'explorer-articles', 'budget-explorer', 'application-planning'],
     'about.html': [],
-    'us-masters-guide.html': []
+    'us-masters-guide.html': ['fit','programs','requirements','timeline','budget','before-departure','our-strengths','guide-faq']
   };
 
-  const enMainAnchor = ['services.html', 'custom-services.html', 'why-us.html'].includes(file) ? 'main-content' : 'content';
+  const enMainAnchor = ['services.html', 'custom-services.html', 'why-us.html', 'study-guide.html', 'study-basics.html', 'us-masters-guide.html'].includes(file) ? 'main-content' : 'content';
 
   function counterpartHash(targetEnglish) {
     if (!rawHash) return '';
@@ -36,6 +38,8 @@
       if (!['topic-0', 'topic-1', 'application-timeline', 'cost-planner', 'ib-school-explorer', 'explorer-articles', 'budget-explorer', 'application-planning', 'career-explorer', 'career-resources'].includes(anchor)) {
         anchor = targetEnglish ? enMainAnchor : 'main-content';
       }
+    } else if (file === 'study-guide.html' && /^timeline-panel-[0-3]$/.test(rawHash)) {
+      anchor = targetEnglish ? 'timeline-tool' : rawHash;
     } else if (!(shared[file] || []).includes(rawHash)) {
       // The English master's guide does not have corresponding section anchors.
       anchor = targetEnglish ? enMainAnchor : 'main-content';
@@ -68,6 +72,14 @@
   }
   wrap.appendChild(nav);
   document.body.appendChild(wrap);
+  function refreshLanguageLinks() {
+    try { rawHash = decodeURIComponent(location.hash.slice(1)); } catch (_) { rawHash = ''; }
+    const links=wrap.querySelectorAll('a');
+    links[0].href=(isEnglish ? '../' : '')+file+query+counterpartHash(false);
+    links[1].href=(isEnglish ? '' : 'en/')+file+query+counterpartHash(true);
+  }
+  window.addEventListener('hashchange', refreshLanguageLinks);
+  window.addEventListener('ivybridge:sectionchange', refreshLanguageLinks);
 
   // Keep relative HTML navigation inside /en rather than jumping to the Chinese site.
   if (isEnglish) {

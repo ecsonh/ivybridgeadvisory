@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>留學指南｜美國碩士規劃與申請 | IvyBridge</title>
+  <link rel="stylesheet" href="assets/site.css"><meta name="description" content="依四個階段規劃美國碩士：認識碩士、選校與職涯、費用預算、申請準備。完整指南與工具按需開啟。">
+  
+  <!-- Structured Data / JSON-LD for Organic SEO -->
+  <!-- Tailwind CSS & Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>
+    /* Smooth transitions & subtle scrollbar */
+    html { scroll-behavior: smooth; }
+    ::selection { background-color: #C5A880; color: #0A2540; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #F8FAFC; }
+    ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
+    
+    .border-subtle { border-color: rgba(226, 232, 240, 0.85); }
+    .hero-gradient { background: radial-gradient(circle at 50% 0%, rgba(235, 242, 249, 0.8) 0%, rgba(255, 255, 255, 1) 75%); }
+    .badge-gold { background-color: #FAF8F5; color: #946C2D; border: 1px solid #D8C2A5; }
+  </style>
+<meta name="robots" content="noindex, nofollow"><link rel="stylesheet" href="assets/fixes.css"><link rel="stylesheet" href="assets/study-guide.css"></head>
+<body class="bg-[#FFFFFF] text-slate-800 font-sans antialiased selection:bg-gold-500 selection:text-white">
+
+  <a href="#main-content" class="skip-link">跳至主要內容</a><aside class="preview-notice">網站預覽：案例、錄取數據、顧問資歷與服務承諾尚待品牌方核實；示意內容不代表實際成果。聯絡與預約尚未啟用。</aside><!-- TOP BAR: Quick Notice & Direct Contact -->
+  <aside aria-label="Announcement" class="bg-ivy-900 text-slate-300 text-xs py-2 px-4 border-b border-ivy-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center space-x-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="font-medium text-slate-200">2027 Fall 美國碩士深度評估啟動</span>
+        <span class="text-slate-400 hidden md:inline">｜ 堅持 1:5 極致師生比，各梯次額滿即止</span>
+      </div>
+      <div class="flex items-center space-x-6 text-slate-300">
+        <button type="button" id="top-line-btn" class="hover:text-gold-400 transition flex items-center gap-1.5 focus:outline-none">
+          <svg class="w-3.5 h-3.5 text-emerald-400" viewbox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349.002.634.286.636.634v.013c0 4.962-4.037 9-9 9-1.282 0-2.502-.271-3.606-.759l-4.704 1.344 1.373-4.604C3.411 14.364 3 12.872 3 11.272c0-4.962 4.038-9 9-9 4.962 0 9 4.038 9 9.002v.004l-.001.004c-.002.32-.266.579-.587.581h-1.047z"></path></svg>
+          官方 LINE: 帳號待確認
+        </button>
+        <span class="text-slate-600 hidden sm:inline">|</span>
+        <span class="hover:text-gold-400 transition hidden sm:inline-flex items-center gap-1">正式聯絡方式待確認</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- STICKY HEADER -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- LOGO -->
+      <a href="ivybridge.html" class="flex items-center space-x-3 group">
+        <div class="w-11 h-11 rounded-lg bg-ivy-800 flex items-center justify-center text-white shadow-sm group-hover:bg-ivy-900 transition">
+          <span class="font-display font-bold text-xl text-gold-400 tracking-wider">IB</span>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-1.5">
+            <span class="text-xl font-bold tracking-tight text-ivy-800 font-serif">IvyBridge</span>
+            <span class="text-base font-semibold text-slate-800">領航留學</span>
+          </div>
+          <span class="text-[10px] tracking-widest text-slate-500 uppercase font-sans">Bespoke US Admissions</span>
+        </div>
+      </a>
+
+      <!-- DESKTOP NAV -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600 desktop-navigation" aria-label="主要導覽">
+        <a href="services.html" class="hover:text-ivy-800 transition py-2 border-b-2 border-transparent hover:border-gold-500">服務一覽</a>
+        <a href="study-guide.html" class="hover:text-ivy-800 transition py-2 border-b-2 border-transparent hover:border-gold-500" aria-current="page">留學指南</a><a href="cases.html" class="hover:text-ivy-800 transition py-2 border-b-2 border-transparent hover:border-gold-500">成功案例牆</a>
+        <a href="about.html" class="hover:text-ivy-800 transition py-2 border-b-2 border-transparent hover:border-gold-500">關於我們</a>
+      </nav>
+
+      <!-- CTA BUTTONS -->
+      <div class="hidden md:flex items-center space-x-4 desktop-actions">
+        <button type="button" id="open-line-modal-btn" class="text-xs font-medium text-ivy-800 hover:text-gold-700 px-3 py-2 border border-slate-200 rounded-md hover:bg-slate-50 transition flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-emerald-600" viewbox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.03 2 11c0 2.87 1.5 5.41 3.84 7.02l-.98 3.63 3.9-1.28C9.8 20.72 10.88 21 12 21c5.52 0 10-4.03 10-9s-4.48-9-10-9z"></path></svg>
+          LINE 快速詢問
+        </button>
+        <a href="contact.html" class="inline-flex items-center justify-center text-xs font-semibold px-4 py-2.5 rounded-md bg-ivy-800 text-white hover:bg-ivy-900 shadow-sm transition">
+          預約 1-on-1 落點評估
+        </a>
+      </div>
+
+      <!-- MOBILE HAMBURGER -->
+      <div class="md:hidden flex items-center compact-menu-toggle">
+        <button type="button" id="mobile-menu-btn" aria-label="開啟導覽選單" class="p-2 rounded-md text-slate-700 hover:text-ivy-800 hover:bg-slate-100 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" viewbox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- MOBILE MENU DRAWER -->
+    <div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3">
+      <a href="services.html" class="block py-2 text-base font-medium text-slate-700 hover:text-ivy-800 mobile-nav-link">服務一覽</a>
+      <a href="study-guide.html" class="block py-2 text-base font-medium text-slate-700 hover:text-ivy-800 mobile-nav-link" aria-current="page">留學指南</a><a href="cases.html" class="block py-2 text-base font-medium text-slate-700 hover:text-ivy-800 mobile-nav-link">成功案例牆</a>
+      <a href="about.html" class="block py-2 text-base font-medium text-slate-700 hover:text-ivy-800 mobile-nav-link">關於我們</a>
+      <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+        <button type="button" id="mobile-line-btn" class="w-full text-center py-2.5 px-4 text-sm font-medium border border-slate-300 rounded-md text-slate-800 hover:bg-slate-50">
+          LINE 官方帳號諮詢 (帳號待確認)
+        </button>
+        <a href="contact.html" class="w-full text-center py-2.5 px-4 text-sm font-semibold bg-ivy-800 text-white rounded-md hover:bg-ivy-900 mobile-nav-link">
+          預約 1-on-1 落點評估
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <section class="ib-site-banner guide-hub-banner"><div class="guide-hub-width"><p class="ib-eyebrow">MASTER’S STUDY GUIDE</p><h1>美國碩士，<span class="guide-keep">從規劃到申請。</span></h1><p>從選擇方向、比較學校，到預算與申請準備，找到你現在需要的資訊。</p></div></section><main id="main-content" class="guide-hub" data-guide-hub><span id="content"></span><span class="guide-legacy-anchor" id="study-intro" aria-hidden="true"></span><span class="guide-legacy-anchor" id="study-benefits" aria-hidden="true"></span><span class="guide-legacy-anchor" id="program-choices" aria-hidden="true"></span><section class="guide-chapter" id="guide-start" data-guide-chapter><p class="guide-step">01</p><h2>認識碩士</h2><p class="guide-chapter-lead">先釐清你想獲得什麼，再決定適合的學位與課程。</p><ul class="guide-key-points"><li>比較研究、實作與職涯導向的課程設計。</li><li>核對先修課、學習背景與跨領域申請條件。</li><li>以課程、地點與個人目標評估適配度，不只看排名。</li></ul><div class="guide-reading-links"><a href="us-masters-guide.html">閱讀完整碩士入門指南 →</a><a href="study-basics.html">了解美國課程、實習與生活 →</a></div></section><section class="guide-chapter" id="guide-schools" data-guide-chapter><p class="guide-step">02</p><h2>選校與職涯</h2><p class="guide-chapter-lead">先看專業與職涯方向，再比較具體的學校與碩士項目。</p><ul class="guide-key-points"><li>先比較課程、先修與畢業要求，再參考招生資料。</li><li>錄取率僅代表列出的項目與年份，不是你的個人錄取機率。</li><li>用職業資料與代表企業探索方向，不將薪資視為就業承諾。</li></ul><details class="guide-tool" id="school-tool"><summary><span>開啟學校探索</span><small>50 所精選大學 · STEM／商科 · 標示資料來源</small></summary><div class="guide-tool-body"><section class="ib-upgrade ib-upgrade-muted guide-tool-content" id="ib-school-explorer"><div class="ib-plans-inner"><p class="ib-eyebrow">GRADUATE ADMISSIONS DATA</p><h3>探索 50 所美國大學的碩士招生資訊</h3><p class="ib-lead">精選 50 所常見申請目標學校（並非官方排名 Top 50）。選擇 STEM 或商科，再選學校。數字來自校方公開資料或具來源的第三方招生研究，並標示具體 Program 與年份。</p><div class="ib-explorer-two"><div class="ib-explorer-panel"><label for="ib-field-choice">探索領域</label><select id="ib-field-choice" class="ib-tool-select"><option value="stem">STEM / 科學與工程</option><option value="business">商科／管理</option></select><label for="ib-school-choice">選擇大學</label><select id="ib-school-choice" class="ib-tool-select"></select><p id="ib-school-count" class="ib-fine" aria-live="polite"></p><p class="ib-fine">注意：同一大學不同碩士項目可能差異極大；多數大學並未完整公開研究所 Program 錄取率。</p></div><div class="ib-explorer-panel ib-result-panel" aria-live="polite"><p class="ib-eyebrow">所選碩士 Program 錄取率</p><div id="ib-school-metric" class="ib-metric">—</div><p id="ib-school-subtitle" class="ib-metric-subtitle"></p><a id="ib-school-source" class="ib-plan-link" href="https://msande.stanford.edu/academics-admissions/graduate/admission/ms-admission-statistics" target="_blank" rel="noopener noreferrer" hidden>查看校方統計 ↗</a><p id="ib-school-note" class="ib-fine"></p><a id="ib-school-compare" class="ib-plan-link" href="https://facts.mit.edu/graduate-student-admission/" target="_blank" rel="noopener noreferrer" hidden>查看全校研究所統計（非領域錄取率）↗</a><div class="ib-brand-stat"><span>IvyBridge 申請成果 · 待核實</span><strong>85% <span class="ib-unverified-tag">待核實</span></strong><small>尚待核實：未提供樣本數、統計期間與「至少一個錄取」或「申請項目錄取」的定義，不能直接與個別學校錄取率比較。</small></div></div></div><p class="ib-source-note">資料更新依校方來源；「未公開／待核實」表示本工具沒有可信的對應碩士 Program 數字，並非錄取率為零。 <a href="https://msande.stanford.edu/academics-admissions/graduate/admission/ms-admission-statistics" target="_blank" rel="noopener noreferrer">Stanford MS&amp;E (2025)</a> · <a href="https://facts.mit.edu/graduate-student-admission/" target="_blank" rel="noopener noreferrer">MIT Graduate Admissions (2025)</a></p></div></section></div></details><span class="guide-legacy-anchor" id="career-resources" aria-hidden="true"></span><details class="guide-tool" id="career-tool"><summary><span>開啟職涯探索</span><small>相關職業、地區與代表企業</small></summary><div class="guide-tool-body"><section class="ib-plans guide-tool-content" id="career-explorer"><div class="ib-plans-inner"><p class="ib-eyebrow">職涯規劃互動工具</p><h3>美國碩士畢業職涯薪資探索</h3><p class="ib-lead">選擇科系與工作地區，探索相關職業與薪資研究方向。不同公司、年資與職位的薪酬差異很大。</p><div class="ib-detail-grid"><div class="ib-detail"><label for="ib-major">碩士專業領域</label><select id="ib-major" class="ib-tool-select"><option value="cs">資訊工程／電腦科學</option><option value="data">資料科學／分析</option><option value="business">商管／金融</option><option value="engineering">工程</option><option value="health">公共衛生／健康管理</option></select><label for="ib-region">工作地區</label><select id="ib-region" class="ib-tool-select"><option value="national">美國全國</option><option value="ny">紐約地區</option><option value="ca">加州</option><option value="wa">華盛頓州</option></select></div><div class="ib-detail"><h3 id="ib-career-role">軟體開發人員</h3><p id="ib-career-note">職業與薪資資料請參考美國勞工統計局的最新資料。</p><a id="ib-career-source" class="ib-plan-link" href="https://www.bls.gov/oes/" target="_blank" rel="noopener">查看 BLS 職業薪資資料 ↗</a><p class="ib-fine">目前不顯示未經核實的公司薪資數字。下列公司僅為相關產業的代表企業，並不代表正在招聘或提供特定薪酬。</p><div class="ib-company-examples"><strong>相關領域的知名企業</strong><ul id="ib-company-examples"></ul></div></div><div class="ib-detail"><h3>畢業後求職顧問</h3><p>除了美國研究所申請，IvyBridge 也規劃提供履歷、求職策略與面試準備等畢業後諮詢服務。</p><p class="ib-fine">此為獨立諮詢項目，並非所有升學方案均包含。</p><a href="contact.html" class="ib-plan-link">詢問職涯諮詢 →</a></div></div></div></section></div></details></section><section class="guide-chapter" id="guide-budget" data-guide-chapter><p class="guide-step">03</p><h2>費用預算</h2><p class="guide-chapter-lead">先估整個學位的成本，再調整學校與生活安排。</p><ul class="guide-key-points"><li>學費、生活費、保險與申請費分開估算。</li><li>將學制長度與城市差異納入總預算。</li><li>試算是規劃情境，正式費用與獎學金以學校公告為準。</li></ul><span class="guide-legacy-anchor" id="cost-planner" aria-hidden="true"></span><details class="guide-tool" id="budget-tool"><summary><span>開始費用試算</span><small>按地區、學校類型與科系估算一年開銷</small></summary><div class="guide-tool-body"><section class="ib-upgrade ib-upgrade-muted guide-tool-content" id="budget-explorer"><div class="ib-plans-inner"><p class="ib-eyebrow">02 · STUDY BUDGET</p><h3>規劃留學成本與預算</h3><p class="ib-lead">了解學費與生活費的大致範圍，並以各學校官方報價核實。</p><div class="bg-white rounded-lg border border-slate-200 p-6 sm:p-8 mb-12 shadow-sm">
+          <div class="border-b border-slate-100 pb-4 mb-6">
+            <h3 class="text-lg font-bold text-ivy-900 font-serif" id="topic-1">美國研究所年開銷即時試算器</h3>
+            <p class="text-xs text-slate-500">依據不同地理區域、學校屬性與科系，即時估算 1 年學費與生活費（美金/台幣）</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
+            <div>
+              <label class="block font-semibold text-slate-700 mb-2" for="cost-region">目標區域 (Location)：</label>
+              <select id="cost-region" class="w-full p-2.5 bg-slate-50 border border-slate-300 rounded-md text-slate-800 focus:outline-none focus:ring-1 focus:ring-ivy-800">
+                <option value="east">美東 (紐約、波士頓等 - 生活費最高)</option>
+                <option value="west">美西 (加州矽谷、西雅圖等 - 生活費高)</option>
+                <option value="central">中部/南部 (德州、伊利諾等 - 生活費實惠)</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block font-semibold text-slate-700 mb-2" for="cost-type">學校性質 (Type)：</label>
+              <select id="cost-type" class="w-full p-2.5 bg-slate-50 border border-slate-300 rounded-md text-slate-800 focus:outline-none focus:ring-1 focus:ring-ivy-800">
+                <option value="private">私立大學 (如 Columbia, USC, NYU, CMU)</option>
+                <option value="public">公立大學 (如 UC Berkeley, UIUC, UT Austin)</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block font-semibold text-slate-700 mb-2" for="cost-major">申請科系學門 (Major)：</label>
+              <select id="cost-major" class="w-full p-2.5 bg-slate-50 border border-slate-300 rounded-md text-slate-800 focus:outline-none focus:ring-1 focus:ring-ivy-800">
+                <option value="stem">工學院 / STEM (CS, EE, Data, MSBA)</option>
+                <option value="mba">頂尖商學院 (MBA, 專項金融碩士)</option>
+                <option value="other">人文社科 / 教育 / 傳播設計</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- DYNAMIC CALCULATION RESULT BOX -->
+          <div class="mt-6 p-5 bg-ivy-50 rounded-lg border border-ivy-200/80 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+              <span class="text-[11px] font-semibold text-ivy-700 uppercase tracking-wide">預估年開銷範圍 (Annual Estimate)</span>
+              <div class="text-2xl sm:text-3xl font-bold text-ivy-900 mt-0.5" id="cost-output-usd">
+                $68,000 ~ $88,000 USD
+              </div>
+              <p class="text-xs text-slate-600 mt-1" id="cost-output-twd">
+                折合新台幣約：NT$ 2,176,000 ~ 2,816,000 元／年（含學費與基本食宿保險）
+              </p>
+            <p class="page-toc">試算僅為預算情境，非即時報價；固定假設匯率 1 USD = 32 TWD，非即時匯率。請依各校官方費用核實。</p></div>
+            <a href="contact.html" class="px-5 py-2.5 bg-ivy-800 text-white rounded text-xs font-semibold hover:bg-ivy-900 transition shrink-0">
+              索取專屬預算與獎學金方案
+            </a>
+          </div>
+
+        </div></div></section></div></details><p class="guide-deep-link"><a href="us-masters-guide.html#budget">如何估算整個學位的預算 →</a></p></section><section class="guide-chapter" id="guide-application" data-guide-chapter><p class="guide-step">04</p><h2>申請準備</h2><p class="guide-chapter-lead">以每個項目的截止日倒推，逐步安排文件、面試與行前準備。</p><ul class="guide-key-points"><li>確認考試、文書、推薦人與文件要求。</li><li>送件前檢查完整性，依各校流程準備面試。</li><li>取得錄取後，再確認入學、簽證、住宿與保險。</li></ul><span class="guide-legacy-anchor" id="application-timeline" aria-hidden="true"></span><details class="guide-tool" id="timeline-tool"><summary><span>查看申請時間線</span><small>從前期規劃到錄取後安排</small></summary><div class="guide-tool-body"><section class="ib-upgrade guide-tool-content" id="application-planning"><div class="ib-plans-inner"><p class="ib-eyebrow">04 · APPLICATION TIMELINE</p><h3>你的研究所申請時間線</h3><p class="ib-lead">開啟每個階段，查看關鍵任務與需注意的文件。</p><div class="bg-white rounded-lg border border-slate-200 p-6 sm:p-8 mb-12 shadow-sm">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-slate-100 pb-4 mb-6">
+            <div>
+              <h3 class="text-lg font-bold text-ivy-900 font-serif" id="topic-0">18 個月美國碩士申請全景時程導引</h3>
+              <p class="text-xs text-slate-500">點擊各月份區間，查看關鍵任務交付要求</p>
+            </div>
+            <span class="badge-gold text-xs px-3 py-1 rounded font-medium">申請必備甘特指南</span>
+          </div>
+
+          <div class="space-y-3" id="timeline-accordion">
+            
+            <!-- STEP 1 -->
+            <div class="border border-slate-200 rounded-md overflow-hidden">
+              <button type="button" class="timeline-toggle w-full px-5 py-3.5 bg-slate-50 hover:bg-slate-100 text-left flex justify-between items-center text-xs font-bold text-slate-800 transition" aria-controls="timeline-panel-0">
+                <span class="flex items-center gap-2">
+                  <span class="w-5 h-5 rounded-full bg-ivy-800 text-white flex items-center justify-center text-[10px]">1</span>
+                  出國前 14~18 個月 (大三下 / 5月~7月)：方向定錨與背景盤點
+                </span>
+                <span class="text-slate-400 font-mono text-sm toggle-icon">+</span>
+              </button>
+              <div class="timeline-body hidden px-5 py-4 text-xs text-slate-600 space-y-2 bg-white" id="timeline-panel-0">
+                <p>• <strong>核心目標：</strong>確定目標專業（商學院/STEM/轉領域），檢視大學在校成績 GPA，評估是否需要先修學分補強。</p>
+                <p>• <strong>標化考試：</strong>啟動托福 (TOEFL) 或 GRE/GMAT 衝刺；如有意採條件式入學或免 GRE 項目，同步確認當年免試政策。</p>
+                <p>• <strong>顧問交付：</strong>IvyBridge 啟動背景健檢訪談，規劃大三暑期高含金量實習或實驗室專題。</p>
+              </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="border border-slate-200 rounded-md overflow-hidden">
+              <button type="button" class="timeline-toggle w-full px-5 py-3.5 bg-slate-50 hover:bg-slate-100 text-left flex justify-between items-center text-xs font-bold text-slate-800 transition" aria-controls="timeline-panel-1">
+                <span class="flex items-center gap-2">
+                  <span class="w-5 h-5 rounded-full bg-ivy-800 text-white flex items-center justify-center text-[10px]">2</span>
+                  出國前 10~13 個月 (大四上 / 8月~10月)：梯次選校與文書大修
+                </span>
+                <span class="text-slate-400 font-mono text-sm toggle-icon">+</span>
+              </button>
+              <div class="timeline-body hidden px-5 py-4 text-xs text-slate-600 space-y-2 bg-white" id="timeline-panel-1">
+                <p>• <strong>核心目標：</strong>完成選校清單定稿（衝刺校、核心校、保底校分配），聯繫 2~3 位推薦人（教授/主管）。</p>
+                <p>• <strong>文書啟動：</strong>CV 產線級精修、個人陳述 (SOP) 框架成形、針對不同學校 Prompt 深度調校。</p>
+                <p>• <strong>顧問交付：</strong>完成英文履歷、推薦信草稿擬定，SOP 進入第一輪邏輯重構與外師潤飾。</p>
+              </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="border border-slate-200 rounded-md overflow-hidden">
+              <button type="button" class="timeline-toggle w-full px-5 py-3.5 bg-slate-50 hover:bg-slate-100 text-left flex justify-between items-center text-xs font-bold text-slate-800 transition" aria-controls="timeline-panel-2">
+                <span class="flex items-center gap-2">
+                  <span class="w-5 h-5 rounded-full bg-ivy-800 text-white flex items-center justify-center text-[10px]">3</span>
+                  出國前 7~9 個月 (11月~1月)：Round 1 &amp; 2 全面送件
+                </span>
+                <span class="text-slate-400 font-mono text-sm toggle-icon">+</span>
+              </button>
+              <div class="timeline-body hidden px-5 py-4 text-xs text-slate-600 space-y-2 bg-white" id="timeline-panel-2">
+                <p>• <strong>核心目標：</strong>全美百大與名校第一輪 (Priority Deadline) 送件，正式寄送官方成績單與送分。</p>
+                <p>• <strong>透明控管：</strong>學員與顧問共同登入學校 Application Portal 逐一檢查所有上傳文件、付款遞交。</p>
+                <p>• <strong>面試準備：</strong>商學院與部分工學院陸續發放 Kira Talent 錄影面試或真人面試邀請，啟動模擬面試。</p>
+              </div>
+            </div>
+
+            <!-- STEP 4 -->
+            <div class="border border-slate-200 rounded-md overflow-hidden">
+              <button type="button" class="timeline-toggle w-full px-5 py-3.5 bg-slate-50 hover:bg-slate-100 text-left flex justify-between items-center text-xs font-bold text-slate-800 transition" aria-controls="timeline-panel-3">
+                <span class="flex items-center gap-2">
+                  <span class="w-5 h-5 rounded-full bg-ivy-800 text-white flex items-center justify-center text-[10px]">4</span>
+                  出國前 3~6 個月 (3月~8月)：Offer 決選、簽證與赴美行前
+                </span>
+                <span class="text-slate-400 font-mono text-sm toggle-icon">+</span>
+              </button>
+              <div class="timeline-body hidden px-5 py-4 text-xs text-slate-600 space-y-2 bg-white" id="timeline-panel-3">
+                <p>• <strong>核心目標：</strong>比較各校 Offer 與獎學金條件，繳交入學訂金 (Deposit) 鎖定席位。</p>
+                <p>• <strong>簽證準備：</strong>取得 I-20 表格、繳交 SEVIS 費用、向 AIT 預約 F-1 學生簽證面試。</p>
+                <p>• <strong>行前安排：</strong>海外租房、學生體檢與疫苗、行前說明會與美國校友生活圈接軌。</p>
+              </div>
+            </div>
+
+          </div>
+        </div></div></section></div></details><details class="guide-tool" id="departure-tool"><summary><span>錄取後與行前清單</span><small>入學文件、實習資格、簽證與生活準備</small></summary><div class="guide-tool-body"><section class="guide-tool-content" id="practical-training"><div class="ib-plans-inner"><p class="ib-eyebrow">PRACTICAL TRAINING</p><h3>CPT、OPT 與 STEM OPT：先確認資格，再安排時間線</h3><div class="ib-why-grid"><article><h3>CPT · 課程相關實習</h3><p>是否能在學期間從事實習，取決於實習是否符合課程要求、學校批准與個人 F-1 身分條件。不要假定所有學生都能立即實習。</p></article><article><h3>OPT · 畢業前後的實務訓練</h3><p>OPT 有申請窗口與資格條件；STEM OPT 延期亦須符合 DHS 指定學位、雇主與合規條件，不是只要唸 STEM 就自動享有。</p></article></div><p class="ib-note-small">此為一般性教育資訊，不構成移民法律意見。請與所屬學校 DSO、USCIS 及具資格的專業人員確認個人情況。</p><p><a href="https://studyinthestates.dhs.gov/students" target="_blank" rel="noopener noreferrer" class="ib-plan-link">Study in the States 官方指引 ↗</a></p></div></section><section class="guide-tool-content" id="arrival-checklist"><div class="ib-plans-inner"><p class="ib-eyebrow">AFTER ADMISSION</p><h3>出國大小事：錄取後的準備清單</h3><p class="ib-lead">從 Offer 到抵達美國，先確認以下幾件真正重要的事情。</p><ul class="ib-checklist"><li>比較完整學位費用、課程與錄取條件，確認接受 Offer 與繳交訂金期限。</li><li>依學校指示準備入學文件、財力證明與身分資料，核對姓名及護照。</li><li>透過官方管道完成 I-20、SEVIS、簽證相關安排；面談與個人聲明由本人完成。</li><li>評估住宿、租約、醫療保險、交通、生活開支與緊急聯絡資訊。</li><li>確認抵達日期、選課與迎新活動，以及校方國際學生辦公室的支援。</li><li>保留重要文件電子及紙本備份，避免臨時安排造成時間壓力。</li></ul><p><a class="ib-plan-link" href="https://educationusa.state.gov/your-5-steps-us-study" target="_blank" rel="noopener noreferrer">EducationUSA — 美國留學五步驟 ↗</a></p></div></section></div></details></section><section class="guide-further" id="explorer-articles"><h2>延伸閱讀</h2><p>想深入了解某個主題？從這兩份完整指南開始。</p><ul><li><a href="us-masters-guide.html">美國碩士入門與申請須知</a></li><li><a href="study-basics.html">美國課程、實習資格與留學生活</a></li></ul></section><span class="guide-legacy-anchor" id="study-next-step" aria-hidden="true"></span><section class="guide-next ib-bottom-cta" id="guide-next"><h2>看看相似背景，如何規劃下一步。</h2><p>從案例了解申請策略，再討論適合你的準備方向。</p><div class="guide-next-actions"><a class="guide-primary" href="cases.html">瀏覽成功案例牆</a><a href="contact.html">預約諮詢 →</a></div></section></main><!-- FOOTER -->
+  <footer class="bg-ivy-900 text-slate-400 py-16 border-t border-ivy-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-ivy-800/80">
+        
+        <div class="space-y-4 md:col-span-1">
+          <div class="flex items-center space-x-2">
+            <div class="w-8 h-8 rounded bg-gold-500 text-ivy-900 flex items-center justify-center font-bold font-display text-sm">
+              IB
+            </div>
+            <span class="text-base font-bold text-white font-serif tracking-tight">IvyBridge 領航留學</span>
+          </div>
+          <p class="text-slate-400 leading-relaxed text-xs">
+            專攻全美 Top 30 與高投報率 STEM 研究所申請的精品留學顧問品牌。以策略引領，用陪伴圓夢。
+          </p>
+          <p class="text-[11px] text-slate-500">
+            © 2026 IvyBridge Admissions Consulting. All Rights Reserved.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-slate-200 font-semibold mb-3 tracking-wide">申請專攻路徑</h4>
+          <ul class="space-y-2">
+            <li><a href="services.html" class="hover:text-gold-400 transition">常春藤 &amp; Top 30 菁英衝刺</a></li>
+            <li><a href="services.html" class="hover:text-gold-400 transition">跨考轉專業 STEM 躍遷</a></li>
+            <li><a href="services.html" class="hover:text-gold-400 transition">低 GPA 逆襲與 Pathway</a></li>
+            <li><a href="services.html" class="hover:text-gold-400 transition">美本留學生專屬深造方案</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-slate-200 font-semibold mb-3 tracking-wide">核心交付與資源</h4>
+          <ul class="space-y-2">
+            <li><a href="us-masters-guide.html" class="hover:text-gold-400 transition">美國碩士留學須知</a></li><li><a href="study-guide.html#guide-start" class="hover:text-gold-400 transition" aria-current="page">留學美國 OPT / CPT 優勢</a></li>
+            <li><a href="cases.html" class="hover:text-gold-400 transition">2026 名校成功案例庫</a></li>
+            <li><a href="study-guide.html" class="hover:text-gold-400 transition">18 個月留學申請甘特時程</a></li>
+            <li><a href="study-guide.html" class="hover:text-gold-400 transition">美國各區學費與生活費試算</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-slate-200 font-semibold mb-3 tracking-wide">官方諮詢與預約</h4>
+          <ul class="space-y-2 text-slate-400">
+            <li>諮詢專線：電話待確認</li>
+            <li>LINE 官方：帳號待確認</li>
+            <li>諮詢信箱：Email 待確認</li>
+            <li>諮詢空間：地址待確認</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-500 gap-4">
+        <div>
+          嚴正聲明：IvyBridge 為獨立高階顧問工作室，非任何外國學校之代理招生機構，100% 絕不收受海外佣金回扣。
+        </div>
+        <div class="flex space-x-6">
+          <button type="button" id="privacy-link" class="hover:text-slate-300 transition">隱私權政策與服務責任條款</button>
+          <a href="#main-content" class="hover:text-slate-300 transition">回到頂部 ↑</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- MODAL: LINE / PRIVACY / NOTICE MODAL -->
+  <div id="general-notice-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="資訊提示">
+    <div class="bg-white rounded-xl max-w-md w-full p-6 shadow-2xl border border-slate-200 text-left">
+      <h3 id="notice-modal-title" class="text-base font-bold text-ivy-900 font-serif mb-2">LINE 官方帳號諮詢</h3>
+      <div id="notice-modal-body" class="text-xs text-slate-600 leading-relaxed space-y-2">
+        <p>歡迎直接於 LINE 搜尋官方 ID：<strong class="text-ivy-800">帳號待確認</strong>（包含 @ 符號）</p>
+        <p>或掃描頁面上的 QR Code，加入後請傳送「您的目前學校、預計申請領域與目標年份」，主案顧問將在 24 小時內親自為您安排 30 分鐘免費評估。</p>
+      </div>
+      <div class="mt-6 flex justify-end">
+        <button type="button" id="close-notice-modal" class="px-4 py-2 bg-ivy-800 text-white rounded text-xs font-semibold hover:bg-ivy-900">
+          了解，我知道了
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT: Full Interaction Logic -->
+  <script src="assets/app.js" defer></script><script src="assets/language.js" defer></script>
+  <!-- Vercel Web Analytics: static HTML integration -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+<script defer src="assets/site-structure.js"></script><script defer src="assets/admissions-data.js"></script><script defer src="assets/school-explorer.js"></script><script defer src="assets/study-guide.js"></script></body>
+</html>

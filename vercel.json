@@ -4,6 +4,40 @@
   "outputDirectory": "public",
   "cleanUrls": false,
   "headers": [
-    {"source": "/(.*)", "headers": [{"key":"X-Content-Type-Options","value":"nosniff"},{"key":"Referrer-Policy","value":"strict-origin-when-cross-origin"}]}
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/why-us.html",
+      "destination": "/study-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/insights.html",
+      "destination": "/study-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/en/why-us.html",
+      "destination": "/en/study-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/en/insights.html",
+      "destination": "/en/study-guide.html",
+      "permanent": true
+    }
   ]
 }

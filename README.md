@@ -41,3 +41,7 @@ All Chinese and English HTML pages include the standard static HTML queue and de
 Home → Why USA → Services → Case Studies → Insights → About → Contact remain separate pages, with the master’s guide as an additional resource and custom services as a secondary service route. Homepages feature a manually scrollable case-category preview, not a live results feed. Existing Chinese cases and the new English scenarios remain explicitly illustrative.
 
 Before enabling real inquiries, provide a verified receiving email or approved form endpoint, official LINE/WeChat details and booking link. A live admissions feed needs verified results and publication consent. Founder/team biographies and any staffing or outcome claims require brand verification. No verified contact destination or factual client results have been invented. The broader English site still uses separate HTML page shells; only the service-plan content is generated from a shared bilingual source in this update.
+
+## Unified study guide (review branch)
+
+`study-guide.html` and `/en/study-guide.html` combine the old guide and explorer into four short chapters with on-demand tools. `study-basics.html` and `us-masters-guide.html` retain deeper reading. Old guide/explorer paths redirect to the hub; query strings and supported fragments remain usable. See [review notes](docs/UNIFIED_STUDY_GUIDE_REVIEW.md).
