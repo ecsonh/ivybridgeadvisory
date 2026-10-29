@@ -152,87 +152,41 @@ html[lang="en"] .ib-detail-grid>.ib-detail[data-plan="comprehensive"]::before{co
 .ib-page-shell .ib-detail-grid{padding-top:12px}
 @media(max-width:680px){.ib-service-hero{padding:44px 20px}.ib-service-hero-actions{align-items:flex-start;flex-direction:column;gap:13px}.ib-detail-grid>.ib-detail[data-plan="comprehensive"]{margin-top:8px}}
 
-/* Homepage overview (plans, proof points, strategy): ONE shared full-bleed surface.
-   Keep markup centered by .ib-page-shell; paint the side gutters without changing
-   content width or adding extra wrappers/duplicate per-section shadows. */
-.ib-page-shell .ib-home-overview {
-  --ib-home-overview-bg: #f7f9fc;
-  background: var(--ib-home-overview-bg);
-  box-shadow: 0 0 0 100vmax var(--ib-home-overview-bg);
-  clip-path: inset(0 -100vmax);
-}
-.ib-page-shell .ib-home-overview > section {
-  background: transparent;
-}
-.ib-page-shell .ib-home-overview > section + section {
-  border-top: 1px solid #e4eaf0;
-}
-.ib-page-shell:has(.ib-home-overview) > .ib-page-sidebar {
-  z-index: 1;
-}
 
-
-/* Unified IvyBridge banners — same editorial navy, warm-gold eyebrow and title scale
-   on all 10 page types in both locales. Individual page content remains unchanged. */
-section.ib-site-banner.ib-site-banner{
-  background:#112e4a;
-  color:#fff;
-  padding:clamp(54px,6vw,78px) max(22px,calc((100vw - 1180px)/2));
-  border-color:#234763;
-  border-radius:0;
-  box-sizing:border-box;
-  min-height:0;
-  width:100%;
-  max-width:none;
+/* Services-only refinement: white reading canvas, lighter cards and separated custom CTA. */
+/* Scoped to .ib-services-main so homepage plan cards and other pages are untouched. */
+.ib-services-main #plan-details{background:#fff;color:#112e4a}
+.ib-services-main #plan-details .ib-plans-inner{padding:3px 0}
+.ib-services-main #plan-details>.ib-plans-inner>h2{margin-bottom:14px}
+.ib-services-main #plan-details .ib-lead{margin-bottom:31px}
+.ib-services-main #plan-details .ib-detail-grid{gap:clamp(19px,2vw,28px);align-items:stretch;padding:15px 1px 3px}
+.ib-services-main #plan-details .ib-detail{
+ background:#fff;border:1px solid #dee6ec;border-radius:12px;
+ padding:30px 29px 26px;box-shadow:0 3px 14px rgba(17,46,74,.035);
 }
-section.ib-site-banner.ib-site-banner :is(h1,h1 span){
-  color:#fff;
-  font-family:Georgia,"Noto Serif TC",serif;
-  font-weight:600;
-  font-size:clamp(31px,3.6vw,48px);
-  line-height:1.28;
-  letter-spacing:-.025em;
+.ib-services-main #plan-details .ib-detail h3{margin:3px 0 13px;font-size:20px;line-height:1.4}
+.ib-services-main #plan-details .ib-detail-price{margin:0 0 6px}
+.ib-services-main #plan-details .ib-extra{margin:0 0 15px}
+.ib-services-main #plan-details .ib-detail ul{margin:10px 0 18px;padding-left:19px}
+.ib-services-main #plan-details .ib-detail li{margin:9px 0;line-height:1.65}
+.ib-services-main #plan-details .ib-detail .ib-plan-link{margin-top:auto}
+.ib-services-main #plan-details .ib-detail[data-plan="comprehensive"]{
+ background:#fffdf9;border:1.5px solid #b9955e;
+ box-shadow:0 6px 20px rgba(177,142,84,.10)
 }
-section.ib-site-banner.ib-site-banner :is(.ib-eyebrow,.ib-editorial-eyebrow,.guide-eyebrow,.text-gold-700){
-  color:#d7b77d!important;
-  font-size:12px;
-  font-weight:700;
-  letter-spacing:.15em;
+.ib-services-main #plan-details .ib-detail[data-plan="comprehensive"]::before{background:#fffdf9}
+.ib-services-main #plan-details .ib-custom-callout{
+ margin:34px 0 5px;padding:23px 26px;
+ border:1px solid #e3e9ee;border-left:3px solid #c5a880;border-radius:10px;
+ background:#f7f9fb;
 }
-section.ib-site-banner.ib-site-banner :is(p,.guide-intro,.ib-lead) {
-  color:#dbe5ed;
-  line-height:1.8;
-}
-section.ib-site-banner.ib-site-banner .hero-emphasis{color:#d7b77d!important}
-.ib-site-banner-inner{max-width:1180px;margin:0 auto}
-section.ib-site-banner.ib-site-banner .ib-explorer-grid a{color:#112e4a}
-section.ib-site-banner.ib-site-banner .ib-explorer-grid a :is(strong,small){color:inherit}
-@media(max-width:720px){
- section.ib-site-banner.ib-site-banner{padding:42px 20px}
- section.ib-site-banner.ib-site-banner h1{font-size:clamp(29px,7vw,38px)}
-}
-
-
-/* IvyBridge academic crest — replaces the legacy IB badge site-wide. */
-header a.group > div:first-child:has(> span:first-child) {
-  width: 52px !important;
-  height: 52px !important;
-  min-width: 52px;
-  flex: 0 0 52px;
-  background: #0b2135 url("ivybridge-crest.svg") center / contain no-repeat !important;
-  border-radius: 50% !important;
-  box-shadow: none !important;
-  overflow: hidden;
-}
-header a.group > div:first-child:has(> span:first-child) > span {
-  opacity: 0 !important;
-  font-size: 0 !important;
-}
-@media (max-width: 420px) {
-  header a.group > div:first-child:has(> span:first-child) {
-    width: 43px !important;
-    height: 43px !important;
-    min-width: 43px;
-    flex-basis: 43px;
-  }
+.ib-services-main #plan-details .ib-custom-callout h2,
+.ib-services-main #plan-details .ib-custom-callout h3{margin:0 0 5px;font-size:19px}
+.ib-services-main #plan-details .ib-custom-callout p{margin:4px 0 9px;font-size:14px}
+.ib-services-main #plan-details .ib-custom-callout .ib-plan-link{display:inline-block;margin-top:2px}
+.ib-services-main #plan-details .ib-boundary{margin-top:38px}
+@media(max-width:850px){
+ .ib-services-main #plan-details .ib-detail-grid{gap:20px}
+ .ib-services-main #plan-details .ib-detail{padding:24px 22px}
+ .ib-services-main #plan-details .ib-custom-callout{padding:20px;margin-top:28px}
 }
