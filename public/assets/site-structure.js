@@ -25,6 +25,8 @@
 (function(){
  'use strict';
  function init(){
+  // Landing pages have their own linear conversion flow; do not inject a chapter sidebar.
+  if(document.body.classList.contains('ib-home-landing'))return;
   const en=document.documentElement.lang==='en';
   let main=document.querySelector('main');
   if(!main){
