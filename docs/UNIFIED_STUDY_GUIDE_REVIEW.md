@@ -32,7 +32,7 @@ Branch: `feat/unified-study-guide`. Base: `59abd3cc139e7ecc7ab2c70f718d23ae2c5c1
 3. Do collapsed tools make the page easier to scan?
 4. Does the final handoff to stories and consultation feel appropriate?
 
-No merge to main or production release is included in this branch.
+Owner approved this UI version for merge on 2026-10-30. The release includes the final documentation alignment; the lasting baseline is `docs/STUDY_GUIDE_DESIGN_CONTRACT.md`. Preview/read-access limitations below remain factual test boundaries, not a claim that live testing occurred.
 
 ## Validation performed before push
 

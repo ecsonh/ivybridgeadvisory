@@ -23,7 +23,7 @@ Site content is still a preview: noindex remains enabled, sample cases and brand
 
 ## Blog
 
-There is no CMS or database in this version. New articles can be added as HTML pages and linked from insights.html. An editorial CMS or static content generator can be introduced separately.
+There is no CMS or database in this version. New articles can be added as HTML pages and linked from the further-reading section of study-guide.html. An editorial CMS or static content generator can be introduced separately.
 
 ## Vercel Web Analytics
 
@@ -38,10 +38,14 @@ All Chinese and English HTML pages include the standard static HTML queue and de
 
 ## Content architecture and remaining launch dependencies
 
-Home → Why USA → Services → Case Studies → Insights → About → Contact remain separate pages, with the master’s guide as an additional resource and custom services as a secondary service route. Homepages feature a manually scrollable case-category preview, not a live results feed. Existing Chinese cases and the new English scenarios remain explicitly illustrative.
+Home, the independent Master’s Guide, Services, unified Study Guide, Cases, About and Contact remain addressable pages; custom services is a secondary service route. Why USA and Insights are legacy redirects to the unified guide. Homepages feature a manually scrollable case-category preview, not a live results feed. Existing Chinese cases and the new English scenarios remain explicitly illustrative.
 
 Before enabling real inquiries, provide a verified receiving email or approved form endpoint, official LINE/WeChat details and booking link. A live admissions feed needs verified results and publication consent. Founder/team biographies and any staffing or outcome claims require brand verification. No verified contact destination or factual client results have been invented. The broader English site still uses separate HTML page shells; only the service-plan content is generated from a shared bilingual source in this update.
 
-## Unified study guide (review branch)
+## Approved unified study guide
 
 `study-guide.html` and `/en/study-guide.html` combine the old guide and explorer into four short chapters with on-demand tools. `study-basics.html` retains longer study/life reading. `us-masters-guide.html` remains an independent primary-menu page with its original content and layout; it is NOT part of the merge. Old guide/explorer paths redirect to the hub; query strings and supported fragments remain usable. See [review notes](docs/UNIFIED_STUDY_GUIDE_REVIEW.md).
+
+## Future design changes
+
+Read [AGENTS.md](AGENTS.md), [AI_SITE_RULES.md](AI_SITE_RULES.md), [IVYBRIDGE_WEBSITE_PLAYBOOK.md](IVYBRIDGE_WEBSITE_PLAYBOOK.md) and the [approved guide design contract](docs/STUDY_GUIDE_DESIGN_CONTRACT.md) before editing. Preserve the navy banner, shared sidebar, restrained palette, readable responsive layout and independent Master’s Guide. Work on a feature branch and obtain owner approval before merging; do not treat deployment as permission to remove launch disclosures or enable forms.

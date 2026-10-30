@@ -1,5 +1,5 @@
 # Repository instructions for AI coding agents
-Read **[AI_SITE_RULES.md](AI_SITE_RULES.md)**, **[IVYBRIDGE_WEBSITE_PLAYBOOK.md](IVYBRIDGE_WEBSITE_PLAYBOOK.md)**, and **[ADMISSIONS_DATA_GUIDE.md](ADMISSIONS_DATA_GUIDE.md)** before editing any page, source file or school data. These files are the owner-approved style, content, product, data and safety contracts.
+Read **[AI_SITE_RULES.md](AI_SITE_RULES.md)**, **[IVYBRIDGE_WEBSITE_PLAYBOOK.md](IVYBRIDGE_WEBSITE_PLAYBOOK.md)**, and **[ADMISSIONS_DATA_GUIDE.md](ADMISSIONS_DATA_GUIDE.md)** before editing any page, source file or school data. For guide/navigation/style work, also read **[docs/STUDY_GUIDE_DESIGN_CONTRACT.md](docs/STUDY_GUIDE_DESIGN_CONTRACT.md)**; it records the approved PR #13 baseline and the independent master’s-guide boundary. These files are the owner-approved style, content, product, data and safety contracts.
 
 ## Required workflow
 - Inspect existing site / latest main and active PR before modifying. Do not overwrite functional layouts, data, forms or translations.
