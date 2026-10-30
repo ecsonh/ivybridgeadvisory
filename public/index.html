@@ -24,9 +24,6 @@
   </style>
 <meta name="robots" content="noindex, nofollow"><link rel="stylesheet" href="assets/fixes.css"><style>
 /* Homepage-only layout. Uses the site's existing navy/gold editorial palette. */
-.ib-home-banner{background:#112e4a!important;color:#fff!important}
-.ib-home-banner h1{color:#fff!important}
-.ib-home-banner p{color:#e0e8ef!important}
 .ib-home-hero-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin:30px auto 0}
 .ib-home-primary,.ib-home-secondary{display:inline-flex;justify-content:center;align-items:center;gap:8px;text-decoration:none;border-radius:6px;padding:13px 24px;font-weight:700;font-size:14px}
 .ib-home-primary{background:#d7b77d;color:#112e4a!important}
@@ -60,7 +57,7 @@
 .ib-home-final{text-align:center;padding:58px 20px;background:#f6f8fa;border-top:1px solid #e2e8f0}
 .ib-home-final .ib-home-primary{margin:15px auto}
 .ib-home-final .ib-home-honesty{font-size:12px;margin:12px auto 0;max-width:690px}
-@media(max-width:840px){.ib-home-options,.ib-home-strategy-list{grid-template-columns:1fr}.ib-home-approach{grid-template-columns:1fr;gap:15px}.ib-home-section{padding:46px 22px}.ib-home-option{padding:21px}.ib-home-banner{padding:55px 20px!important}}
+@media(max-width:840px){.ib-home-options,.ib-home-strategy-list{grid-template-columns:1fr}.ib-home-approach{grid-template-columns:1fr;gap:15px}.ib-home-section{padding:46px 22px}.ib-home-option{padding:21px}}
 </style></head>
 <body class="bg-[#FFFFFF] text-slate-800 font-sans antialiased selection:bg-gold-500 selection:text-white">
 
@@ -151,12 +148,95 @@
 
   <!-- MAIN CONTENT CONTAINER -->
   <main id="main-content" tabindex="-1">
-<section class="ib-site-banner ib-editorial-hero ib-standalone-hero ib-home-banner" aria-labelledby="home-title">
-<span class="ib-editorial-eyebrow">IVYBRIDGE ADVISORY · US MASTER'S ADMISSIONS</span>
-<h1 id="home-title">美國碩士申請，<br>找到適合你的方向。</h1>
-<p>選校、文書、完整網申或單項協助。根據你的背景與職涯目標，選擇真正需要的申請支持。</p>
-<div class="ib-home-hero-actions"><a class="ib-home-primary" href="services.html">探索服務方案 <span aria-hidden="true">→</span></a><a class="ib-home-secondary" href="contact.html">了解諮詢方式</a></div>
-</section>
+<section class="ib-site-banner relative pt-12 pb-20 md:pt-20 md:pb-28 hero-gradient overflow-hidden border-b border-slate-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <!-- LEFT HERO CONTENT -->
+          <div class="lg:col-span-7 space-y-6 text-left">
+            
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full badge-gold text-xs font-medium">
+              <span class="w-1.5 h-1.5 rounded-full bg-gold-600"></span>
+              專注全美前 30 名校與高投報率 STEM 研究所申請
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-ivy-900 font-serif leading-tight tracking-tight">
+              拒絕流水線套版代辦，<br>
+              以<span class="text-ivy-800 hero-emphasis">深度策略與全透明陪伴</span><br>
+              成就你的名校之路。
+            </h1>
+
+            <p class="text-base sm:text-lg text-slate-600 leading-relaxed font-normal max-w-2xl">
+              專為台灣本地頂尖學子與在美留學生打造的精品留學顧問品牌。嚴格堅持 <strong>1:5 顧問師生比上限</strong>，以前台深度陪伴顧問與後台名校教研智庫雙軌交付，為你拆解背景盲點、重構申請動機，實現最清晰具體的名校跨越。
+            </p>
+
+            <!-- CALL TO ACTIONS -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+              <a href="contact.html" class="inline-flex items-center justify-center px-7 py-3.5 rounded-md bg-ivy-800 text-white font-medium text-sm hover:bg-ivy-900 shadow-md transition group">
+                <span>免費預約 1-on-1 落點評估</span>
+                <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewbox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </a>
+              <a href="cases.html" class="inline-flex items-center justify-center px-6 py-3.5 rounded-md border border-slate-300 bg-white text-slate-700 font-medium text-sm hover:bg-slate-50 hover:border-slate-400 transition">
+                瀏覽 2026 最新錄取榜單
+              </a>
+            </div>
+
+            <!-- TRUST PROMISES (CE Elite Style Bullet Guarantees) -->
+            <div class="pt-6 border-t border-slate-200/80 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-600">
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <span>申請帳號 100% 自主控管</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <span>堅持絕無任何學校佣金回扣</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <span>文書多輪深度迭代直至滿意</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT HERO VISUAL (Ivy League Image Showcase) -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative mx-auto rounded-xl overflow-hidden shadow-2xl border border-slate-200 bg-white">
+              <img src="assets/image-69ec1e0b25fe.jpg" alt="Ivy League Library Study Setting" class="w-full h-[380px] object-cover object-center">
+              
+              <div class="absolute inset-0 bg-gradient-to-t from-ivy-900/80 via-transparent to-transparent flex flex-col justify-end p-6 text-white">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <span class="text-xs uppercase tracking-wider text-gold-400 font-semibold">Admissions Excellence</span>
+                    <p class="text-sm font-medium text-slate-100">哥大、MIT、CMU、UCB 錄取見證</p>
+                  </div>
+                  <span class="px-2.5 py-1 rounded bg-white/20 backdrop-blur-md text-xs font-medium text-white border border-white/30">
+                    2026 最新榜單
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- FLOATING MINI CARD -->
+            <div class="hidden sm:block absolute -bottom-5 -left-5 bg-white p-4 rounded-lg shadow-xl border border-slate-200/90 max-w-xs">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-gold-100 text-gold-700 flex items-center justify-center font-bold text-lg">
+                  ★
+                </div>
+                <div>
+                  <p class="text-xs font-semibold text-slate-900">非典型背景逆襲見證</p>
+                  <p class="text-[11px] text-slate-500">GPA 2.97 獲錄取哥倫比亞大學 MS</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
 <div class="ib-home-content">
 <section class="ib-home-section" id="home-options" aria-labelledby="home-options-title">
 <div class="ib-home-intro"><span class="ib-editorial-eyebrow">FIND YOUR FIT</span><h2 id="home-options-title">你現在最需要哪一種協助？</h2><p>不需要先研究所有方案。先找到你的需求，再去服務一覽比較具體內容與價格。</p></div>
