@@ -4,7 +4,7 @@
  const hub=document.querySelector('[data-guide-hub]');if(!hub)return;
  const en=document.documentElement.lang==='en';
  const aliases={
-  'study-intro':'guide-start','study-benefits':'guide-start','program-choices':'guide-start','study-next-step':'guide-next',
+  'study-intro':'guide-start','study-benefits':'program-fit','program-choices':'guide-start','study-next-step':'guide-next',
   'budget-explorer':'budget-tool','cost-planner':'budget-tool','topic-1':'budget-tool',
   'application-planning':'timeline-tool','application-timeline':'timeline-tool','topic-0':'timeline-tool',
   'career-resources':'career-tool','career-explorer':'career-tool'

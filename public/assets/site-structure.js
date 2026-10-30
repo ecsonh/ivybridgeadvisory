@@ -45,7 +45,7 @@
   if(main.querySelector('.guide-toc,.ib-page-sidebar'))return;
   const all=[...main.querySelectorAll('h1,h2')].filter(el=>el.textContent.trim().length>3 && !el.closest('.ib-page-sidebar,.ib-explorer-grid,.ib-bottom-cta'));
   const isGuideHub=main.hasAttribute('data-guide-hub');
-  const headings=isGuideHub?[...main.querySelectorAll('[data-guide-chapter]')]:all.filter(el=>el.tagName==='H2').slice(0,9);
+  const headings=isGuideHub?[...main.querySelectorAll('[data-guide-intro],[data-guide-chapter]')]:all.filter(el=>el.tagName==='H2').slice(0,9);
   if(!headings.length)return;
   const ids=new Set([...document.querySelectorAll('[id]')].map(n=>n.id));
   function slug(s){return s.toLowerCase().replace(/[^a-z0-9\u4e00-\u9fff]+/g,'-').replace(/^-|-$/g,'').slice(0,60)||'chapter'}
@@ -63,7 +63,7 @@
   const details=document.createElement('details');details.className='ib-toc-details';details.open=true;
   const summary=document.createElement('summary');summary.textContent=en?'On this page':'本頁目錄';details.appendChild(summary);
   const nav=document.createElement('nav');nav.className='ib-toc-links';
-  for(const el of headings){const link=document.createElement('a');link.href='#'+encodeURIComponent(el.id);link.textContent=(isGuideHub?el.querySelector('h2').textContent:el.textContent).trim().replace(/\s+/g,' ').slice(0,36);nav.appendChild(link)}
+  for(const el of headings){const link=document.createElement('a');link.href='#'+encodeURIComponent(el.id);link.textContent=(isGuideHub?(el.dataset.tocLabel||el.querySelector('h2').textContent):el.textContent).trim().replace(/\s+/g,' ').slice(0,36);nav.appendChild(link)}
   details.appendChild(nav);aside.appendChild(details);shell.append(aside,main);
   const links=[...nav.querySelectorAll('a')];
   function active(id){for(const a of links)a.setAttribute('aria-current',String(decodeURIComponent(a.hash.slice(1))===id))}

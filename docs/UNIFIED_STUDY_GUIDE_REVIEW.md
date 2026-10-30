@@ -42,3 +42,7 @@ No merge to main or production release is included in this branch.
 - Responsive UI checks at 375, 768 and 1440 px; all 24 non-redirect content pages also checked for header order and mobile overflow. Screenshot review of desktop/mobile entry and expanded school tool.
 - Regression checks: service plan/query language preservation, local consultation downloads, case-detail navigation and mobile menu/Escape.
 - No receiving/email/calendar integrations were added. Server-side submission cannot be tested because it remains intentionally unconfigured.
+
+## Program-fit overview addition
+
+At the owner's request, the merged guide now starts with an overview immediately below the unchanged navy banner. Its headline reuses **「不只看排名，更要看碩士項目是否適合你。」** and four equal cards cover academics, careers, flexibility and student support. Cards have concise descriptions and working contextual links; the card body is not a navigation link. The shared sidebar includes a short overview entry followed by the same four planning chapters. Mobile stacks the cards. English content mirrors the Chinese version. Neither independent `us-masters-guide.html` page is modified by this addition.

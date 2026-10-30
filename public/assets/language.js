@@ -10,7 +10,7 @@
 
   // Anchor ids that exist in both language versions.
   const shared = {
-    'study-guide.html': ['guide-start','guide-schools','guide-budget','guide-application','guide-next','school-tool','career-tool','budget-tool','timeline-tool','departure-tool','ib-school-explorer','career-explorer','practical-training','arrival-checklist','explorer-articles','study-benefits','program-choices','study-intro','study-next-step','budget-explorer','cost-planner','topic-1','application-planning','application-timeline','topic-0','career-resources'],
+    'study-guide.html': ['program-fit','guide-start','guide-schools','guide-budget','guide-application','guide-next','school-tool','career-tool','budget-tool','timeline-tool','departure-tool','ib-school-explorer','career-explorer','practical-training','arrival-checklist','explorer-articles','study-benefits','program-choices','study-intro','study-next-step','budget-explorer','cost-planner','topic-1','application-planning','application-timeline','topic-0','career-resources'],
     'study-basics.html': ['study-intro','study-benefits','program-choices','practical-training','arrival-checklist','study-next-step'],
     'index.html': ['plans', 'admissions-wall'],
     'services.html': ['plan-details', 'essential', 'comprehensive', 'elite', 'service-paths', 'how-it-works', 'compare-plans', 'service-faq'],
