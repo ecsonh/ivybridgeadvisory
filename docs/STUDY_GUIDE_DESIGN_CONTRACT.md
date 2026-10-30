@@ -58,3 +58,7 @@ Keep idiomatic equivalent English content and the same order, links and interact
 - Check 375, 768 and 1440 px layouts; inspect screenshots for typography, hierarchy, overflow and banner/sidebar preservation. Static checks alone do not establish visual quality.
 - Any independent master's guide change must be explicitly requested. For a merge of the other two pages, compare the independent page outside shared navigation against the approved base.
 - Use a feature branch and PR. Merge only after explicit owner approval; a styling approval does not remove noindex, verify outcomes or enable form transport. Report Preview/Production status and any live verification limitation accurately.
+
+## Paired reading backgrounds (owner-requested refinement)
+
+On `study-guide.html` and `us-masters-guide.html`, in both languages, alternate the existing reading sections **two at a time**: two white sections, then two soft off-white sections (`#F4F7FA`), repeating. Use a quiet 64 px vertical fade at pair boundaries, not a separate accent color for every section. Overview counts as a reading section; nested tools/cards do not. Keep banners, chapter sidebars and closing CTAs outside these background groups. `assets/reading-bands.css` owns this scoped treatment; it must not change text, heading scale, content order or interactive behavior. The shorter existing English master's guide has only one reading section, so it remains the first white group; do not invent or split content just to force more colored bands.
