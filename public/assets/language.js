@@ -20,10 +20,10 @@
     'why-us.html': ['study-intro', 'study-benefits', 'program-choices', 'practical-training', 'arrival-checklist', 'study-next-step'],
     'insights.html': ['ib-school-explorer', 'explorer-articles', 'budget-explorer', 'application-planning'],
     'about.html': [],
-    'us-masters-guide.html': ['fit','programs','requirements','timeline','budget','before-departure','our-strengths','guide-faq']
+    'us-masters-guide.html': []
   };
 
-  const enMainAnchor = ['services.html', 'custom-services.html', 'why-us.html', 'study-guide.html', 'study-basics.html', 'us-masters-guide.html'].includes(file) ? 'main-content' : 'content';
+  const enMainAnchor = ['services.html', 'custom-services.html', 'why-us.html', 'study-guide.html', 'study-basics.html'].includes(file) ? 'main-content' : 'content';
 
   function counterpartHash(targetEnglish) {
     if (!rawHash) return '';

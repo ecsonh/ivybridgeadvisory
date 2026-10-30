@@ -4,11 +4,11 @@ Branch: `feat/unified-study-guide`. Base: `59abd3cc139e7ecc7ab2c70f718d23ae2c5c1
 
 ## Scope
 
-- One top-level **留學指南 / Study Guide** entry immediately before Success Stories. The former guide, explorer and introductory guide are no longer three competing header items.
+- One top-level **留學指南 / Study Guide** entry immediately before Success Stories. Only the former `why-us.html` guide and `insights.html` explorer are combined. **美國留學須知 / Master's Guide (`us-masters-guide.html`) remains a separate primary navigation item.**
 - New `study-guide.html` and `/en/study-guide.html`: four chapters — understand master's study; programs and careers; budget and costs; application preparation.
 - First screen: consistent navy banner, one headline and one short introduction. Shared chapter navigation handles the four stages; it collapses on mobile.
 - Tools are native accessible disclosures, closed by default. Opening a tool closes other tool panels. Detailed program lookup, career examples, budget calculations and timeline behavior are preserved. Query strings, legacy links and current tool/section survive language switching.
-- Full introduction remains at `us-masters-guide.html`; study/life guidance is retained at new `study-basics.html`. Both are linked as deeper reading.
+- The original content, layout and behavior of both `us-masters-guide.html` language versions are restored from the PR base; only their shared menu is synchronized. Study/life detail from the two merged pages remains at `study-basics.html`.
 - Old `why-us.html` / `insights.html` URLs redirect to the hub in both languages. Vercel uses permanent redirects; local/static files also have a client redirect and a visible fallback link. Existing query strings and fragments are retained. The hub opens a requested tool for deep links.
 - Existing school list and sourced admissions data are untouched. No new outcome, salary or immigration eligibility claims. Contact/custom forms remain local preparation/downloads.
 - Success Stories then Consultation are the final actions. Prices and service deliverables are untouched.
@@ -22,7 +22,7 @@ Branch: `feat/unified-study-guide`. Base: `59abd3cc139e7ecc7ab2c70f718d23ae2c5c1
 - `public/assets/language.js`: shared new chapter/tool IDs and updated in-page language targets.
 - `public/assets/guide-redirect.js`, `vercel.json`, four legacy HTML files: redirects with local fallback.
 - Other HTML files: header simplification and migrated references to the new hub.
-- `public/en/us-masters-guide.html`: aligned long-form reading sections/anchors in English.
+- `public/us-masters-guide.html`, `public/en/us-masters-guide.html`: original pages preserved; shared navigation changes only.
 - Bundled Chinese font: expanded for the new copy, retaining existing glyphs and license.
 
 ## Review focus

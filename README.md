@@ -44,4 +44,4 @@ Before enabling real inquiries, provide a verified receiving email or approved f
 
 ## Unified study guide (review branch)
 
-`study-guide.html` and `/en/study-guide.html` combine the old guide and explorer into four short chapters with on-demand tools. `study-basics.html` and `us-masters-guide.html` retain deeper reading. Old guide/explorer paths redirect to the hub; query strings and supported fragments remain usable. See [review notes](docs/UNIFIED_STUDY_GUIDE_REVIEW.md).
+`study-guide.html` and `/en/study-guide.html` combine the old guide and explorer into four short chapters with on-demand tools. `study-basics.html` retains longer study/life reading. `us-masters-guide.html` remains an independent primary-menu page with its original content and layout; it is NOT part of the merge. Old guide/explorer paths redirect to the hub; query strings and supported fragments remain usable. See [review notes](docs/UNIFIED_STUDY_GUIDE_REVIEW.md).
