@@ -22,7 +22,46 @@
     .hero-gradient { background: radial-gradient(circle at 50% 0%, rgba(235, 242, 249, 0.8) 0%, rgba(255, 255, 255, 1) 75%); }
     .badge-gold { background-color: #FAF8F5; color: #946C2D; border: 1px solid #D8C2A5; }
   </style>
-<meta name="robots" content="noindex, nofollow"><link rel="stylesheet" href="assets/fixes.css"></head>
+<meta name="robots" content="noindex, nofollow"><link rel="stylesheet" href="assets/fixes.css"><style>
+/* Homepage-only layout. Uses the site's existing navy/gold editorial palette. */
+.ib-home-banner{background:#112e4a!important;color:#fff!important}
+.ib-home-banner h1{color:#fff!important}
+.ib-home-banner p{color:#e0e8ef!important}
+.ib-home-hero-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin:30px auto 0}
+.ib-home-primary,.ib-home-secondary{display:inline-flex;justify-content:center;align-items:center;gap:8px;text-decoration:none;border-radius:6px;padding:13px 24px;font-weight:700;font-size:14px}
+.ib-home-primary{background:#d7b77d;color:#112e4a!important}
+.ib-home-secondary{border:1px solid rgba(255,255,255,.7);color:white!important}
+.ib-home-content{color:#112e4a}
+.ib-home-section{padding:64px clamp(20px,4vw,60px);max-width:1200px;margin:0 auto}
+.ib-home-soft{background:#f6f8fa;max-width:none}
+.ib-home-soft>.ib-home-intro,.ib-home-soft>.ib-home-strategy-list,.ib-home-soft>.ib-home-centered-action{max-width:1080px;margin-left:auto;margin-right:auto}
+.ib-home-intro{max-width:760px;margin-bottom:30px}
+.ib-home-intro h2,.ib-home-approach h2,.ib-home-final h2{font-size:clamp(25px,3vw,36px);font-weight:750;line-height:1.4;margin:8px 0 12px}
+.ib-home-intro p,.ib-home-approach p,.ib-home-final p{color:#58677c;line-height:1.8}
+.ib-home-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.ib-home-option{display:flex;flex-direction:column;gap:16px;border:1px solid #dbe4ec;background:#fff;border-radius:12px;padding:26px 23px;color:#112e4a;text-decoration:none;box-shadow:0 5px 18px rgba(17,46,74,.04);transition:border-color .15s,transform .15s,box-shadow .15s}
+.ib-home-option:hover,.ib-home-option:focus-visible{border-color:#b9955e;box-shadow:0 10px 25px rgba(17,46,74,.1);transform:translateY(-3px)}
+.ib-home-option-icon{font-size:22px;color:#946c2d;background:#faf8f5;border-radius:9px;width:44px;height:44px;display:grid;place-items:center}
+.ib-home-option-type,.ib-home-strategy-kicker{font-weight:700;color:#946c2d;font-size:12px;letter-spacing:.04em}
+.ib-home-option h3,.ib-home-strategy-list h3{font-size:20px;font-weight:750;margin:6px 0 9px}
+.ib-home-option p,.ib-home-strategy-list p{font-size:14px;line-height:1.8;color:#5b6a7d}
+.ib-home-text-link{font-weight:750;font-size:14px;color:#112e4a;display:block;margin-top:17px}
+.ib-home-option-footnote{text-align:center;margin-top:23px;font-size:14px}
+.ib-home-option-footnote a{color:#946c2d;font-weight:700;text-decoration:underline}
+.ib-home-strategy-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.ib-home-strategy-list article{border-top:3px solid #c5a880;background:white;padding:25px;border-radius:0 0 8px 8px}
+.ib-home-centered-action{text-align:center;margin-top:30px!important}
+.ib-home-centered-action .ib-home-primary,.ib-home-final .ib-home-primary{background:#112e4a;color:#fff!important}
+.ib-home-approach{display:grid;grid-template-columns:1.15fr 1fr;gap:45px;align-items:start}
+.ib-home-approach-points{border-top:1px solid #dde5ec}
+.ib-home-approach-points p{display:flex;flex-direction:column;gap:2px;border-bottom:1px solid #dde5ec;padding:16px 0;margin:0}
+.ib-home-approach-points strong{color:#112e4a}
+.ib-home-approach-points span{font-size:14px}
+.ib-home-final{text-align:center;padding:58px 20px;background:#f6f8fa;border-top:1px solid #e2e8f0}
+.ib-home-final .ib-home-primary{margin:15px auto}
+.ib-home-final .ib-home-honesty{font-size:12px;margin:12px auto 0;max-width:690px}
+@media(max-width:840px){.ib-home-options,.ib-home-strategy-list{grid-template-columns:1fr}.ib-home-approach{grid-template-columns:1fr;gap:15px}.ib-home-section{padding:46px 22px}.ib-home-option{padding:21px}.ib-home-banner{padding:55px 20px!important}}
+</style></head>
 <body class="bg-[#FFFFFF] text-slate-800 font-sans antialiased selection:bg-gold-500 selection:text-white">
 
 
@@ -112,243 +151,34 @@
 
   <!-- MAIN CONTENT CONTAINER -->
   <main id="main-content" tabindex="-1">
-<section class="ib-site-banner relative pt-12 pb-20 md:pt-20 md:pb-28 hero-gradient overflow-hidden border-b border-slate-100">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
-          <!-- LEFT HERO CONTENT -->
-          <div class="lg:col-span-7 space-y-6 text-left">
-            
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full badge-gold text-xs font-medium">
-              <span class="w-1.5 h-1.5 rounded-full bg-gold-600"></span>
-              專注全美前 30 名校與高投報率 STEM 研究所申請
-            </div>
-
-            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-ivy-900 font-serif leading-tight tracking-tight">
-              拒絕流水線套版代辦，<br>
-              以<span class="text-ivy-800 hero-emphasis">深度策略與全透明陪伴</span><br>
-              成就你的名校之路。
-            </h1>
-
-            <p class="text-base sm:text-lg text-slate-600 leading-relaxed font-normal max-w-2xl">
-              專為台灣本地頂尖學子與在美留學生打造的精品留學顧問品牌。嚴格堅持 <strong>1:5 顧問師生比上限</strong>，以前台深度陪伴顧問與後台名校教研智庫雙軌交付，為你拆解背景盲點、重構申請動機，實現最清晰具體的名校跨越。
-            </p>
-
-            <!-- CALL TO ACTIONS -->
-            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
-              <a href="contact.html" class="inline-flex items-center justify-center px-7 py-3.5 rounded-md bg-ivy-800 text-white font-medium text-sm hover:bg-ivy-900 shadow-md transition group">
-                <span>免費預約 1-on-1 落點評估</span>
-                <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewbox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-              </a>
-              <a href="cases.html" class="inline-flex items-center justify-center px-6 py-3.5 rounded-md border border-slate-300 bg-white text-slate-700 font-medium text-sm hover:bg-slate-50 hover:border-slate-400 transition">
-                瀏覽 2026 最新錄取榜單
-              </a>
-            </div>
-
-            <!-- TRUST PROMISES (CE Elite Style Bullet Guarantees) -->
-            <div class="pt-6 border-t border-slate-200/80 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-600">
-              <div class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                <span>申請帳號 100% 自主控管</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                <span>堅持絕無任何學校佣金回扣</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                <span>文書多輪深度迭代直至滿意</span>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- RIGHT HERO VISUAL (Ivy League Image Showcase) -->
-          <div class="lg:col-span-5 relative">
-            <div class="relative mx-auto rounded-xl overflow-hidden shadow-2xl border border-slate-200 bg-white">
-              <img src="assets/image-69ec1e0b25fe.jpg" alt="Ivy League Library Study Setting" class="w-full h-[380px] object-cover object-center">
-              
-              <div class="absolute inset-0 bg-gradient-to-t from-ivy-900/80 via-transparent to-transparent flex flex-col justify-end p-6 text-white">
-                <div class="flex items-center justify-between">
-                  <div>
-                    <span class="text-xs uppercase tracking-wider text-gold-400 font-semibold">Admissions Excellence</span>
-                    <p class="text-sm font-medium text-slate-100">哥大、MIT、CMU、UCB 錄取見證</p>
-                  </div>
-                  <span class="px-2.5 py-1 rounded bg-white/20 backdrop-blur-md text-xs font-medium text-white border border-white/30">
-                    2026 最新榜單
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <!-- FLOATING MINI CARD -->
-            <div class="hidden sm:block absolute -bottom-5 -left-5 bg-white p-4 rounded-lg shadow-xl border border-slate-200/90 max-w-xs">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-gold-100 text-gold-700 flex items-center justify-center font-bold text-lg">
-                  ★
-                </div>
-                <div>
-                  <p class="text-xs font-semibold text-slate-900">非典型背景逆襲見證</p>
-                  <p class="text-[11px] text-slate-500">GPA 2.97 獲錄取哥倫比亞大學 MS</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- Homepage overview: Plans + proof points + strategy share one full-bleed surface. -->
-    <div class="ib-home-overview" aria-label="申請方案與升學規劃">
-    <!-- PLANS:summary:start --><section class="ib-plans" id="plans"><div class="ib-plans-inner"><h2>依照你的目標，選擇適合的申請支持</h2><p class="ib-lead">專注碩士申請，依照你需要的參與程度與申請範圍選擇。</p><div class="ib-detail-grid" ><article class="ib-plan" data-plan="essential"><h3>基礎申請指導</h3><ul><li>3 個碩士項目申請文書</li><li>背景分析與選校建議</li><li>文書構思、架構與修改指導</li><li>1 次模擬面試</li><li>學生自行填寫及提交網上申請</li></ul><a class="ib-plan-link" href="services.html#essential">了解方案詳情 →</a></article><article class="ib-plan" data-plan="comprehensive"><h3>全程申請顧問</h3><ul><li>5 個碩士項目申請文書</li><li>背景分析與選校建議</li><li>文書構思、架構與修改指導</li><li>1 次模擬面試</li><li>協助填寫全部網申資料、整理文件與送件流程</li></ul><a class="ib-plan-link" href="services.html#comprehensive">了解方案詳情 →</a></article><article class="ib-plan" data-plan="elite"><h3>尊榮菁英全案</h3><ul><li>最多 12 個美國碩士項目申請文書；其他國家申請另行報價</li><li>背景分析與跨國選校建議</li><li>逐項目文書構思、架構與修改指導</li><li>3 次模擬面試</li><li>協助填寫全部網申資料、整理文件與送件流程</li><li>簽證申請資料填寫與準備協助</li></ul><a class="ib-plan-link" href="services.html#elite">了解方案詳情 →</a></article></div><aside class="ib-custom-callout"><h3>只需要部分協助？</h3><p>選擇文書、選校、面試或純諮詢，告訴我們你的需求，再確認專屬服務範圍與報價。</p><a class="ib-plan-link" href="custom-services.html">我想要客製化服務 →</a></aside></div></section><!-- PLANS:summary:end -->
-
-    <section class="bg-white border-b border-slate-200 py-10">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-y lg:divide-y-0 lg:divide-x divide-slate-100">
-          
-          <div class="pt-4 lg:pt-0">
-            <p class="text-3xl sm:text-4xl font-bold text-ivy-800 font-display">待核實</p>
-            <p class="text-xs sm:text-sm font-medium text-slate-600 mt-1">全美 Top 30 名校錄取率</p>
-            <p class="text-[11px] text-slate-400 mt-0.5">近三年全案學員真實數據統計</p>
-          </div>
-
-          <div class="pt-4 lg:pt-0">
-            <p class="text-3xl sm:text-4xl font-bold text-ivy-800 font-display">待核實</p>
-            <p class="text-xs sm:text-sm font-medium text-slate-600 mt-1">頂尖名校錄取 Offer 總數</p>
-            <p class="text-[11px] text-slate-400 mt-0.5">涵蓋常春藤聯盟、MIT、Stanford</p>
-          </div>
-
-          <div class="pt-4 lg:pt-0">
-            <p class="text-3xl sm:text-4xl font-bold text-ivy-800 font-display">待核實</p>
-            <p class="text-xs sm:text-sm font-medium text-slate-600 mt-1">累積獲取獎學金總額 (USD)</p>
-            <p class="text-[11px] text-slate-400 mt-0.5">助攻優秀學子減輕留學經濟負擔</p>
-          </div>
-
-          <div class="pt-4 lg:pt-0">
-            <p class="text-3xl sm:text-4xl font-bold text-gold-600 font-display">1 : 5</p>
-            <p class="text-xs sm:text-sm font-medium text-slate-600 mt-1">顧問師生比嚴格上限</p>
-            <p class="text-[11px] text-slate-400 mt-0.5">單季限額，絕不流水線量產</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section id="strategy-pathways" class="py-16 sm:py-20 bg-slate-50/70 border-b border-slate-200">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-3xl mx-auto mb-14">
-          <span class="text-xs font-semibold tracking-widest text-gold-700 uppercase">Targeted Strategy</span>
-          <h2 class="text-2xl sm:text-3xl font-bold text-ivy-900 font-serif mt-2">三大申請策略路徑，精準鎖定你的留學目標</h2>
-          <p class="text-sm sm:text-base text-slate-600 mt-3 leading-relaxed">
-            不同於傳統代辦無差別撒網的罐頭清單，IvyBridge 依據學員核心需求劃分三大專攻維度，確保資源與心力集中於最具效益的切入點。
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
-          <!-- PATH 1 -->
-          <div class="bg-white rounded-lg p-8 border border-slate-200/90 shadow-sm hover:shadow-md transition flex flex-col justify-between">
-            <div>
-              <div class="w-12 h-12 rounded-md bg-ivy-50 text-ivy-800 flex items-center justify-center font-bold text-lg mb-6 border border-ivy-100">
-                01
-              </div>
-              <h3 class="text-xl font-bold text-ivy-900 mb-2">常春藤 &amp; Top 30 菁英衝刺</h3>
-              <p class="text-xs text-gold-700 font-semibold mb-4 tracking-wide">追求極致學術與聲譽巔峰</p>
-              <p class="text-sm text-slate-600 leading-relaxed mb-6">
-                針對目標 Harvard、Stanford、MIT、Columbia、UPenn、CMU 等頂級學府。由同系所名校顧問協同，深挖科研經歷與學術敘事，量身打造不可替代的個人 Profile。
-              </p>
-              <ul class="space-y-2.5 text-xs text-slate-600 border-t border-slate-100 pt-5">
-                <li class="flex items-center gap-2">
-                  <span class="text-gold-600 font-bold">✓</span> 頂級學者/實驗室推薦信定位引導
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="text-gold-600 font-bold">✓</span> 招生官視角 SOP 邏輯多維重構
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="text-gold-600 font-bold">✓</span> 專屬名校校友 1-on-1 模擬面試
-                </li>
-              </ul>
-            </div>
-            <div class="pt-6 mt-6 border-t border-slate-100">
-              <a href="services.html" class="text-xs font-semibold text-ivy-800 hover:text-gold-600 flex items-center gap-1 group">
-                查看衝刺方案詳情 <span class="group-hover:translate-x-1 transition-transform">→</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- PATH 2 -->
-          <div class="bg-white rounded-lg p-8 border-2 border-ivy-800 shadow-md relative flex flex-col justify-between">
-            <span class="absolute -top-3 right-6 bg-ivy-800 text-white text-[11px] font-semibold px-3 py-0.5 rounded-full">
-              高需求熱門首選
-            </span>
-            <div>
-              <div class="w-12 h-12 rounded-md bg-gold-100 text-gold-700 flex items-center justify-center font-bold text-lg mb-6 border border-gold-200">
-                02
-              </div>
-              <h3 class="text-xl font-bold text-ivy-900 mb-2">就業導向 STEM 跨考躍遷</h3>
-              <p class="text-xs text-gold-700 font-semibold mb-4 tracking-wide">著重 36 個月 OPT 留美與投報率</p>
-              <p class="text-sm text-slate-600 leading-relaxed mb-6">
-                鎖定 CS、數據分析 (MSBA)、軟體工程、資管與金融工等熱門專業。特別擅長文商跨考理工，盤點先修課缺口，精準佈局矽谷、西雅圖、紐約就業友善校。
-              </p>
-              <ul class="space-y-2.5 text-xs text-slate-600 border-t border-slate-100 pt-5">
-                <li class="flex items-center gap-2">
-                  <span class="text-gold-600 font-bold">✓</span> 跨科系 Prerequisite 先修課選課指南
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="text-gold-600 font-bold">✓</span> OPT / CPT 就業率與實習數據深度評估
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="text-gold-600 font-bold">✓</span> 科技大廠工程師級專業履歷重修
-                </li>
-              </ul>
-            </div>
-            <div class="pt-6 mt-6 border-t border-slate-100">
-              <a href="services.html" class="text-xs font-semibold text-ivy-800 hover:text-gold-600 flex items-center gap-1 group">
-                查看 STEM 方案詳情 <span class="group-hover:translate-x-1 transition-transform">→</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- PATH 3 -->
-          <div class="bg-white rounded-lg p-8 border border-slate-200/90 shadow-sm hover:shadow-md transition flex flex-col justify-between">
-            <div>
-              <div class="w-12 h-12 rounded-md bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-lg mb-6 border border-slate-200">
-                03
-              </div>
-              <h3 class="text-xl font-bold text-ivy-900 mb-2">低 GPA 逆襲與 Pathway 保駕</h3>
-              <p class="text-xs text-gold-700 font-semibold mb-4 tracking-wide">突破硬門檻，穩健錄取全美百大</p>
-              <p class="text-sm text-slate-600 leading-relaxed mb-6">
-                若在校 GPA &lt; 3.0 或缺少 GRE/托福高分，無需自我設限。我們透過 WES 認證拉分策略、多元經歷補強，以及名校正規碩士銜接課程，打破成績劣勢。
-              </p>
-              <ul class="space-y-2.5 text-xs text-slate-600 border-t border-slate-100 pt-5">
-                <li class="flex items-center gap-2">
-                  <span class="text-gold-600 font-bold">✓</span> WES / ECE 成績認證提分試算
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="text-gold-600 font-bold">✓</span> GPA 劣勢轉化為逆境克服敘事
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="text-gold-600 font-bold">✓</span> Northeastern、USC 等百大免 GRE 保底清單
-                </li>
-              </ul>
-            </div>
-            <div class="pt-6 mt-6 border-t border-slate-100">
-              <a href="services.html" class="text-xs font-semibold text-ivy-800 hover:text-gold-600 flex items-center gap-1 group">
-                查看逆襲方案詳情 <span class="group-hover:translate-x-1 transition-transform">→</span>
-              </a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-    </div><!-- /.ib-home-overview -->
-
-    <section class="ib-plans ib-detail-section"><div class="ib-plans-inner ib-reading"><h2>錄取案例導覽</h2><p>正式錄取動態將於核實與取得學生授權後更新。目前以下為案例分類導覽，並非即時錄取榜單。</p><div class="ib-case-wall" id="admissions-wall"><article><h3>STEM 與跨領域</h3><p>從先修課、專案與職涯方向梳理申請策略。</p><a href="cases.html">瀏覽案例 →</a></article><article><h3>商學院與管理</h3><p>整理工作經驗、量化成果與個人動機。</p><a href="cases.html">瀏覽案例 →</a></article><article><h3>人文、社科與其他</h3><p>檢視研究興趣、寫作材料與項目適配度。</p><a href="cases.html">瀏覽案例 →</a></article></div><div class="ib-wall-controls"><button type="button" data-wall="-1" aria-controls="admissions-wall">上一項</button><button type="button" data-wall="1" aria-controls="admissions-wall">下一項</button></div></div></section></main><!-- FOOTER -->
+<section class="ib-site-banner ib-editorial-hero ib-standalone-hero ib-home-banner" aria-labelledby="home-title">
+<span class="ib-editorial-eyebrow">IVYBRIDGE ADVISORY · US MASTER'S ADMISSIONS</span>
+<h1 id="home-title">美國碩士申請，<br>找到適合你的方向。</h1>
+<p>選校、文書、完整網申或單項協助。根據你的背景與職涯目標，選擇真正需要的申請支持。</p>
+<div class="ib-home-hero-actions"><a class="ib-home-primary" href="services.html">探索服務方案 <span aria-hidden="true">→</span></a><a class="ib-home-secondary" href="contact.html">了解諮詢方式</a></div>
+</section>
+<div class="ib-home-content">
+<section class="ib-home-section" id="home-options" aria-labelledby="home-options-title">
+<div class="ib-home-intro"><span class="ib-editorial-eyebrow">FIND YOUR FIT</span><h2 id="home-options-title">你現在最需要哪一種協助？</h2><p>不需要先研究所有方案。先找到你的需求，再去服務一覽比較具體內容與價格。</p></div>
+<div class="ib-home-options">
+<a href="services.html#essential" class="ib-home-option"><span class="ib-home-option-icon" aria-hidden="true">✦</span><div><span class="ib-home-option-type">自行申請，專業指導</span><h3>選校與文書有人帶</h3><p>已經準備自行送件，希望在學校選擇、文書和面試上獲得指導。</p><span class="ib-home-text-link">了解基礎申請指導 →</span></div></a>
+<a href="services.html#comprehensive" class="ib-home-option"><span class="ib-home-option-icon" aria-hidden="true">✓</span><div><span class="ib-home-option-type">完整流程協助</span><h3>從規劃一路到送件</h3><p>希望顧問協助文書、網申資料整理與送件流程，降低行政負擔。</p><span class="ib-home-text-link">了解全程申請顧問 →</span></div></a>
+<a href="services.html#elite" class="ib-home-option"><span class="ib-home-option-icon" aria-hidden="true">★</span><div><span class="ib-home-option-type">較大申請範圍</span><h3>需要更全面的支持</h3><p>申請項目較多，想要更完整的文書、面試與簽證資料準備協助。</p><span class="ib-home-text-link">了解尊榮菁英全案 →</span></div></a>
+</div><p class="ib-home-option-footnote">只需要單一服務？<a href="custom-services.html">查看客製化選項 →</a></p>
+</section>
+<section class="ib-home-section ib-home-soft" id="home-strategies" aria-labelledby="home-strategies-title">
+<div class="ib-home-intro"><span class="ib-editorial-eyebrow">APPLICATION STRATEGY</span><h2 id="home-strategies-title">不同背景，走不同申請路線。</h2><p>以下是我們協助釐清的常見申請方向，<strong>不是三種服務方案，也不代表保證錄取。</strong></p></div>
+<div class="ib-home-strategy-list">
+<article><span class="ib-home-strategy-kicker">名校申請</span><h3>挑戰 Top 30 與研究型學程</h3><p>分析科研、課程及實習經驗，釐清推薦信與文書重點，建立衝刺、匹配及穩健選校組合。</p></article>
+<article><span class="ib-home-strategy-kicker">跨領域與職涯</span><h3>STEM／商業分析／轉專業</h3><p>盤點先修課、技術專案與職涯目標，理解不同學程要求；STEM OPT 資格需依學校及項目個別核對。</p></article>
+<article><span class="ib-home-strategy-kicker">背景補強</span><h3>GPA 或經歷不理想</h3><p>評估硬性門檻，利用課程、專案、工作成果與合理的選校梯度提升申請材料的說服力。</p></article>
+</div><div class="ib-home-centered-action"><a class="ib-home-primary" href="services.html">查看 IvyBridge 能提供的協助 →</a></div>
+</section>
+<section class="ib-home-section" id="home-approach" aria-labelledby="home-approach-title">
+<div class="ib-home-approach"><div><span class="ib-editorial-eyebrow">MORE THAN RANKINGS</span><h2 id="home-approach-title">我們重視的不只是學校排名。</h2><p>好的申請規劃，也要看課程是否適合、畢業後的職涯機會，以及整體費用和獎學金可能性。</p><p>錄取率、Offer 數量與獎學金總額等品牌成果，在完成核實前不作為招生宣傳數字。</p></div><div class="ib-home-approach-points"><p><strong>學校與學程適配</strong><span>課程、先修要求、研究與就業方向</span></p><p><strong>個人化申請策略</strong><span>背景分析、材料補強、選校梯度</span></p><p><strong>預算與職涯考量</strong><span>總成本、獎學金和長期目標</span></p></div></div>
+</section>
+<section class="ib-home-final" aria-labelledby="home-final-title"><span class="ib-editorial-eyebrow">YOUR NEXT STEP</span><h2 id="home-final-title">先了解選項，再決定需要多少協助。</h2><p>所有服務內容、價格與申請分工都整理在「服務一覽」。</p><a class="ib-home-primary" href="services.html">前往服務一覽 →</a><p class="ib-home-honesty">諮詢與預約系統目前尚未啟用；現階段的聯絡問卷僅供下載，不會自動送出。</p></section>
+</div></main><!-- FOOTER -->
   
 <footer class="bg-ivy-900 text-slate-400 py-16 border-t border-ivy-800 text-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
