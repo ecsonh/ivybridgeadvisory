@@ -1,0 +1,10 @@
+/* Two reading sections per band. Only white and the existing #F4F7FA are used.
+   Wrappers contain existing section margins, keeping each pair visually continuous.
+   Paint extends slightly into the reading gutter; banners, TOCs and CTAs are excluded. */
+.reading-band{display:flow-root;position:relative;isolation:isolate;--reading-surface:#fff;--reading-from:#fff}
+.reading-band[data-reading-tone="soft"]{--reading-surface:#f4f7fa}
+.reading-band[data-reading-from="soft"]{--reading-from:#f4f7fa}
+.reading-band::before{content:"";position:absolute;inset:0 -24px;z-index:-1;background:linear-gradient(to bottom,var(--reading-from),var(--reading-surface) 64px);pointer-events:none}
+@media(max-width:1100px){.reading-band::before{inset-inline:-10px}}
+@media(max-width:680px){.reading-band::before{inset-inline:0}}
+@media(forced-colors:active){.reading-band::before{display:none}}
