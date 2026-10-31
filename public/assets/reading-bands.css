@@ -1,5 +1,5 @@
-/* Two reading sections per band. Only white and the existing #F4F7FA are used.
-   Wrappers contain existing section margins, keeping each pair visually continuous.
+/* One reading section per band. Only white and the existing #F4F7FA are used.
+   Wrappers contain existing section margins, so neighboring sections have different surface colors.
    Paint extends slightly into the reading gutter; banners, TOCs and CTAs are excluded. */
 .reading-band{display:flow-root;position:relative;isolation:isolate;--reading-surface:#fff;--reading-from:#fff}
 .reading-band[data-reading-tone="soft"]{--reading-surface:#f4f7fa}
