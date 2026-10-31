@@ -190,3 +190,12 @@ html[lang="en"] .ib-detail-grid>.ib-detail[data-plan="comprehensive"]::before{co
  .ib-services-main #plan-details .ib-detail{padding:24px 22px}
  .ib-services-main #plan-details .ib-custom-callout{padding:20px;margin-top:28px}
 }
+
+/* Brand crest in the shared navigation; preserves existing header spacing and wordmark. */
+header a.group > div.w-11.h-11 {
+  background: #071c30 url('./ivybridge-collegiate-crest.jpg') center / cover no-repeat !important;
+  border-radius: 50% !important;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(197,168,128,.28);
+}
+header a.group > div.w-11.h-11 > span { visibility: hidden; }
