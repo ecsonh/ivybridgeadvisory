@@ -96,3 +96,6 @@ body.ib-modal-active{overflow:hidden}
 .ib-cofounder-card p{line-height:1.8;font-size:15px;color:#52677a}
 @media(max-width:800px){.ib-about-founders .ib-founder-feature{grid-template-columns:1fr;gap:25px}.ib-founder-photo{max-width:480px}.ib-cofounder-card{grid-template-columns:90px minmax(0,1fr);gap:19px;padding:22px}.ib-cofounder-mark{width:88px;font-size:40px}}
 @media(max-width:480px){.ib-cofounder-card{grid-template-columns:1fr}.ib-founder-facts>div{grid-template-columns:1fr;gap:3px}.ib-cofounder-mark{width:84px}}
+
+.ib-founder-photo .ib-founder-photo-fallback{display:grid;place-items:center;height:100%;width:100%;font:normal 64px Georgia,serif;color:#8ba3b7;background:linear-gradient(145deg,#e9eef2,#dce5ec)}
+.ib-founder-photo .ib-founder-photo-fallback[hidden]{display:none!important}
