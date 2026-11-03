@@ -211,20 +211,21 @@ html[lang="en"] .ib-detail-grid>.ib-detail[data-plan="comprehensive"]::before{co
 @media(max-width:840px){.ib-home-content #home-approach{padding-bottom:56px}.ib-home-content .ib-home-final{padding:58px 22px 84px}}
 @media(prefers-reduced-motion:reduce){.ib-home-content .ib-home-final .ib-home-primary,.ib-home-content .ib-home-approach-points p{transition:none!important;transform:none!important}}
 
-/* Responsive navigation: use ONE breakpoint for the menu and reserve space for the floating language switch. */
+/* Responsive header: compact navigation at widths under 1440px. */
 @media(max-width:1439px){
  header .desktop-navigation,header .desktop-actions{display:none!important}
- header .compact-menu-toggle{display:flex!important;align-items:center;position:relative;z-index:2;flex-shrink:0}
+ header .compact-menu-toggle{display:flex!important;align-items:center;justify-content:center;position:relative;z-index:3;flex-shrink:0;margin-left:auto;visibility:visible!important;opacity:1!important}
+ header .compact-menu-toggle #mobile-menu-btn{display:inline-flex!important;align-items:center;justify-content:center;width:44px;min-width:44px;height:44px;visibility:visible!important;opacity:1!important;color:#112e4a!important}
  header #mobile-menu.hidden{display:none!important}
  header #mobile-menu:not(.hidden){display:block!important}
- .ib-lang-wrap{right:80px!important}
 }
 @media(min-width:1440px){
  header .desktop-navigation{display:flex!important}
  header .desktop-actions{display:flex!important}
  header .compact-menu-toggle,header #mobile-menu{display:none!important}
 }
+/* Float language controls at the bottom-right, outside the header touch targets. */
+.ib-lang-wrap{top:auto!important;bottom:calc(18px + env(safe-area-inset-bottom, 0px))!important;right:18px!important;z-index:45}
 @media(max-width:520px){
- .ib-lang-wrap{right:74px!important}
- header .compact-menu-toggle{margin-left:auto}
+ .ib-lang-wrap{right:12px!important;bottom:calc(12px + env(safe-area-inset-bottom, 0px))!important}
 }
