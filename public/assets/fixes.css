@@ -211,17 +211,16 @@ html[lang="en"] .ib-detail-grid>.ib-detail[data-plan="comprehensive"]::before{co
 @media(max-width:840px){.ib-home-content #home-approach{padding-bottom:56px}.ib-home-content .ib-home-final{padding:58px 22px 84px}}
 @media(prefers-reduced-motion:reduce){.ib-home-content .ib-home-final .ib-home-primary,.ib-home-content .ib-home-approach-points p{transition:none!important;transform:none!important}}
 
-/* Responsive header: compact navigation only below 1200px. */
-@media(max-width:1199px){
+/* Responsive header: show primary tabs from 800px; collapse below 800px. */
+@media(max-width:799px){
  header .desktop-navigation,header .desktop-actions{display:none!important}
  header .compact-menu-toggle{display:flex!important;align-items:center;justify-content:center;position:relative;z-index:3;flex-shrink:0;margin-left:auto;visibility:visible!important;opacity:1!important}
  header .compact-menu-toggle #mobile-menu-btn{display:inline-flex!important;align-items:center;justify-content:center;width:44px;min-width:44px;height:44px;visibility:visible!important;opacity:1!important;color:#112e4a!important}
  header #mobile-menu.hidden{display:none!important}
  header #mobile-menu:not(.hidden){display:block!important}
 }
-@media(min-width:1200px){
+@media(min-width:800px){
  header .desktop-navigation{display:flex!important}
- header .desktop-actions{display:flex!important}
  header .compact-menu-toggle,header #mobile-menu{display:none!important}
 }
 /* Float language controls at the bottom-right, outside the header touch targets. */
@@ -229,3 +228,16 @@ html[lang="en"] .ib-detail-grid>.ib-detail[data-plan="comprehensive"]::before{co
 @media(max-width:520px){
  .ib-lang-wrap{right:12px!important;bottom:calc(12px + env(safe-area-inset-bottom, 0px))!important}
 }
+
+/* Medium-width desktop: keep all five navigation tabs readable without wrapping. */
+@media(min-width:800px) and (max-width:1199px){
+ header>div{gap:10px!important;padding-left:18px!important;padding-right:18px!important}
+ header .desktop-navigation{display:flex!important;gap:8px!important;font-size:12px!important;min-width:0}
+ header .desktop-navigation a{padding-left:0!important;padding-right:0!important;white-space:nowrap}
+ header .desktop-actions{display:none!important}
+ header a.group{gap:8px!important}
+ header a.group .text-xl{font-size:16px!important}
+ header a.group .text-base{font-size:13px!important}
+ header a.group .text-\\[10px\\]{font-size:9px!important}
+}
+@media(min-width:1200px){header .desktop-actions{display:flex!important}}
