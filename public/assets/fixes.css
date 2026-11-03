@@ -211,7 +211,7 @@ html[lang="en"] .ib-detail-grid>.ib-detail[data-plan="comprehensive"]::before{co
 @media(max-width:840px){.ib-home-content #home-approach{padding-bottom:56px}.ib-home-content .ib-home-final{padding:58px 22px 84px}}
 @media(prefers-reduced-motion:reduce){.ib-home-content .ib-home-final .ib-home-primary,.ib-home-content .ib-home-approach-points p{transition:none!important;transform:none!important}}
 
-/* Responsive header: compact navigation at widths under 1440px. */
+/* Responsive header: compact navigation only below 1200px. */
 @media(max-width:1199px){
  header .desktop-navigation,header .desktop-actions{display:none!important}
  header .compact-menu-toggle{display:flex!important;align-items:center;justify-content:center;position:relative;z-index:3;flex-shrink:0;margin-left:auto;visibility:visible!important;opacity:1!important}
