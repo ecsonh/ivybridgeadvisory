@@ -212,14 +212,14 @@ html[lang="en"] .ib-detail-grid>.ib-detail[data-plan="comprehensive"]::before{co
 @media(prefers-reduced-motion:reduce){.ib-home-content .ib-home-final .ib-home-primary,.ib-home-content .ib-home-approach-points p{transition:none!important;transform:none!important}}
 
 /* Responsive header: compact navigation at widths under 1440px. */
-@media(max-width:1439px){
+@media(max-width:1199px){
  header .desktop-navigation,header .desktop-actions{display:none!important}
  header .compact-menu-toggle{display:flex!important;align-items:center;justify-content:center;position:relative;z-index:3;flex-shrink:0;margin-left:auto;visibility:visible!important;opacity:1!important}
  header .compact-menu-toggle #mobile-menu-btn{display:inline-flex!important;align-items:center;justify-content:center;width:44px;min-width:44px;height:44px;visibility:visible!important;opacity:1!important;color:#112e4a!important}
  header #mobile-menu.hidden{display:none!important}
  header #mobile-menu:not(.hidden){display:block!important}
 }
-@media(min-width:1440px){
+@media(min-width:1200px){
  header .desktop-navigation{display:flex!important}
  header .desktop-actions{display:flex!important}
  header .compact-menu-toggle,header #mobile-menu{display:none!important}
