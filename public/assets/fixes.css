@@ -253,3 +253,13 @@ html[lang="en"] .ib-detail-grid>.ib-detail[data-plan="comprehensive"]::before{co
 #contact form#consult-form textarea{min-height:100px}
 #contact #google-meet-booking a:focus-visible{outline:3px solid #b9955e;outline-offset:3px}
 @media(max-width:680px){#contact-hero.ib-site-banner{padding:50px 22px 58px}#contact-hero p{font-size:16px}}
+
+/* Direct-contact card: never let long addresses or email addresses overflow the grid. */
+#contact-direct-details{min-width:0;max-width:100%;overflow:hidden}
+#contact-direct-details>div.flex.items-start{display:grid;grid-template-columns:max-content minmax(0,1fr);column-gap:12px;align-items:start;min-width:0}
+#contact-direct-details>div.flex.items-start>span:first-child{white-space:nowrap}
+#contact-direct-details>div.flex.items-start>a,
+#contact-direct-details>div.flex.items-start>span:last-child{display:block;min-width:0;max-width:100%;overflow-wrap:anywhere;word-break:normal;white-space:normal}
+@media(max-width:480px){
+ #contact-direct-details>div.flex.items-start{grid-template-columns:minmax(0,1fr);row-gap:4px}
+}
