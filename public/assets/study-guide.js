@@ -14,14 +14,20 @@
   if(!id)return;
   const target=document.getElementById(aliases[id]||id);if(!target)return;
   const tool=target.matches('details')?target:target.closest('details.guide-tool');
-  if(tool)tool.open=true;
+  if(tool){
+   hub.querySelectorAll('details.guide-tool').forEach(other=>{if(other!==tool)other.open=false});
+   tool.open=true;
+  }
   // Inner timeline panels use the established button/aria-expanded behavior.
   if(target.classList.contains('timeline-body')&&target.classList.contains('hidden')){
    target.previousElementSibling?.click();
   }
   requestAnimationFrame(()=>target.scrollIntoView({block:'start',behavior:'auto'}));
  }
+ let initializing=true;
  hub.querySelectorAll('details.guide-tool').forEach(tool=>tool.addEventListener('toggle',()=>{
+  // Initial native toggle events must not rewrite the URL or override a requested deep link.
+  if(initializing)return;
   if(!tool.open){
    if(location.hash==='#'+tool.id){history.replaceState(null,'',location.pathname+location.search);window.dispatchEvent(new Event('ivybridge:sectionchange'));}
    return;
@@ -32,6 +38,7 @@
   hub.querySelectorAll('details.guide-tool').forEach(other=>{if(other!==tool)other.open=false});
  }));
  window.addEventListener('hashchange',revealHash);revealHash();
+ window.setTimeout(()=>{initializing=false},0);
  const major=document.getElementById('ib-major'),region=document.getElementById('ib-region');
  if(major&&region){
   const employers={cs:['Google','Microsoft','Amazon','IBM'],data:['Microsoft','Amazon','Databricks','NVIDIA'],business:['JPMorgan Chase','Goldman Sachs','Morgan Stanley','Deloitte'],engineering:['Tesla','Boeing','Siemens','GE Aerospace'],health:['UnitedHealth Group','CVS Health','Mayo Clinic','Kaiser Permanente']};
