@@ -31,7 +31,7 @@
     .ib-site-banner.hero-gradient .border-slate-200\/80 { border-color: rgba(255,255,255,.28); }
     .ib-site-banner.hero-gradient .badge-gold { color: #946C2D; }
   </style>
-<meta name="robots" content="noindex, nofollow"><link rel="stylesheet" href="assets/fixes.css"><style>
+<meta name="robots" content="noindex, nofollow"><link rel="stylesheet" href="assets/fixes.css"><link rel="stylesheet" href="assets/rotating-headline.css"><style>
 /* Student goal discovery CTA */
 .ib-home-services-prompt{text-align:center;margin:40px auto 0;max-width:760px;padding:26px 18px;border-top:1px solid #dbe4ec}.ib-home-services-prompt h3{font-size:clamp(20px,2.4vw,27px);font-weight:750;line-height:1.5}.ib-home-services-prompt>p{color:#58677c;line-height:1.8;margin:12px auto 18px}.ib-home-services-prompt .ib-home-primary{background:#112e4a;color:#fff!important}
 /* Homepage-only layout. Uses the site's existing navy/gold editorial palette. */
@@ -168,9 +168,14 @@
               IVYBRIDGE ADVISORY · US MASTER'S ADMISSIONS
             </div>
 
-            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-ivy-900 font-serif leading-tight tracking-tight">
-              美國碩士申請，<br><span class="text-ivy-800 hero-emphasis">從這裡開始。</span>
+            <h1 class="ib-rotating-hero-title text-3xl sm:text-4xl lg:text-5xl font-bold text-ivy-900 font-serif leading-tight tracking-tight">
+              美國碩士申請，<br><span class="hero-emphasis ib-rotating-headline" data-rotate-headline data-rotate-values="你的背景，值得更好的申請策略。|不只錄取名校，更要選對未來。|從你的優勢，找到適合的方向。">你的背景，值得更好的申請策略。</span>
             </h1>
+            <div class="ib-rotating-controls" role="group" aria-label="選擇首頁主標題">
+              <button type="button" class="ib-rotating-dot is-active" data-rotate-to="0" aria-label="查看標題一" aria-pressed="true"></button>
+              <button type="button" class="ib-rotating-dot" data-rotate-to="1" aria-label="查看標題二" aria-pressed="false"></button>
+              <button type="button" class="ib-rotating-dot" data-rotate-to="2" aria-label="查看標題三" aria-pressed="false"></button>
+            </div>
 
             <p class="text-base sm:text-lg text-slate-600 leading-relaxed font-normal max-w-2xl">
               不只是選校與文書，而是根據你的背景與未來職涯，找到真正適合你的申請方向。
@@ -338,7 +343,7 @@
   </div>
 
   <!-- JAVASCRIPT: Full Interaction Logic -->
-  <script src="assets/app.js" defer></script><script src="assets/language.js" defer></script>
+  <script src="assets/app.js" defer></script><script src="assets/rotating-headline.js" defer></script><script src="assets/language.js" defer></script>
   <!-- Vercel Web Analytics: static HTML integration -->
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
