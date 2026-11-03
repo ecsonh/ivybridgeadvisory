@@ -12,8 +12,6 @@
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let index = 0;
   let timer = null;
-  let hovered = false;
-  let focused = false;
 
   function show(next, animate) {
     index = (next + options.length) % options.length;
@@ -37,8 +35,8 @@
   }
   function start() {
     stop();
-    if (!document.hidden && !hovered && !focused && !reducedMotion.matches) {
-      timer = window.setInterval(() => show(index + 1, true), 3000);
+    if (!document.hidden && !reducedMotion.matches) {
+      timer = window.setInterval(() => show(index + 1, true), 2000);
     }
   }
   dots.forEach(dot => {
@@ -47,15 +45,6 @@
       if (Number.isInteger(next) && next >= 0 && next < options.length) show(next, true);
       start();
     });
-  });
-  hero.addEventListener('pointerenter', () => { hovered = true; stop(); });
-  hero.addEventListener('pointerleave', () => { hovered = false; start(); });
-  hero.addEventListener('focusin', () => { focused = true; stop(); });
-  hero.addEventListener('focusout', event => {
-    if (!event.relatedTarget || !hero.contains(event.relatedTarget)) {
-      focused = false;
-      start();
-    }
   });
   document.addEventListener('visibilitychange', start);
   if (typeof reducedMotion.addEventListener === 'function') reducedMotion.addEventListener('change', start);
