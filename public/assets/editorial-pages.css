@@ -74,3 +74,28 @@ body.ib-modal-active{overflow:hidden}
 .ib-detail-chapter h2{font-size:22px}
 .ib-detail-chapter p{color:#516779;font-size:15px;line-height:1.8}
 @media(max-width:780px){.ib-highlight-grid{grid-template-columns:1fr}.ib-library-cta-inner{align-items:flex-start;flex-direction:column}.ib-library-cta a{white-space:normal}.ib-story-card{padding:22px}}
+
+/* Verified founder team profiles, scoped to About. */
+.ib-about-founders .ib-founder-feature{grid-template-columns:minmax(230px,.78fr) minmax(0,1.22fr);gap:42px;align-items:start;margin-top:28px}
+.ib-founder-photo{margin:0;min-width:0}
+.ib-founder-photo .ib-portrait-ready{aspect-ratio:3/4;min-height:0;overflow:hidden;background:#e9eff3;border:1px solid #d6e0e8;border-radius:11px;padding:0;display:block}
+.ib-founder-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.ib-founder-photo figcaption{font-size:12px;color:#718399;letter-spacing:.05em;margin-top:10px}
+.ib-founder-bio{min-width:0}
+.ib-founder-bio>h3,.ib-cofounder-card h3{font:normal clamp(25px,2.8vw,34px)/1.3 Georgia,serif;margin:5px 0 3px;color:#112e4a}
+.ib-founder-role{font-size:13px!important;font-weight:700;color:#947347!important;margin:0 0 18px!important;letter-spacing:.025em}
+.ib-founder-bio>p{line-height:1.85;margin:13px 0;color:#4d6074;font-size:15px}
+.ib-founder-facts{border-top:1px solid #dce5ec;border-bottom:1px solid #dce5ec;margin:22px 0 12px;padding:10px 0;display:grid;gap:0}
+.ib-founder-facts>div{display:grid;grid-template-columns:92px minmax(0,1fr);gap:14px;padding:11px 0;border-bottom:1px solid #edf1f4}
+.ib-founder-facts>div:last-child{border:0}
+.ib-founder-facts dt{font-size:13px;font-weight:700;color:#112e4a}
+.ib-founder-facts dd{font-size:13px;color:#4c6275;line-height:1.6;margin:0;min-width:0;overflow-wrap:anywhere}
+.ib-founder-disclaimer{font-size:11px!important;line-height:1.7!important;color:#718296!important}
+.ib-cofounder-card{display:grid;grid-template-columns:115px minmax(0,1fr);gap:28px;background:white;border:1px solid #dfe7ed;border-radius:12px;padding:30px;margin-top:24px;align-items:center}
+.ib-cofounder-mark{width:110px;aspect-ratio:1;background:#eef2f5;border:1px solid #dce5ec;border-radius:9px;display:grid;place-items:center;font:normal 48px Georgia,serif;color:#96a8b9}
+.ib-cofounder-card p{line-height:1.8;font-size:15px;color:#52677a}
+@media(max-width:800px){.ib-about-founders .ib-founder-feature{grid-template-columns:1fr;gap:25px}.ib-founder-photo{max-width:480px}.ib-cofounder-card{grid-template-columns:90px minmax(0,1fr);gap:19px;padding:22px}.ib-cofounder-mark{width:88px;font-size:40px}}
+@media(max-width:480px){.ib-cofounder-card{grid-template-columns:1fr}.ib-founder-facts>div{grid-template-columns:1fr;gap:3px}.ib-cofounder-mark{width:84px}}
+
+.ib-founder-photo .ib-founder-photo-fallback{display:grid;place-items:center;height:100%;width:100%;font:normal 64px Georgia,serif;color:#8ba3b7;background:linear-gradient(145deg,#e9eef2,#dce5ec)}
+.ib-founder-photo .ib-founder-photo-fallback[hidden]{display:none!important}
