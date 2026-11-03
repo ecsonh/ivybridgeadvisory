@@ -274,7 +274,6 @@
       const openLineBtn = document.getElementById('open-line-modal-btn');
       const mobileLineBtn = document.getElementById('mobile-line-btn');
       const copyLineBtn = document.getElementById('copy-line-btn');
-      const openCalNotice = document.getElementById('open-calendar-notice');
       const privacyLink = document.getElementById('privacy-link');
 
       const lineNoticeHtml = '<p>官方 LINE 帳號與加入好友連結尚待確認，目前不提供加入或複製功能。</p>';
@@ -283,16 +282,7 @@
       if (mobileLineBtn) mobileLineBtn.addEventListener('click', () => showNotice('LINE 官方即時諮詢', lineNoticeHtml));
 
       if (openCalNotice) {
-        openCalNotice.addEventListener('click', () => {
-          showNotice('Calendly 線上預約系統', `
-            <p>線上預約尚未開放；Calendly 正式連結待品牌方提供。</p>
-            <p>目前問卷只供下載，不會寄信或安排預約。</p>
-          `);
-        });
-      }
-
-      if (privacyLink) {
-        privacyLink.addEventListener('click', () => {
+        openCalNotice.addEventListener('click', (){
           showNotice('隱私權政策與責任規範', `
             <p><strong>1. 資料隱私承諾：</strong>學員所填寫之在校成績、科系與聯絡資訊，僅用於 IvyBridge 留學申請評估與溝通，絕不作為第三方商業用途。</p>
             <p><strong>2. 零佣金獨立性：</strong>IvyBridge 保證絕不接受任何學校之佣金回扣，所有選校建議均完全立足於學員的最大生涯與錄取利益。</p>
