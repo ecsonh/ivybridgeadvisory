@@ -113,3 +113,16 @@ Prioritize STEM-specific **residential** master's programs and non-MBA business 
 - Wake Forest University
 
 **To add manually:** edit `public/assets/admissions-data.js` and replace the specific `null` field with a sourced rate object, keeping the other field and the rest of the file unchanged. The selector updates automatically when the script is deployed.
+
+## Owner-supplied planning data update — 2026-11-03
+
+The owner explicitly requested importing `Pasted markdown.md`. The attachment says 51 schools, but its IS/CS/PS table contains **50 unique schools**, exactly matching the existing selector. The MBA table contains 49 (Caltech absent). Keep the existing 50-school list and sourced `stem` records unchanged.
+
+- Added `information`, `csds`, `professional` fields. Most supplied values have `quality: "estimate"`, `year: null`, `source: null`; show **≈** and a prominent **unofficial / unverified estimate** label. These supplied estimates are not observed statistics, measured averages or proof that a corresponding degree exists. N/A stays null. Do not invent future estimates to fill gaps.
+- This is an explicitly requested exception to the earlier sourced-only dataset policy, not permission to relabel estimates as official. Existing sourced STEM records remain separately selectable and are not overwritten by estimates for broad fields.
+- CMU `csds`: the university's [comparison table](https://www.cs.cmu.edu/education/masters/programs-comparison) reports MSCS 154 offers / 1,289 applications, rounded 12%. Applies only to MSCS. Accessible table did not establish the admissions cohort year, so year stays null rather than asserting the attachment's 2025 label.
+- MBA: retain existing sourced records when they agree with the attachment. Case Western's supplied correction is 52%, supported by its [Weatherhead profile](https://poetsandquants.com/school-profile/case-western-reserve-university-weatherhead-school-of-management/); Purdue's supplied correction is 78%, supported by its [Daniels historical profile](https://poetsandquants.com/school-profile/purdue-university-krannert-school-management/). Admission cohort years are unspecified, not the page update year. Historical profiles do not establish current degree availability.
+- Johns Hopkins MBA ≈35% is an owner-supplied estimate, not a sourced MBA statistic. All other new unsourced numerical claims must use `estimate` or `owner-reported`, never `official` / `secondary`.
+- `school-explorer.js` uses explicit quality states and clears the source URL on every selection. Missing source/year must not inherit from the previous selection. Count is derived from the dataset. Both languages offer MBA, IS, CS/DS, Professional Studies and preserved sourced STEM records.
+- No change to IvyBridge's unverified 85% figure, pricing, other tools or forms.
+- Typography supplement: `public/assets/NotoSansTC-explorer.ttf` contains four missing glyphs (史／平／粗／註), subset from Google Fonts' Noto Sans TC variable font under the existing `public/assets/FONT-LICENSE.txt`. `study-guide.css` limits it to those Unicode characters; the original font remains unchanged.
