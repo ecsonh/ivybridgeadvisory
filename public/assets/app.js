@@ -358,5 +358,5 @@ document.addEventListener('DOMContentLoaded',()=>{
  }
  const menu=document.getElementById('mobile-menu'),trigger=document.getElementById('mobile-menu-btn');
  document.querySelectorAll('.mobile-nav-link').forEach(a=>a.addEventListener('click',()=>trigger?.setAttribute('aria-expanded','false')));
- const media=matchMedia('(min-width:1280px)');media.addEventListener('change',()=>{if(media.matches&&menu){menu.classList.add('hidden');trigger?.setAttribute('aria-expanded','false')}});
+ const media=matchMedia('(min-width:800px)');media.addEventListener('change',()=>{if(media.matches&&menu){menu.classList.add('hidden');trigger?.setAttribute('aria-expanded','false')}});
 });
