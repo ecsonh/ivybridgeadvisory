@@ -58,3 +58,7 @@ Keep idiomatic equivalent English content and the same order, links and interact
 - Check 375, 768 and 1440 px layouts; inspect screenshots for typography, hierarchy, overflow and banner/sidebar preservation. Static checks alone do not establish visual quality.
 - Any independent master's guide change must be explicitly requested. For a merge of the other two pages, compare the independent page outside shared navigation against the approved base.
 - Use a feature branch and PR. Merge only after explicit owner approval; a styling approval does not remove noindex, verify outcomes or enable form transport. Report Preview/Production status and any live verification limitation accurately.
+
+## Independent master's-guide banner alignment (2026-11-03)
+
+The owner explicitly requested aligning the independent master's-guide banner with the established navy banner. Keep its existing copy, CTAs, anchors and below-banner content. In `fixes.css`, `.ib-site-banner.guide-hero` (Chinese) and `.ib-site-banner.ib-masters-guide-hero` (English) use navy `#112E4A`, white headings, soft-white supporting text, muted-gold labels and gold primary buttons. Reuse the Study Guide's responsive heading scale and 62 / 42 / 34 px vertical spacing. Do not restore the legacy light `.guide-hero` background or apply these overrides to reading sections. This targeted visual change does not merge the independent page into the unified guide.
