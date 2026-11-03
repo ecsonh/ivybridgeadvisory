@@ -274,22 +274,12 @@
       const openLineBtn = document.getElementById('open-line-modal-btn');
       const mobileLineBtn = document.getElementById('mobile-line-btn');
       const copyLineBtn = document.getElementById('copy-line-btn');
-      const openCalNotice = document.getElementById('open-calendar-notice');
       const privacyLink = document.getElementById('privacy-link');
 
       const lineNoticeHtml = '<p>官方 LINE 帳號與加入好友連結尚待確認，目前不提供加入或複製功能。</p>';
       if (topLineBtn) topLineBtn.addEventListener('click', () => showNotice('LINE 官方即時諮詢', lineNoticeHtml));
       if (openLineBtn) openLineBtn.addEventListener('click', () => showNotice('LINE 官方即時諮詢', lineNoticeHtml));
       if (mobileLineBtn) mobileLineBtn.addEventListener('click', () => showNotice('LINE 官方即時諮詢', lineNoticeHtml));
-
-      if (openCalNotice) {
-        openCalNotice.addEventListener('click', () => {
-          showNotice('Calendly 線上預約系統', `
-            <p>線上預約尚未開放；Calendly 正式連結待品牌方提供。</p>
-            <p>目前問卷只供下載，不會寄信或安排預約。</p>
-          `);
-        });
-      }
 
       if (privacyLink) {
         privacyLink.addEventListener('click', () => {
