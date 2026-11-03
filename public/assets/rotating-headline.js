@@ -36,7 +36,7 @@
   function start() {
     stop();
     if (!document.hidden && !reducedMotion.matches) {
-      timer = window.setInterval(() => show(index + 1, true), 2000);
+      timer = window.setInterval(() => show(index + 1, true), 2500);
     }
   }
   dots.forEach(dot => {
