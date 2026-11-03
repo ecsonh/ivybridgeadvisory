@@ -126,3 +126,8 @@ The owner explicitly requested importing `Pasted markdown.md`. The attachment sa
 - `school-explorer.js` uses explicit quality states and clears the source URL on every selection. Missing source/year must not inherit from the previous selection. Count is derived from the dataset. Both languages offer MBA, IS, CS/DS, Professional Studies and preserved sourced STEM records.
 - No change to IvyBridge's unverified 85% figure, pricing, other tools or forms.
 - Typography supplement: `public/assets/NotoSansTC-explorer.ttf` contains four missing glyphs (史／平／粗／註), subset from Google Fonts' Noto Sans TC variable font under the existing `public/assets/FONT-LICENSE.txt`. `study-guide.css` limits it to those Unicode characters; the original font remains unchanged.
+
+
+### Explorer outcome block — 2026-11-03
+
+Owner requested removing the entire unverified IvyBridge 85% block from the bilingual Study Guide explorer. Removed it and placed a navy/gold aspiration banner beneath the data. The proposed 90% ideal-school / Ivy League claim is not published: cohort period, numerator/denominator, definition of ideal-school success and separate Ivy League outcomes are not yet supplied. Replace aspirational copy with a quantified outcome only after supporting records and clear metric definitions are available; do not infer that 90% of students gained Ivy League admission. Other pages/data and school-rate displays remain unchanged.

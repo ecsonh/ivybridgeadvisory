@@ -11,3 +11,15 @@
 
 /* Supplement missing explorer glyphs from the same OFL-licensed Noto Sans TC family. */
 @font-face{font-family:IvyTC;src:url(NotoSansTC-explorer.ttf) format("truetype");font-weight:100 900;font-display:swap;unicode-range:U+53F2,U+5E73,U+7C97,U+8A3B}
+
+/* Brand aspiration below the explorer; outcome percentages require documented evidence. */
+#school-tool .guide-aspiration{display:flex;align-items:center;justify-content:space-between;gap:28px;margin-top:30px;padding:32px;border:1px solid #c5a880;border-left:4px solid #d7b77d;border-radius:8px;background:#112e4a;color:#fff}
+#school-tool .guide-aspiration>div{min-width:0;max-width:650px}
+#school-tool .guide-aspiration .guide-aspiration-label{color:#d7b77d;font-size:12px;line-height:1.6;font-weight:700;letter-spacing:.12em;margin:0 0 12px}
+#school-tool .guide-aspiration h3{color:#fff;font-family:IvyTC,Georgia,serif;font-size:clamp(23px,2.3vw,30px);font-weight:600;line-height:1.5;margin:0 0 12px;text-wrap:balance}
+#school-tool .guide-aspiration p:not(.guide-aspiration-label){color:#dce6ed;font-size:16px;line-height:1.85;margin:0}
+#school-tool .guide-aspiration>a{display:inline-flex;align-items:center;gap:12px;flex-shrink:0;padding:13px 18px;border-radius:4px;background:#d7b77d;color:#112e4a;font-size:15px;font-weight:650;line-height:1.6;text-decoration:none}
+#school-tool .guide-aspiration>a:hover{background:#e3c999}
+#school-tool .guide-aspiration>a:focus-visible{outline:2px solid #fff;outline-offset:5px}
+@media(max-width:1100px){#school-tool .guide-aspiration{align-items:flex-start;flex-direction:column;gap:22px;padding:26px}}
+@media(max-width:680px){#school-tool .guide-aspiration{padding:24px 20px}#school-tool .guide-aspiration>a{max-width:100%;box-sizing:border-box}}
