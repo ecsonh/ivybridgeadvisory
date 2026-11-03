@@ -263,3 +263,33 @@ html[lang="en"] .ib-detail-grid>.ib-detail[data-plan="comprehensive"]::before{co
 @media(max-width:480px){
  #contact-direct-details>div.flex.items-start{grid-template-columns:minmax(0,1fr);row-gap:4px}
 }
+
+/* Independent master's guide: use the approved navy/gold banner, not the legacy light hero.
+   Scope both language variants so shared reading sections and other page banners stay intact. */
+.ib-site-banner.guide-hero,
+.ib-site-banner.ib-masters-guide-hero{background:#112e4a;color:#fff;border-bottom:1px solid #112e4a;padding:62px 0}
+.ib-site-banner.guide-hero h1,
+.ib-site-banner.ib-masters-guide-hero h1{font-family:IvyTC,Georgia,serif;font-size:clamp(30px,3.6vw,46px);font-weight:600;line-height:1.4;color:#fff;max-width:900px;margin:14px 0 18px;text-wrap:balance}
+.ib-site-banner.guide-hero h1 span{display:inline-block;color:#dce6ed;font-size:.8em;font-weight:500;line-height:1.5;margin-top:12px}
+.ib-site-banner.guide-hero .guide-eyebrow{color:#d7b77d;font-size:12px!important;letter-spacing:.15em;margin:0 0 14px}
+.ib-site-banner.guide-hero .guide-intro,
+.ib-site-banner.ib-masters-guide-hero p{color:#dce6ed;max-width:740px;font-size:18px;line-height:1.85;margin:0}
+.ib-site-banner.guide-hero .guide-meta{color:#bdcdda;font-size:14px!important;line-height:1.8;margin:24px 0 0}
+.ib-site-banner.guide-hero .guide-button,
+.ib-site-banner.ib-masters-guide-hero a{background:#d7b77d;color:#112e4a;border-radius:4px;text-decoration:none}
+.ib-site-banner.guide-hero .guide-button:hover,
+.ib-site-banner.ib-masters-guide-hero a:hover{background:#e3c999;color:#112e4a}
+.ib-site-banner.guide-hero .guide-text-link{color:#dce6ed;text-underline-offset:.25em}
+.ib-site-banner.guide-hero .guide-text-link:hover{color:#fff}
+.ib-site-banner.guide-hero a:focus-visible,
+.ib-site-banner.ib-masters-guide-hero a:focus-visible{outline:2px solid #fff;outline-offset:5px}
+.ib-site-banner.ib-masters-guide-hero{padding-inline:max(28px,calc((100% - 1124px)/2));text-align:left}
+@media(max-width:1100px){
+ .ib-site-banner.guide-hero,.ib-site-banner.ib-masters-guide-hero{padding-block:42px}
+}
+@media(max-width:680px){
+ .ib-site-banner.guide-hero,.ib-site-banner.ib-masters-guide-hero{padding-block:34px}
+ .ib-site-banner.guide-hero h1,.ib-site-banner.ib-masters-guide-hero h1{font-size:29px}
+ .ib-site-banner.guide-hero .guide-intro,.ib-site-banner.ib-masters-guide-hero p{font-size:16px}
+ .ib-site-banner.ib-masters-guide-hero{padding-inline:20px}
+}
