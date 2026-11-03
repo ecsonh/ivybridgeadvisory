@@ -1,0 +1,12 @@
+/* Homepage headline rotation: scoped to hero, existing navy/gold identity preserved. */
+.ib-site-banner .ib-rotating-hero-title{margin-bottom:0;font-weight:600!important}
+.ib-site-banner .ib-rotating-headline{font-weight:500!important}
+.ib-site-banner .ib-rotating-headline{display:block;min-height:2.85em;line-height:1.42;color:#d7b77d!important;font-size:.86em;letter-spacing:-.025em;text-wrap:balance;max-width:100%;overflow-wrap:break-word}
+.ib-site-banner .ib-rotating-headline.ib-headline-enter{animation:ib-headline-enter .48s cubic-bezier(.2,.7,.25,1) both}
+@keyframes ib-headline-enter{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+.ib-site-banner .ib-rotating-controls{display:flex;align-items:center;gap:10px;margin-top:-12px}
+.ib-site-banner .ib-rotating-dot{appearance:none;display:block;width:10px;height:10px;min-width:10px;border-radius:999px;background:rgba(228,238,246,.48);border:0;padding:0;cursor:pointer;transition:width .22s ease,background-color .22s ease;box-shadow:none}
+.ib-site-banner .ib-rotating-dot.is-active{width:29px;background:#d7b77d}
+.ib-site-banner .ib-rotating-dot:focus-visible{outline:2px solid #d7b77d;outline-offset:5px}
+@media(max-width:639px){.ib-site-banner .ib-rotating-headline{min-height:2.95em;font-size:.84em}.ib-site-banner .ib-rotating-controls{margin-top:-8px}}
+@media(prefers-reduced-motion:reduce){.ib-site-banner .ib-rotating-headline.ib-headline-enter{animation:none}.ib-site-banner .ib-rotating-dot{transition:none}}
