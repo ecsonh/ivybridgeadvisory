@@ -190,3 +190,24 @@ html[lang="en"] .ib-detail-grid>.ib-detail[data-plan="comprehensive"]::before{co
  .ib-services-main #plan-details .ib-detail{padding:24px 22px}
  .ib-services-main #plan-details .ib-custom-callout{padding:20px;margin-top:28px}
 }
+
+/* Homepage clarity and spacing refinements (2026-11-02) */
+/* Scoped to homepage: keep shared banners, section index, and brand palette unchanged. */
+.ib-home-content #home-approach{padding-bottom:84px;border-top:1px solid #e2e8f0;}
+.ib-home-content #home-approach .ib-home-approach-points{border-top:1px solid #cbd5e1;}
+.ib-home-content #home-approach .ib-home-approach-points p{border-bottom:1px solid #cbd5e1;padding:19px 0;}
+.ib-home-content #home-approach .ib-home-approach-points p:last-child{border-bottom:1px solid #cbd5e1;}
+.ib-home-content .ib-home-final{padding:74px 24px 108px;min-height:0;}
+.ib-home-content .ib-home-final .ib-home-primary{transition:background-color .2s ease,box-shadow .2s ease,transform .2s ease;}
+.ib-home-content .ib-home-final .ib-home-primary:hover{background:#1b4567;box-shadow:0 8px 22px rgba(17,46,74,.16);transform:translateY(-2px);}
+.ib-home-content .ib-home-approach h2{max-width:18ch;text-wrap:balance;}
+.ib-home-content .ib-home-approach-points strong{font-size:16px;letter-spacing:.01em;}
+.ib-home-content .ib-home-approach-points p{transition:background-color .2s ease,padding-left .2s ease;}
+.ib-home-content .ib-home-approach-points p:hover{background:#f8fafc;padding-left:10px;}
+.ib-home-content .ib-home-option:focus-visible,.ib-home-content .ib-home-primary:focus-visible{outline:3px solid #b9955e;outline-offset:4px;}
+.ib-site-banner .ib-hero-insight-card{z-index:5;background:#fff!important;border:1px solid #d5dfeb!important;box-shadow:0 14px 28px rgba(1,18,35,.22)!important;max-width:335px;}
+.ib-site-banner .ib-hero-insight-card p{color:#334155!important;opacity:1!important;text-shadow:none!important;}
+.ib-site-banner .ib-hero-insight-card p:first-child{color:#112e4a!important;font-weight:800!important;font-size:13px!important;}
+.ib-site-banner .ib-hero-insight-card p:last-child{color:#475569!important;font-size:12px!important;line-height:1.6!important;}
+@media(max-width:840px){.ib-home-content #home-approach{padding-bottom:56px}.ib-home-content .ib-home-final{padding:58px 22px 84px}}
+@media(prefers-reduced-motion:reduce){.ib-home-content .ib-home-final .ib-home-primary,.ib-home-content .ib-home-approach-points p{transition:none!important;transform:none!important}}
