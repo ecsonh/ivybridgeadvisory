@@ -99,3 +99,16 @@ body.ib-modal-active{overflow:hidden}
 
 .ib-founder-photo .ib-founder-photo-fallback{display:grid;place-items:center;height:100%;width:100%;font:normal 64px Georgia,serif;color:#8ba3b7;background:linear-gradient(145deg,#e9eef2,#dce5ec)}
 .ib-founder-photo .ib-founder-photo-fallback[hidden]{display:none!important}
+
+/* About page — matching, full-width Founder & Co-Founder profiles without portraits. */
+.ib-about-founders .ib-team-profile,
+#advisor-team .ib-team-profile{display:block;width:100%;max-width:100%;box-sizing:border-box;margin:28px 0 0;padding:clamp(24px,3.3vw,42px);border:1px solid #dfe7ed;border-radius:12px;background:#fff;box-shadow:0 5px 18px rgba(17,46,74,.035)}
+.ib-about-founders .ib-team-profile .ib-founder-bio,
+#advisor-team .ib-team-profile .ib-cofounder-bio{width:100%;max-width:860px;min-width:0;margin:0 auto}
+.ib-about-founders .ib-team-profile .ib-founder-bio>h3,
+#advisor-team .ib-team-profile .ib-cofounder-bio>h3{margin-top:8px}
+#advisor-team .ib-team-profile .ib-cofounder-bio>p{font-size:15px;line-height:1.85;max-width:860px;color:#4d6074}
+#advisor-team .ib-team-profile .ib-founder-disclaimer{margin-top:22px;border-top:1px solid #dbe4ea;padding-top:18px}
+@media(max-width:800px){
+ .ib-about-founders .ib-team-profile,#advisor-team .ib-team-profile{padding:24px}
+}
