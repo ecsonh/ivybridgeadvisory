@@ -62,3 +62,7 @@ Keep idiomatic equivalent English content and the same order, links and interact
 ## Independent master's-guide banner alignment (2026-11-03)
 
 The owner explicitly requested aligning the independent master's-guide banner with the established navy banner. Keep its existing copy, CTAs, anchors and below-banner content. In `fixes.css`, `.ib-site-banner.guide-hero` (Chinese) and `.ib-site-banner.ib-masters-guide-hero` (English) use navy `#112E4A`, white headings, soft-white supporting text, muted-gold labels and gold primary buttons. Reuse the Study Guide's responsive heading scale and 62 / 42 / 34 px vertical spacing. Do not restore the legacy light `.guide-hero` background or apply these overrides to reading sections. This targeted visual change does not merge the independent page into the unified guide.
+
+## School explorer default-open exception (2026-11-03)
+
+At the owner's explicit request, `#school-tool` is open on initial load in both languages. All other top-level tools remain closed unless targeted by a deep link. Retain native keyboard/mouse collapse, one-open-tool behavior and language/hash handling. Opening by default must not scroll away from the hero or add a hash to an ordinary page load. A deep link to another tool takes precedence over this default. This supersedes earlier all-tools-closed wording only for the school explorer.
