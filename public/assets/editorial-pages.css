@@ -112,3 +112,17 @@ body.ib-modal-active{overflow:hidden}
 @media(max-width:800px){
  .ib-about-founders .ib-team-profile,#advisor-team .ib-team-profile{padding:24px}
 }
+
+/* About: Founder and Co-Founder now share the same section container geometry.
+   The former full-width gray wrapper introduced a different left/right edge
+   inside the shared chapter shell, making the two sections appear misaligned. */
+#founder-story.ib-editorial-section,
+#advisor-team.ib-editorial-section{width:100%;max-width:1130px;margin-inline:auto;padding:54px 18px;box-sizing:border-box}
+#founder-story .ib-team-profile,
+#advisor-team .ib-team-profile{width:100%;margin:28px 0 0;box-sizing:border-box}
+#founder-story .ib-founder-bio,
+#advisor-team .ib-cofounder-bio{max-width:860px;width:100%;margin-inline:auto;min-width:0}
+@media(max-width:580px){
+ #founder-story.ib-editorial-section,
+ #advisor-team.ib-editorial-section{padding:38px 13px}
+}
