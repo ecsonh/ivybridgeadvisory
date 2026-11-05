@@ -1,4 +1,4 @@
-/* IvyBridge master's admissions explorer. Data lives in admissions-data.js. */
+/* Shared bilingual explorer. Estimates are never presented as observed program rates. */
 (() => {
  'use strict';
  const root=document.getElementById('ib-school-explorer');
@@ -9,34 +9,44 @@
  const school=root.querySelector('#ib-school-choice'),field=root.querySelector('#ib-field-choice');
  const metric=root.querySelector('#ib-school-metric'),sub=root.querySelector('#ib-school-subtitle');
  const source=root.querySelector('#ib-school-source'),note=root.querySelector('#ib-school-note');
- const compare=root.querySelector('#ib-school-compare');
- const count=root.querySelector('#ib-school-count');
+ const compare=root.querySelector('#ib-school-compare'),count=root.querySelector('#ib-school-count');
  const names=Object.keys(db).sort((a,b)=>a.localeCompare(b,'en'));
  school.replaceChildren();
  for(const name of names){const o=document.createElement('option');o.value=name;o.textContent=name;school.appendChild(o)}
- if(count)count.textContent=tr('收錄 50 所美國大學（精選清單，非官方排名）','50 curated U.S. universities (not an official ranking)');
- school.value='Stanford University';
+ if(count)count.textContent=tr(`收錄 ${names.length} 所美國大學（精選清單，非官方排名）`,`${names.length} curated U.S. universities (not an official ranking)`);
+ school.value=names.includes('Stanford University')?'Stanford University':names[0];
  function render(){
-   const item=db[school.value];
-   if(!item)return;
-   const row=item[field.value];
-   if(row&&typeof row.rate==='number'&&row.source){
-     metric.textContent=new Intl.NumberFormat(en?'en-US':'zh-TW',{maximumFractionDigits:2}).format(row.rate)+'%';
-     sub.textContent=row.program+' · '+row.year+' · '+(row.quality==='secondary'?tr('第三方資料','Third-party source'):row.quality==='official-calculated'?tr('校方數據計算','Calculated from university figures'):tr('校方數據','University source'));
-     source.hidden=false;
-     source.href=row.source;
-     source.textContent=(row.quality==='secondary'?tr('第三方研究資料 ↗','Third-party study ↗'):tr('校方資料 ↗','Official university source ↗'));
-     const caveat=(field.value==='business'?tr('本數字代表此校特定 MBA 項目，不是所有商科碩士（MSBA、MFin 等）的錄取率。','This rate refers to the specified MBA program, not all business master’s degrees such as MSBA or MFin.'):tr('本數字只代表列出的碩士項目，並非整校 STEM 錄取率。','This rate describes the named master’s program, not university-wide STEM admissions.'));
-     note.textContent=caveat+' '+(row.note||'');
-   }else{
-     metric.textContent=tr('尚無可信數據','No verified rate');
-     sub.textContent=tr('此校此領域尚未找到可核實的碩士項目錄取率。','No verifiable master’s program acceptance rate is currently recorded for this institution and field.');
-     source.hidden=true;
-     note.textContent=(item.stemNote&&field.value==='stem')?item.stemNote:tr('可在 GitHub 的 public/assets/admissions-data.js 補充 Program、年份、來源及錄取率。','Program-level figures can be added in public/assets/admissions-data.js with year and source.');
-   }
+   const row=db[school.value]?.[field.value];
+   // Clear the previous record's URL even when the next record has no source.
+   source.hidden=true;source.removeAttribute('href');source.textContent='';
    compare.hidden=true;
+   const valid=row && typeof row.rate==='number' && Number.isFinite(row.rate) && row.rate>=0 && row.rate<=100;
+   const estimated=row?.quality==='estimate';
+   const reported=row?.quality==='owner-reported';
+   const sourced=valid && ['official','official-calculated','secondary'].includes(row.quality) && /^https:\/\//.test(row.source||'');
+   root.dataset.dataQuality=estimated?'estimate':reported?'owner-reported':sourced?row.quality:'unavailable';
+   if(valid && (estimated || reported || sourced)){
+     metric.textContent=(estimated?'≈ ':'')+new Intl.NumberFormat(en?'en-US':'zh-TW',{maximumFractionDigits:2}).format(row.rate)+'%';
+     const status=estimated?tr('非官方估計・未經核實','Unofficial estimate · unverified'):reported?tr('提供數值・尚未核實','Supplied figure · unverified'):row.quality==='secondary'?tr('第三方資料','Third-party report'):row.quality==='official-calculated'?tr('校方數據計算','Calculated from university figures'):tr('校方數據','University source');
+     sub.textContent=status+' · '+row.program+' · '+(row.year||tr('招生年份未提供','Admissions year unspecified'));
+     if(sourced){
+       source.hidden=false;source.href=row.source;
+       source.textContent=row.quality==='secondary'?tr('查看第三方資料 ↗','View third-party source ↗'):tr('查看校方資料 ↗','View university source ↗');
+     }
+     if(estimated){
+       note.textContent=tr('委託方提供的粗略規劃估計，沒有可核實的招生統計或明確年份；不是學校公布的實際錄取率、學程平均或個人錄取機率，也不保證該校設有對應學程。','Owner-supplied rough planning estimate with no verifiable admissions statistics or cohort year. Not a university-published rate, measured program average, personal admission probability or confirmation of a corresponding degree.');
+     }else if(reported){
+       note.textContent=tr('提供的參考數值尚未核實來源與招生年份，不應視為已確認的錄取率。','The supplied reference figure has no verified source or cohort year and must not be treated as a confirmed acceptance rate.');
+     }else{
+       const caveat=field.value==='business'?tr('僅代表列出的 MBA 學程，不適用所有商科碩士（MSBA／MFin 等）。','Applies only to the named MBA program, not all business master’s degrees such as MSBA or MFin.'):tr('僅代表列出的個別碩士學程，不是整校或整個領域的平均錄取率。','Applies only to the named master’s program, not a university-wide or field-wide average.');
+       const historical=field.value==='business' && !row.year?tr('資料頁未註明招生年度；網頁更新日期不等於招生年份，歷史數據也不代表目前仍開放招生。','The profile does not state the admission cohort. A page update date is not an admissions year, and historical data does not establish current program availability.') : '';
+       note.textContent=caveat+' '+(historical || (en?row.note:row.noteZh||row.note)||'');
+     }
+   }else{
+     metric.textContent=tr('N/A・無可比較資料','N/A · No comparable data');
+     sub.textContent=tr('目前未提供此校此領域可比較的錄取率；不代表 0%。','No comparable rate is supplied for this institution and field; this does not mean 0%.');
+     note.textContent=tr('請以個別學程官方招生要求為準。無法確認可比較的學程或沒有公開數據時，不推算錄取率。','Check the individual program’s official admission requirements. No rate is inferred when a comparable program or published figure cannot be confirmed.');
+   }
  }
- school.addEventListener('change',render);
- field.addEventListener('change',render);
- render();
+ school.addEventListener('change',render);field.addEventListener('change',render);render();
 })();
