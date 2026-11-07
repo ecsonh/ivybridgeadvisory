@@ -18,17 +18,9 @@
  const caseLink=entry=>'case.html?id='+encodeURIComponent(entry.id);
  const image=(entry,clazz)=>{
    const wrap=el('div',clazz);
-   if(entry.letterOnly){
-     wrap.classList.add('ib-letter-in-frame');
-     wrap.append(el('div','ib-letter-frame-brand','IvyBridge 領航留學'),
-       el('div','ib-letter-frame-kicker','CONGRATULATIONS · 錄取榮譽榜'),
-       el('h4','ib-letter-frame-university',title(entry)),
-       el('p','ib-letter-frame-program',program(entry)),
-       el('span','ib-letter-frame-year',entry.year));
-   }
    const picture=el('img','ib-poster-img');
    picture.src=file(entry);
-   picture.alt=t('錄取海報：','Admissions poster: ')+entry.school+' · '+entry.program;
+   picture.alt=t(entry.letterOnly?'錄取信截圖：':'錄取海報：',entry.letterOnly?'Admission-letter screenshot: ':'Admissions poster: ')+entry.school+' · '+entry.program;
    picture.loading='lazy';
    picture.decoding='async';
    picture.addEventListener('error',()=>{
@@ -38,7 +30,6 @@
      wrap.append(note);
    },{once:true});
    wrap.append(picture);
-   if(entry.letterOnly)wrap.append(el('p','ib-letter-frame-footer','IvyBridge · ADMISSIONS SHOWCASE'));
    return wrap;
  };
  const proofText=t('錄取海報素材 · IvyBridge 參與及公開授權待核實','Admission material · advisory involvement/permission pending');
@@ -152,6 +143,7 @@
        el('p','',t('圖片保留提供者原始排版與已遮蔽之個資，點擊下方連結可在新分頁查看原圖。','The uploaded image preserves its original design and existing privacy redactions. Open it in a new tab to inspect.')));
      const imgLink=el('a','ib-admissions-all-link',t('開啟完整錄取海報 ↗','Open full admissions poster ↗'));
      imgLink.href=file(entry);imgLink.target='_blank';imgLink.rel='noopener noreferrer';
+     if(entry.letterOnly)caption.append(el('p','ib-admissions-proof-note',t('此案例目前提供的是原始錄取信截圖（非制式海報），放大檢視的清晰度受來源圖片限制。','This case currently includes an original admission-letter screenshot rather than a designed poster; zoom clarity depends on the source resolution.')));
      caption.append(imgLink,el('p','ib-admissions-proof-note',t('本頁不表示 IvyBridge 與錄取學校存在官方合作關係，也不保證相同錄取結果。','No institutional partnership or similar admissions outcome is implied.')));
      panel.append(pic,caption);
      const back=el('a','ib-admissions-back',t('← 返回所有案例','← Back to case library'));
