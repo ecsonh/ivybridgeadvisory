@@ -2,6 +2,7 @@
 (() => {
  'use strict';
  const data=Array.isArray(window.IVYBRIDGE_ADMISSIONS)?window.IVYBRIDGE_ADMISSIONS:[];
+ const featured=data.filter(item=>item.featured!==false && !item.letterOnly);
  const en=document.documentElement.lang.toLowerCase().startsWith('en');
  const t=(zh,english)=>en?english:zh;
  const imagePrefix=en?'../':'';
@@ -44,9 +45,9 @@
  const lightbox=document.querySelector('[data-admission-lightbox]');
  let active=0,lastFocus=null;
  const show=index=>{
-   if(!lightbox||!data.length)return;
-   active=(index+data.length)%data.length;
-   const item=data[active];
+   if(!lightbox||!featured.length)return;
+   active=(index+featured.length)%featured.length;
+   const item=featured[active];
    const pic=lightbox.querySelector('[data-lightbox-image]');
    pic.src=file(item);
    pic.alt=t('完整錄取海報：','Full admission poster: ')+item.school;
@@ -85,7 +86,7 @@
    });
  }
  document.querySelectorAll('[data-featured-admissions]').forEach(container=>{
-   const cards=data.map((item,index)=>{
+   const cards=featured.map((item,index)=>{
      const article=el('article','ib-poster-card');
      const button=el('button','ib-poster-open');
      button.type='button';

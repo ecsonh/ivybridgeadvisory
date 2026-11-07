@@ -86,6 +86,7 @@ window.IVYBRIDGE_ADMISSIONS=[
   ],
   "poster": "assets/admissions/yale-biostatistics-2025.webp",
   "letterOnly": true,
+  "featured": false,
   "source": "user-provided",
   "permissionConfirmed": false,
   "ivybridgeInvolvementConfirmed": false
@@ -100,6 +101,7 @@ window.IVYBRIDGE_ADMISSIONS=[
   "field": "health",
   "poster": "assets/admissions/harvard-medical-mmh-2026.webp",
   "letterOnly": true,
+  "featured": false,
   "source": "user-provided",
   "permissionConfirmed": false,
   "ivybridgeInvolvementConfirmed": false
