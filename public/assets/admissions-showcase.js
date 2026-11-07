@@ -17,6 +17,14 @@
  const caseLink=entry=>'case.html?id='+encodeURIComponent(entry.id);
  const image=(entry,clazz)=>{
    const wrap=el('div',clazz);
+   if(entry.letterOnly){
+     wrap.classList.add('ib-letter-in-frame');
+     wrap.append(el('div','ib-letter-frame-brand','IvyBridge 領航留學'),
+       el('div','ib-letter-frame-kicker','CONGRATULATIONS · 錄取榮譽榜'),
+       el('h4','ib-letter-frame-university',title(entry)),
+       el('p','ib-letter-frame-program',program(entry)),
+       el('span','ib-letter-frame-year',entry.year));
+   }
    const picture=el('img','ib-poster-img');
    picture.src=file(entry);
    picture.alt=t('錄取海報：','Admissions poster: ')+entry.school+' · '+entry.program;
@@ -29,6 +37,7 @@
      wrap.append(note);
    },{once:true});
    wrap.append(picture);
+   if(entry.letterOnly)wrap.append(el('p','ib-letter-frame-footer','IvyBridge · ADMISSIONS SHOWCASE'));
    return wrap;
  };
  const proofText=t('錄取海報素材 · IvyBridge 參與及公開授權待核實','Admission material · advisory involvement/permission pending');
@@ -99,7 +108,7 @@
    const count=section.querySelector('[data-admission-count]');
    let selected='all';
    const render=()=>{
-     const records=data.filter(item=>selected==='all'||item.field===selected);
+     const records=data.filter(item=>selected==='all'||item.field===selected||(Array.isArray(item.fields)&&item.fields.includes(selected)));
      const nodes=records.map(item=>{
        const link=el('a','ib-admission-list-row');
        link.href=caseLink(item);
