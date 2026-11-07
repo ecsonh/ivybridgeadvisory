@@ -67,7 +67,7 @@ window.IVYBRIDGE_ADMISSIONS=[
   "zhProgram": "傳播學理學碩士 · Custom Leadership Program",
   "year": "Fall 2026",
   "field": "business",
-  "poster": "assets/admissions/northwestern-communication-2026.webp",
+  "poster": "assets/admissions/northwestern-communication-2026.png",
   "source": "user-provided",
   "permissionConfirmed": false,
   "ivybridgeInvolvementConfirmed": false
@@ -84,7 +84,7 @@ window.IVYBRIDGE_ADMISSIONS=[
     "health",
     "stem"
   ],
-  "poster": "assets/admissions/yale-biostatistics-2025.webp",
+  "poster": "assets/admissions/yale-biostatistics-2025.png",
   "letterOnly": true,
   "source": "user-provided",
   "permissionConfirmed": false,
@@ -98,7 +98,7 @@ window.IVYBRIDGE_ADMISSIONS=[
   "zhProgram": "媒體、醫學與健康理學碩士",
   "year": "Fall 2026",
   "field": "health",
-  "poster": "assets/admissions/harvard-medical-mmh-2026.webp",
+  "poster": "assets/admissions/harvard-medical-mmh-2026.jpg",
   "letterOnly": true,
   "source": "user-provided",
   "permissionConfirmed": false,
@@ -112,7 +112,7 @@ window.IVYBRIDGE_ADMISSIONS=[
   "zhProgram": "機器人與自主系統工程碩士",
   "year": "Fall 2026",
   "field": "stem",
-  "poster": "assets/admissions/duke-robotics-2026.webp",
+  "poster": "assets/admissions/duke-robotics-2026.png",
   "source": "user-provided",
   "permissionConfirmed": false,
   "ivybridgeInvolvementConfirmed": false
