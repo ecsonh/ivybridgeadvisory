@@ -213,3 +213,10 @@ body.ib-modal-active{overflow:hidden}
 .ib-potential-grid>.ib-potential-card p{margin:0}
 .ib-potential-grid>.ib-potential-card:hover{transform:none;box-shadow:0 2px 10px rgba(17,46,74,.035)}
 @media(max-width:700px){.ib-letter-frame-university{font-size:27px}.ib-letter-frame-program{font-size:12px}.ib-letter-frame-kicker{font-size:11px}}
+
+/* Success stories: clear path to the service comparison, alongside booking. */
+.ib-admissions-final-cta .ib-admissions-cta-actions{display:flex;gap:12px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
+.ib-admissions-final-cta .ib-admissions-cta-actions a{white-space:normal;text-align:center}
+.ib-admissions-final-cta .ib-admissions-cta-actions .ib-admissions-services-link{background:transparent;color:#f7e8c9;border:1px solid #d1ad70}
+.ib-admissions-final-cta .ib-admissions-cta-actions .ib-admissions-services-link:hover,.ib-admissions-final-cta .ib-admissions-cta-actions .ib-admissions-services-link:focus-visible{background:rgba(255,255,255,.1);color:#fff}
+@media(max-width:700px){.ib-admissions-final-cta .ib-admissions-cta-actions{width:100%;justify-content:stretch}.ib-admissions-final-cta .ib-admissions-cta-actions a{flex:1 1 100%}}
