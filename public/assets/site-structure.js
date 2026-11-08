@@ -43,6 +43,8 @@
   // Pages such as the original Master's Guide already provide their own accessible chapter TOC.
   // Never inject a second sidebar or wrap its existing two-column reading layout.
   if(main.querySelector('.guide-toc,.ib-page-sidebar'))return;
+  // Admissions showcases are full-width visual galleries: do not inject a reading sidebar.
+  if(main.hasAttribute('data-no-chapter-sidebar'))return;
   const all=[...main.querySelectorAll('h1,h2')].filter(el=>el.textContent.trim().length>3 && !el.closest('.ib-page-sidebar,.ib-explorer-grid,.ib-bottom-cta'));
   const isGuideHub=main.hasAttribute('data-guide-hub');
   const headings=isGuideHub?[...main.querySelectorAll('[data-guide-intro],[data-guide-chapter]')]:all.filter(el=>el.tagName==='H2').slice(0,9);

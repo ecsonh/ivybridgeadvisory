@@ -126,3 +126,97 @@ body.ib-modal-active{overflow:hidden}
  #founder-story.ib-editorial-section,
  #advisor-team.ib-editorial-section{padding:38px 13px}
 }
+
+
+/* Admissions-first success wall, scoped to new page class and data widgets. */
+.ib-admissions-page{color:#102c48}
+.ib-admissions-intro{background:#102c48;color:white;padding:29px 0 24px;border-bottom:2px solid #bd9654}
+.ib-admissions-shell{max-width:1260px;margin:0 auto;padding:0 25px;box-sizing:border-box}
+.ib-admissions-intro .ib-admissions-shell{display:flex;align-items:end;justify-content:space-between;gap:22px}
+.ib-admissions-intro .ib-editorial-eyebrow{color:#deb97d;font-size:11px;letter-spacing:.17em}
+.ib-admissions-intro h1{font:normal clamp(30px,3.6vw,48px)/1.2 Georgia,serif;color:#fff;margin:6px 0}
+.ib-admissions-intro p{margin:0;color:#dce5ee;font-size:14px;line-height:1.65}
+.ib-admissions-jump{font-size:13px;color:#e0c18a;white-space:nowrap;padding-bottom:5px}
+.ib-admissions-featured{background:#f7f4ed;padding:24px 0 36px}
+.ib-featured-caption{display:flex;align-items:baseline;flex-wrap:wrap;gap:12px;margin-bottom:15px}
+.ib-featured-caption h2{font:normal clamp(19px,2.2vw,26px)/1.3 Georgia,serif;margin:0;color:#102c48}
+.ib-featured-caption .ib-editorial-eyebrow{white-space:nowrap}
+.ib-admission-poster-track{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;align-items:start}
+.ib-poster-card{border:1px solid #d7c6a6;border-radius:10px;background:#fff;overflow:hidden;min-width:0;box-shadow:0 8px 22px rgba(4,29,50,.08);transition:transform .2s,box-shadow .2s}
+.ib-poster-card:hover,.ib-poster-card:focus-within{transform:translateY(-3px);box-shadow:0 13px 30px rgba(4,29,50,.15)}
+.ib-poster-open{display:block;position:relative;padding:8px;margin:0;border:0;background:#071f36;width:100%;cursor:zoom-in}
+.ib-poster-image{display:flex;align-items:center;justify-content:center;aspect-ratio:2/3;overflow:hidden}
+.ib-poster-image img{display:block;width:100%;height:100%;object-fit:contain}
+.ib-poster-img[hidden]{display:none!important}
+.ib-poster-missing{display:grid;place-items:center;text-align:center;background:#0b2843;color:#e6c891;font:14px/1.6 Georgia,serif;padding:18px;width:100%;height:100%;min-height:200px;box-sizing:border-box}
+.ib-poster-card-caption{padding:12px 14px 15px}
+.ib-poster-year{display:block;color:#ad874d;font-size:11px;font-weight:700;letter-spacing:.06em;margin-bottom:5px}
+.ib-poster-card-caption h3{font:bold 17px/1.35 Georgia,serif;margin:0;color:#102c48}
+.ib-poster-card-caption p{font-size:12px;line-height:1.55;color:#526579;margin:6px 0 11px;min-height:37px}
+.ib-poster-detail-link{font-size:12px;font-weight:750;color:#855d2d;text-decoration:underline;text-underline-offset:3px}
+.ib-admissions-proof-note{margin:15px 0 0;color:#65768a;font-size:12px;line-height:1.75}
+.ib-potential-section{padding-block:54px}
+.ib-potential-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:26px 0 0}
+.ib-potential-card{display:flex;flex-direction:column;gap:7px;padding:23px 25px;border:1px solid #dce5ec;border-top:3px solid #c5a880;border-radius:8px;text-decoration:none;background:#fff;color:#112e4a;transition:border-color .18s,transform .18s}
+.ib-potential-card:hover,.ib-potential-card:focus-visible{border-color:#ae8545;transform:translateY(-2px);outline-offset:3px}
+.ib-potential-number{font-size:10px;color:#ad8650;letter-spacing:.11em;font-weight:700}
+.ib-potential-card h3{font:normal 25px/1.28 Georgia,serif;color:#102c48;margin:2px 0}
+.ib-potential-card p{font-size:14px;line-height:1.8;color:#52687b;margin:0 0 7px}
+.ib-potential-card>span:last-child{color:#936b33;margin-top:auto;font-size:13px;font-weight:700}
+.ib-admission-library-section{padding-block:3px}
+.ib-admission-filters{display:flex;gap:10px;flex-wrap:wrap;margin:21px 0 13px}
+.ib-admission-filters button{padding:10px 13px;border:1px solid #d2dde4;border-radius:24px;background:#fff;color:#28435a;font:600 12px/1.3 system-ui;cursor:pointer}
+.ib-admission-filters button[aria-pressed=true]{background:#102c48;color:#fff;border-color:#102c48}
+.ib-admission-count{color:#667a8a;font-size:12px;margin-bottom:11px}
+.ib-admission-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.ib-admission-list-row{display:flex;align-items:center;gap:11px;text-decoration:none;background:#fff;border:1px solid #dde5eb;padding:14px;border-radius:8px;min-width:0}
+.ib-admission-list-row:hover,.ib-admission-list-row:focus-visible{border-color:#b18e5f;box-shadow:0 4px 15px #102c4810}
+.ib-admission-list-initial{flex:0 0 43px;height:43px;background:#112e4a;color:#dfc48c;font:normal 17px/43px Georgia,serif;text-align:center;border-radius:5px}
+.ib-admission-list-info{display:grid;gap:3px;min-width:0;flex:1}
+.ib-admission-list-info strong{color:#102c48;font-size:14px;overflow-wrap:anywhere}
+.ib-admission-list-info small{font-size:12px;color:#657789;line-height:1.5}
+.ib-admission-list-year{font-size:11px;color:#8e744b;flex:0 0 auto;white-space:nowrap}
+.ib-admission-list-arrow{font-size:17px;color:#a78551}
+.ib-admissions-all-link{display:inline-flex;margin-top:23px;padding:10px 16px;border-radius:6px;background:#112e4a;color:#fff!important;text-decoration:none;font-size:13px;font-weight:700}
+.ib-admissions-final-cta{padding-block:50px}
+.ib-potential-detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:24px}
+.ib-potential-detail{background:#fff;border:1px solid #dce5ec;border-radius:9px;padding:23px;scroll-margin-top:130px}
+.ib-potential-detail:target{border-color:#b89055;box-shadow:0 0 0 3px #d2af7833}
+.ib-potential-detail h3{font-size:22px;color:#102c48;margin:0 0 9px}
+.ib-potential-detail p{font-size:14px;color:#53697e;line-height:1.85;margin:0 0 18px}
+.ib-potential-detail a{color:#896331;font-size:13px;font-weight:700}
+.ib-admission-detail{min-height:240px}
+.ib-admission-detail-heading h2{font:normal 36px Georgia,serif;color:#102c48}
+.ib-admission-detail-heading p{color:#4b6479}
+.ib-admission-detail-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.75fr);gap:32px;margin:27px 0}
+.ib-admission-detail-poster{background:#0a2641;border:1px solid #b99962;border-radius:9px;padding:12px;overflow:hidden}
+.ib-admission-detail-poster img{display:block;width:100%;height:auto}
+.ib-admission-detail-copy{padding-top:16px}
+.ib-admission-detail-copy h3{font-size:22px}
+.ib-admission-detail-copy p{line-height:1.8;color:#576b7c;font-size:14px}
+.ib-admissions-back{display:inline-block;font-size:14px;color:#112e4a;font-weight:700;margin:16px 0}
+.ib-admission-lightbox[hidden]{display:none!important}
+.ib-admission-lightbox{position:fixed;z-index:2500;inset:0;background:rgba(3,16,29,.94);display:flex;align-items:center;justify-content:center;gap:12px;padding:48px 18px 20px;box-sizing:border-box}
+.ib-admission-lightbox figure{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;margin:0;max-width:calc(100vw - 150px);max-height:100%;min-width:0}
+.ib-admission-lightbox figure img{display:block;max-width:100%;max-height:calc(100vh - 130px);object-fit:contain}
+.ib-admission-lightbox figcaption{color:#eee0c2;font-size:12px;text-align:center;line-height:1.4}
+.ib-admission-lightbox button{border:1px solid #6b7890;background:#182c43;color:white;border-radius:40px;width:43px;height:43px;cursor:pointer;font-size:26px;flex:0 0 43px}
+.ib-admission-lightbox [data-lightbox-close]{position:absolute;top:12px;right:17px}
+.ib-admissions-modal-open{overflow:hidden}
+@media(max-width:1050px){.ib-admission-poster-track{grid-template-columns:repeat(2,minmax(0,1fr))}.ib-poster-card-caption p{min-height:0}}
+@media(max-width:700px){.ib-admissions-intro .ib-admissions-shell{display:block}.ib-admissions-jump{display:none}.ib-admissions-featured{padding-top:20px}.ib-admission-poster-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:13px;padding-bottom:16px}.ib-poster-card{flex:0 0 min(81vw,340px);scroll-snap-align:start}.ib-potential-grid,.ib-admission-list,.ib-potential-detail-grid,.ib-admission-detail-grid{grid-template-columns:1fr}.ib-admissions-shell{padding:0 16px}.ib-admission-list-year{display:none}.ib-admissions-final-cta{padding-block:30px}.ib-admission-lightbox{gap:2px;padding-inline:5px}.ib-admission-lightbox figure{max-width:calc(100vw - 92px)}.ib-admission-lightbox button{width:39px;height:39px;flex-basis:39px}}
+@media(prefers-reduced-motion:reduce){.ib-poster-card,.ib-potential-card{transition:none!important}}
+
+/* Consistent styling for the four informational application-strategy cards. */
+.ib-potential-grid>.ib-potential-card{border:1px solid #d5b785!important;border-top:3px solid #c5a880!important;border-radius:10px!important;box-shadow:0 2px 10px rgba(17,46,74,.035);height:100%;box-sizing:border-box;cursor:default}
+.ib-potential-grid>.ib-potential-card h3{margin:5px 0 4px}
+.ib-potential-grid>.ib-potential-card p{margin:0}
+.ib-potential-grid>.ib-potential-card:hover{transform:none;box-shadow:0 2px 10px rgba(17,46,74,.035)}
+@media(max-width:700px){.ib-letter-frame-university{font-size:27px}.ib-letter-frame-program{font-size:12px}.ib-letter-frame-kicker{font-size:11px}}
+
+/* Success stories: clear path to the service comparison, alongside booking. */
+.ib-admissions-final-cta .ib-admissions-cta-actions{display:flex;gap:12px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
+.ib-admissions-final-cta .ib-admissions-cta-actions a{white-space:normal;text-align:center}
+.ib-admissions-final-cta .ib-admissions-cta-actions .ib-admissions-services-link{background:transparent;color:#f7e8c9;border:1px solid #d1ad70}
+.ib-admissions-final-cta .ib-admissions-cta-actions .ib-admissions-services-link:hover,.ib-admissions-final-cta .ib-admissions-cta-actions .ib-admissions-services-link:focus-visible{background:rgba(255,255,255,.1);color:#fff}
+@media(max-width:700px){.ib-admissions-final-cta .ib-admissions-cta-actions{width:100%;justify-content:stretch}.ib-admissions-final-cta .ib-admissions-cta-actions a{flex:1 1 100%}}
