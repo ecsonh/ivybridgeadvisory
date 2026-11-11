@@ -276,7 +276,15 @@
       const copyLineBtn = document.getElementById('copy-line-btn');
       const privacyLink = document.getElementById('privacy-link');
 
-      const lineNoticeHtml = '<p>官方 LINE 帳號與加入好友連結尚待確認，目前不提供加入或複製功能。</p>';
+      const lineNoticeHtml = `
+        <p>歡迎加入 IvyBridge 官方 LINE：<strong>@052ppkit</strong>。</p>
+        <p>使用手機可直接點選加入好友；使用電腦可掃描下方官方 QR Code。</p>
+        <div class="flex flex-col items-center gap-3 pt-3">
+          <a href="https://line.me/R/ti/p/%40052ppkit" target="_blank" rel="noopener noreferrer" aria-label="加入 IvyBridge 官方 LINE @052ppkit">
+            <img src="https://qr-official.line.me/gs/M_052ppkit_GW.png?oat_content=qr" alt="IvyBridge 官方 LINE @052ppkit 加入好友 QR Code" width="208" height="208" class="mx-auto max-w-full rounded-lg border border-slate-200 bg-white p-2" loading="lazy" decoding="async">
+          </a>
+          <a href="https://line.me/R/ti/p/%40052ppkit" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-md bg-emerald-600 text-white font-semibold px-5 py-3 hover:bg-emerald-700">加入 LINE 官方帳號 →</a>
+        </div>`;// LINE image and ID provided by IvyBridge
       if (topLineBtn) topLineBtn.addEventListener('click', () => showNotice('LINE 官方即時諮詢', lineNoticeHtml));
       if (openLineBtn) openLineBtn.addEventListener('click', () => showNotice('LINE 官方即時諮詢', lineNoticeHtml));
       if (mobileLineBtn) mobileLineBtn.addEventListener('click', () => showNotice('LINE 官方即時諮詢', lineNoticeHtml));
