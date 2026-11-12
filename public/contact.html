@@ -313,8 +313,8 @@
               class="lg:col-span-8 bg-white p-6 sm:p-10 rounded-xl border border-slate-200 shadow-sm"
             >
               <form id="consult-form" class="space-y-6">
-                <p id="form-status" role="status">
-                  目前為預覽版本：表單只會下載至您的裝置，不會傳送個人資料或成立預約。
+                <p id="form-status" role="status" aria-live="polite" tabindex="-1">
+                  送出後，您的資料會安全傳送至 IvyBridge 官方諮詢信箱。我們將依您提供的聯絡方式回覆；送出表單不代表已完成預約。
                 </p>
                 <!-- STEP 1: TARGET APPLICATION -->
                 <div class="border-b border-slate-100 pb-6">
@@ -501,6 +501,8 @@
                   </div>
                 </div>
 
+                <div class="mb-4 text-xs text-slate-700 leading-relaxed"><label class="flex items-start gap-2 cursor-pointer"><input type="checkbox" name="consent" value="yes" required class="mt-1 shrink-0"><span>我同意將上述資料傳送至 IvyBridge 官方諮詢信箱，僅供聯繫本人與留學申請評估使用。送出表單不代表完成預約。</span></label></div>
+
                 <!-- SUBMIT BUTTON -->
                 <div class="pt-2">
                   <button
@@ -508,7 +510,7 @@
                     id="submit-form-btn"
                     class="w-full py-3.5 px-6 rounded-md bg-ivy-800 text-white font-medium text-sm hover:bg-ivy-900 shadow-md transition flex items-center justify-center gap-2"
                   >
-                    <span>下載諮詢資料（尚未傳送）</span>
+                    <span data-submit-label>送出諮詢表單</span>
                     <svg
                       class="w-4 h-4"
                       fill="none"
@@ -862,6 +864,7 @@
 
     <!-- JAVASCRIPT: Full Interaction Logic -->
     <script src="assets/app.js" defer></script>
+    <script src="assets/inquiry-form.js" defer></script>
     <script src="assets/language.js" defer></script>
     <!-- Vercel Web Analytics: static HTML integration -->
     <script>

@@ -38,7 +38,7 @@ Website homepage highlights plans **without displaying package prices**. Details
 - Shared section navigation is implemented in `public/assets/site-structure.js`; do not duplicate per-page TOC implementations. Ensure it does not cover CTAs or cause layout overflow. Accessible keyboard interactions and aria-current on active section are required.
 - On mobile, the TOC must collapse or become horizontally scrollable. Respect reduced-motion setting.
 - Do not replace functional interaction with decorative fake buttons or claim forms send data when they only download locally.
-- **The consultation and custom forms are currently local-only preparation/downloads**. A verified receiving integration, contact address, availability, privacy terms and explicit owner consent are required to enable sending.
+- **Consultation form:** the bilingual contact page now has a server-side email API, but delivery requires owner-configured Resend credentials and a verified sender domain in Vercel. The UI redirects to the success page only on confirmed API acceptance; never claim this is live until end-to-end delivery is verified. **Custom service requests remain download-only.**
 - Preview pages use noindex: don't remove until the owner approves public launch.
 
 ## 5. Unified Study Guide: page sequence
@@ -68,7 +68,7 @@ Website homepage highlights plans **without displaying package prices**. Details
 ## 8. Final QA checklist (must be reported honestly)
 - [ ] No unintended diff; no unapproved changes to the price matrix or school lists
 - [ ] Bilingual navigation and all internal links / hash anchors verified
-- [ ] Form preselection and local-only disclosure correct
+- [ ] Consultation form preselection, explicit applicant consent, and API success/error states verified; custom service forms remain local-only
 - [ ] School dropdown loads exactly 50 and switches STEM/Business data, source/year, null behavior
 - [ ] Career job/company examples update by major; no obsolete company dropdown
 - [ ] TOC links work on each page and remain usable on mobile
