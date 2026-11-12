@@ -66,7 +66,7 @@
 - **Unified Study Guide:** unchanged navy banner → four-card program-fit overview with **「不只看排名，更要看碩士項目是否適合你。」** → four stages — **(1) understand master’s study, (2) programs and careers, (3) budget and costs, (4) application preparation**. Tools start collapsed; deeper reading follows, then stories/consultation. This owner-approved sequence supersedes the earlier Explorer order. No duplicate free-text university search bar or company dropdown. Do not invent salaries.
 - **Cases:** show only approved/consented outcomes; illustrative scenarios must be explicitly labeled in cards and detail modals.
 - **About:** only verifiable founder / adviser experience and documented processes.
-- **Contact:** current forms prepare or download data locally; **they do not submit, send, schedule or promise a callback** until a real integration is approved.
+- **Contact:** consultation form has been implemented using a server-side email API that requires verified sender credentials and owner activation. The success redirect is conditional on provider acceptance, not appointment confirmation; custom service forms remain local-only.
 - **Blog:** unpublished article teasers stay non-clickable and honestly labeled. Do not turn placeholder previews into fake published articles.
 
 ## 6. Graduate admissions data: strict source contract
@@ -85,7 +85,7 @@ When changing navigation or tools, verify **all checked-in Chinese and English r
 4. 50-school dropdown, change STEM↔Business, official/secondary/null state, correct source/year; no empty dropdown.
 5. Budget controls update amounts; timeline accordion opens/closes with keyboard; career field/region updates role and illustrative employers.
 6. Mobile width (375 px), tablet width (~768 px), desktop width (~1440 px), overflow, menu, sticky TOC, focus indicators.
-7. Forms validate and **only download or copy** pending explicit backend integration.
+7. Consultation form validates, requires consent, and submits through /api/inquiry only when a verified email sender is configured; custom service forms still download/copy.
 8. Keep `noindex` on unapproved preview content. Do not claim Vercel or live browser testing that was not performed.
 
 ## 8. GitHub / Vercel handoff contract

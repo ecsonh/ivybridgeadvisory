@@ -3,6 +3,7 @@
 ## Architecture
 - Chinese and English contact forms submit JSON via POST to `/api/inquiry` (a Vercel Node.js Function, `api/inquiry.js`).
 - The Function validates applicant information, disallows cross-origin browser submissions, checks a hidden anti-bot field and delivers **one** plain-text email through the Resend API. It never sends a client-side API key.
+- Applicant consent checkbox is required on both versions and re-validated by the API.
 - Delivery destination is fixed on the server: `ivybridgeadvisory@gmail.com`; applicant email is used as `reply_to`.
 - Only after the email API returns a successful result with a message id does the browser navigate to `/inquiry-sent.html` or `/en/inquiry-sent.html`.
 - Failure leaves the applicant's input on the page with a visible error. **A success response means the email provider accepted the request, not that a human has read the email or its Gmail delivery is guaranteed.**

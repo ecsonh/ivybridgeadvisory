@@ -8,7 +8,7 @@ Read **[AI_SITE_RULES.md](AI_SITE_RULES.md)**, **[IVYBRIDGE_WEBSITE_PLAYBOOK.md]
 - Honor exact US$2,500 / US$4,800 / US$9,800 package terms; never show price on the homepage. Elite includes at most 12 U.S. programs, +$1,000 each beyond 12; non-U.S. programs priced separately.
 - Do not fabricate results, testimonials, immigration advice, employment, salary or student acceptance statistics. IvyBridge 85% is UNVERIFIED until documented; label prominently or omit.
 - Graduate admission dataset: `public/assets/admissions-data.js`. Update only with sourced program, year, percentage and data quality. Missing rate = null.
-- Existing contact forms only prepare/download data; do not pretend they submit or book.
+- Consultation forms use a server-side email API only after valid owner-controlled Vercel email credentials are configured and delivery verified. Custom service forms remain local-only downloads. Never claim a successful submission until the API confirms acceptance.
 - Run static link/anchor, JavaScript, and UI interaction checks; report what was and was NOT actually tested.
 
 Treat `AI_SITE_RULES.md` as authoritative for business facts and `IVYBRIDGE_WEBSITE_PLAYBOOK.md` for implementation, design and editorial patterns. Ask the owner when standards conflict.
