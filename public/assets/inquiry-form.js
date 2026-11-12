@@ -23,6 +23,7 @@
   if(sending||!form.reportValidity())return;
   const values=Object.fromEntries(new FormData(form));
   values.language=en?'en':'zh';
+  values.consent=values.consent==='yes';
   if(!submissionId)submissionId=globalThis.crypto?.randomUUID?.()||undefined;
   if(submissionId)values.submissionId=submissionId;
   sending=true;

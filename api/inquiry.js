@@ -53,6 +53,7 @@ module.exports = async function handler(req,res){
     try{input=JSON.parse(input);}catch{return reply(res,400,{error:'invalid_json'});}
   }
   if(!input||Array.isArray(input)||typeof input!=='object')return reply(res,400,{error:'invalid_fields'});
+  if(input.consent!==true)return reply(res,422,{error:'consent_required'});
   if(Buffer.byteLength(JSON.stringify(input),'utf8')>MAX_BYTES)return reply(res,413,{error:'too_large'});
   // Non-visible bot-trap field: ignore automated submissions without sending.
   if(typeof input.company_website==='string' && input.company_website.trim())return reply(res,200,{ok:true});
