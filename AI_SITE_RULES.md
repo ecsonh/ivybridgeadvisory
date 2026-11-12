@@ -19,8 +19,8 @@ Last reviewed: 2026-10-30. **Read this entire document before modifying the webs
 ## 3. Non-negotiable product terms (approved)
 Website homepage highlights plans **without displaying package prices**. Details and USD prices belong to Services.
 - Essential 基礎申請指導: **US$2,500**; 3 master's program applications/essay support; +US$500 for each additional U.S. program; background review, school-selection suggestions, 1 mock interview. Student completes and submits application forms.
-- Comprehensive 全程申請顧問: **US$4,800**; 5 master's program applications/essay support; +US$700 for each additional U.S. program; background review, school selection, 1 mock interview, advisor assistance preparing and filling forms.
-- Elite 尊榮菁英全案: **US$9,800**; up to **12 U.S. master's programs**; each U.S. program beyond 12 is **+US$1,000**. Applications outside the U.S. are **quoted separately** and do not consume the U.S. quota. Background and school review, essays, 3 mock interviews, form completion support, and general visa application form/document preparation guidance.
+- Comprehensive 保姆級文書申請: **US$5,800**; 5 master's program applications/essay support; +US$700 for each additional U.S. program; background review, school selection, 1 mock interview, advisor assistance preparing and filling forms.
+- Elite 菁英Top30保證方案: **US$9,800**; up to **12 U.S. master's programs**; each U.S. program beyond 12 is **+US$1,000**. Applications outside the U.S. are **quoted separately** and do not consume the U.S. quota. Background and school review, essays, 3 mock interviews, form completion support, and general visa application form/document preparation guidance.
 - One program means one discrete degree/program application; two at the same university count separately.
 - Applicants supply accurate data, review and authorize content, and personally complete legally required attestations, payments and identity verification. No illegal visa representation and no guarantee of admit, visa or employment.
 - Scope of essay revision rounds, adviser response times, refund terms and delivery deadlines is contractual; do not invent.

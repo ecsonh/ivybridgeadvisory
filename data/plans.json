@@ -28,12 +28,12 @@
   },
   {
     "id": "comprehensive",
-    "price": 4800,
-    "extra": 700,
+    "price": 5800,
+    "extra": 900,
     "programs": 5,
     "mock_interviews": 1,
     "zh": {
-      "name": "全程申請顧問",
+      "name": "保姆級文書申請",
       "items": [
         "5 個碩士項目申請文書",
         "背景分析與選校建議",
@@ -56,11 +56,11 @@
   {
     "id": "elite",
     "price": 9800,
-    "extra": 1000,
+    "extra": 900,
     "programs": 12,
     "mock_interviews": 3,
     "zh": {
-      "name": "尊榮菁英全案",
+      "name": "菁英Top30保證方案",
       "items": [
         "最多 8 個美國碩士項目申請文書；其他國家申請另行報價",
         "背景分析與跨國選校建議",

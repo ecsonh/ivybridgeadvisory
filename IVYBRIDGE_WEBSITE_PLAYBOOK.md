@@ -52,7 +52,7 @@
 
 ## 4. Plan pricing and deliverables — DO NOT CHANGE
 - **Essential 基礎申請指導: US$2,500**, 3 programs, +US$500 per additional program; profile and school advising, essays, **1** mock interview. **Student completes and submits online applications.**
-- **Comprehensive 全程申請顧問: US$4,800**, 5 programs, +US$700 per additional program; profile and school advising, essays, **1** mock interview, advisor assistance with online application forms and submission preparation.
+- **Comprehensive 保姆級文書申請: US$5,800**, 5 programs, +US$700 per additional program; profile and school advising, essays, **1** mock interview, advisor assistance with online application forms and submission preparation.
 - **Elite 尊榮菁英全案: US$9,800**, up to **12 U.S. programs**, +US$1,000 for each U.S. program **beyond 12**, **3** mock interviews; application-form and general visa documentation assistance. **Non-U.S. applications quoted separately** and not counted in the 12.
 - Each university/program combination counts separately, including two programs in the same university. Third-party fees are separate. Students must personally verify and perform mandatory declarations, verification or payments.
 - Homepage plan cards do **not** show prices; the service-detail page does. Modular assistance stays a secondary quote-based option.
