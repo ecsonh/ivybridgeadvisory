@@ -8,77 +8,77 @@
     "zh": {
       "name": "基礎申請指導",
       "items": [
-        "3 個碩士項目申請文書",
+        "3 個美國碩士項目",
         "背景分析與選校建議",
-        "文書構思、架構與修改指導",
+        "CV 與客製文書指導",
         "1 次模擬面試",
-        "學生自行填寫及提交網上申請"
+        "學生自行送件"
       ]
     },
     "en": {
       "name": "Essential · Guided Admissions",
       "items": [
-        "Application essays for 3 master’s programs",
-        "Profile assessment and program selection",
-        "Essay brainstorming, structure and revision guidance",
+        "3 U.S. master's applications",
+        "Profile review & program shortlist",
+        "Tailored essays & CV guidance",
         "1 mock interview",
-        "Applicant completes and submits application forms"
-      ]
-    }
-  },
-  {
-    "id": "comprehensive",
-    "price": 5800,
-    "extra": 900,
-    "programs": 5,
-    "mock_interviews": 1,
-    "zh": {
-      "name": "保姆級文書申請",
-      "items": [
-        "5 個碩士項目申請文書",
-        "背景分析與選校建議",
-        "文書構思、架構與修改指導",
-        "1 次模擬面試",
-        "協助填寫全部網申資料、整理文件與送件流程"
-      ]
-    },
-    "en": {
-      "name": "Comprehensive · Full-Service Admissions",
-      "items": [
-        "Application essays for 5 master’s programs",
-        "Profile assessment and program selection",
-        "Essay brainstorming, structure and revision guidance",
-        "1 mock interview",
-        "Full application form completion, document organization and submission coordination"
+        "You submit applications"
       ]
     }
   },
   {
     "id": "elite",
     "price": 9800,
-    "extra": 900,
-    "programs": 12,
+    "extra": 1000,
+    "programs": 8,
     "mock_interviews": 3,
     "zh": {
       "name": "菁英Top30保證方案",
       "items": [
-        "最多 8 個美國碩士項目申請文書；其他國家申請另行報價",
-        "背景分析與跨國選校建議",
-        "逐項目文書構思、架構與修改指導",
+        "最多 8 個美國碩士項目",
+        "Top30 選校與專屬文書策略",
         "3 次模擬面試",
-        "協助填寫全部網申資料、整理文件與送件流程",
-        "簽證申請資料填寫與準備協助"
+        "網申與簽證材料協助",
+        "專業 Mentor 可安排"
       ]
     },
     "en": {
-      "name": "Elite · Premier Admissions",
+      "name": "Elite · Top 30 Guarantee",
       "items": [
-        "Application essays for up to 12 U.S. master's programs; applications in other countries quoted separately",
-        "Profile assessment and cross-country program selection",
-        "Program-specific essay brainstorming and revision guidance",
+        "Up to 8 U.S. master's applications",
+        "Top 30-targeted strategy & essays",
         "3 mock interviews",
-        "Full application form completion and submission coordination",
-        "Visa application form and document preparation assistance"
+        "Application & visa document support",
+        "Mentor access subject to availability"
+      ]
+    },
+    "refund_usd": 4000,
+    "guarantee_type": "contractual_top30_no_admission_refund"
+  },
+  {
+    "id": "comprehensive",
+    "price": 5800,
+    "extra": 700,
+    "programs": 5,
+    "mock_interviews": 1,
+    "zh": {
+      "name": "保姆級文書申請",
+      "items": [
+        "5 個美國碩士項目",
+        "選校與逐項目文書指導",
+        "CV 與推薦信規劃",
+        "1 次模擬面試",
+        "網申與送件協助"
+      ]
+    },
+    "en": {
+      "name": "Comprehensive · Full-Service Admissions",
+      "items": [
+        "5 U.S. master's applications",
+        "Program fit & tailored essay guidance",
+        "CV & recommendation planning",
+        "1 mock interview",
+        "Advisor-assisted application submissions"
       ]
     }
   }
