@@ -333,3 +333,10 @@ html[lang="en"] .ib-plan[data-plan="elite"]{background:#fffaf1;border:2px solid 
 .ib-home-elite-refund span{font-size:12px;color:#825f2a;font-weight:700}
 .ib-home-elite-refund:hover,.ib-home-elite-refund:focus-visible{background:#f9edce;border-color:#99703b}
 .ib-home-elite-refund:focus-visible{outline:3px solid #aa8247;outline-offset:3px}
+
+/* Consistent-width comparison columns, including highlighted Elite. */
+.ib-services-main .ib-compare{table-layout:fixed;width:100%;min-width:880px}
+.ib-services-main .ib-compare th,.ib-services-main .ib-compare td{width:25%;box-sizing:border-box;overflow-wrap:anywhere;word-break:normal;vertical-align:middle}
+.ib-services-main .ib-compare thead th{white-space:normal}
+.ib-services-main .ib-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media(max-width:700px){.ib-services-main .ib-compare{min-width:800px}}
