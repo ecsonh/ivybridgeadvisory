@@ -220,3 +220,10 @@ body.ib-modal-active{overflow:hidden}
 .ib-admissions-final-cta .ib-admissions-cta-actions .ib-admissions-services-link{background:transparent;color:#f7e8c9;border:1px solid #d1ad70}
 .ib-admissions-final-cta .ib-admissions-cta-actions .ib-admissions-services-link:hover,.ib-admissions-final-cta .ib-admissions-cta-actions .ib-admissions-services-link:focus-visible{background:rgba(255,255,255,.1);color:#fff}
 @media(max-width:700px){.ib-admissions-final-cta .ib-admissions-cta-actions{width:100%;justify-content:stretch}.ib-admissions-final-cta .ib-admissions-cta-actions a{flex:1 1 100%}}
+
+/* Co-founder portrait: two-column editorial layout on desktop, stacked on mobile. */
+#advisor-team .ib-team-profile.ib-cofounder-card{display:grid;grid-template-columns:minmax(190px,260px) minmax(0,1fr);gap:clamp(24px,4vw,48px);align-items:center}
+#advisor-team .ib-cofounder-photo{margin:0;max-width:260px;width:100%;min-width:0}
+#advisor-team .ib-cofounder-photo img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:center 22%;display:block;border-radius:11px;border:1px solid #d6e0e8;background:#edf2f6}
+#advisor-team .ib-team-profile .ib-cofounder-bio{max-width:none;margin:0}
+@media(max-width:680px){#advisor-team .ib-team-profile.ib-cofounder-card{grid-template-columns:minmax(0,1fr);gap:22px}#advisor-team .ib-cofounder-photo{max-width:250px;margin:0 auto}#advisor-team .ib-team-profile .ib-cofounder-bio{width:100%}}
