@@ -239,17 +239,6 @@
         calculateCost();
       }
 
-      const form = document.getElementById('consult-form');
-      if(form) form.addEventListener('submit', e => {
-        e.preventDefault();
-        if(!form.reportValidity()) return;
-        const data = Object.fromEntries(new FormData(form));
-        const blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
-        const url = URL.createObjectURL(blob); const link = document.createElement('a');
-        link.href=url; link.download=document.documentElement.lang === 'en'?'IvyBridge-consultation.json':'IvyBridge-諮詢資料.json'; link.click();
-        setTimeout(()=>URL.revokeObjectURL(url),1000);
-        document.getElementById('form-status').textContent=document.documentElement.lang === 'en'?'Download prepared. Check your browser downloads. Nothing has been sent and no booking has been made.':'已產生下載檔案，請確認瀏覽器下載結果。資料尚未傳送，也尚未成立預約。';
-      });
       // 8. GENERAL NOTICE MODAL (LINE / PRIVACY / CALENDLY)
       const noticeModal = document.getElementById('general-notice-modal');
       const noticeTitle = document.getElementById('notice-modal-title');

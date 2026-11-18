@@ -313,9 +313,7 @@
               class="lg:col-span-8 bg-white p-6 sm:p-10 rounded-xl border border-slate-200 shadow-sm"
             >
               <form id="consult-form" class="space-y-6">
-                <p id="form-status" role="status">
-                  目前為預覽版本：表單只會下載至您的裝置，不會傳送個人資料或成立預約。
-                </p>
+                <p id="form-status" role="status" aria-live="polite" tabindex="-1"></p>
                 <!-- STEP 1: TARGET APPLICATION -->
                 <div class="border-b border-slate-100 pb-6">
                   <h3
@@ -501,6 +499,8 @@
                   </div>
                 </div>
 
+                <div class="ib-inquiry-consent"><label><input type="checkbox" name="consent" value="yes" required><span>我同意 IvyBridge 使用填寫資料回覆此諮詢。</span></label></div>
+
                 <!-- SUBMIT BUTTON -->
                 <div class="pt-2">
                   <button
@@ -508,7 +508,7 @@
                     id="submit-form-btn"
                     class="w-full py-3.5 px-6 rounded-md bg-ivy-800 text-white font-medium text-sm hover:bg-ivy-900 shadow-md transition flex items-center justify-center gap-2"
                   >
-                    <span>下載諮詢資料（尚未傳送）</span>
+                    <span data-submit-label>送出諮詢表單</span>
                     <svg
                       class="w-4 h-4"
                       fill="none"
@@ -926,6 +926,7 @@
 
     <!-- JAVASCRIPT: Full Interaction Logic -->
     <script src="assets/app.js" defer></script>
+    <script src="assets/inquiry-form.js" defer></script>
     <script src="assets/language.js" defer></script>
     <!-- Vercel Web Analytics: static HTML integration -->
     <script>
