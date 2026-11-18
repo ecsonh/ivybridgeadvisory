@@ -340,3 +340,42 @@ html[lang="en"] .ib-plan[data-plan="elite"]{background:#fffaf1;border:2px solid 
 .ib-services-main .ib-compare thead th{white-space:normal}
 .ib-services-main .ib-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
 @media(max-width:700px){.ib-services-main .ib-compare{min-width:800px}}
+
+
+/* Elite card: inset the preferred label into the gold upper border, and
+   keep the refund promise between benefits and the consultation CTA. */
+.ib-services-main #plan-details .ib-detail-grid>.ib-detail[data-plan="elite"]{
+  position:relative;
+  overflow:visible;
+  padding-top:52px;
+}
+.ib-services-main #plan-details .ib-detail-grid>.ib-detail[data-plan="elite"]>.ib-elite-tag{
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translate(-50%,-50%);
+  z-index:2;
+  box-sizing:border-box;
+  max-width:calc(100% - 20px);
+  width:max-content;
+  padding:9px 18px;
+  margin:0;
+  border:4px solid #fffdf7;
+  border-radius:999px;
+  color:#fff;
+  background:#17324c;
+  text-align:center;
+  font-size:clamp(10px,1vw,12px);
+  line-height:1.35;
+  white-space:normal;
+  box-shadow:0 3px 10px rgba(17,46,74,.12);
+}
+.ib-services-main #plan-details .ib-detail-grid>.ib-detail[data-plan="elite"]>ul{
+  margin-bottom:16px;
+}
+.ib-services-main #plan-details .ib-detail-grid>.ib-detail[data-plan="elite"]>.ib-elite-promise{
+  margin:4px 0 23px;
+}
+@media(max-width:850px){
+  .ib-services-main #plan-details .ib-detail-grid>.ib-detail[data-plan="elite"]{padding-top:54px}
+}
