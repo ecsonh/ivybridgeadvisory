@@ -43,8 +43,8 @@ def cards(lang: str, details: bool) -> str:
                      if en else f"每加申 1 個項目：US${plan['extra']:,}")
             price = f'<p class="ib-detail-price">US${plan["price"]:,}</p><p class="ib-extra">{extra}</p>'
         items = "".join("<li>" + escape(x) + "</li>" for x in plan[lang]["items"])
-        href = ("contact.html?plan=" if details else "services.html#") + pid
-        label = ("Ask about Top 30 Guarantee →" if en else "諮詢 Top30 保證方案 →") if pid == "elite" and details else ("Discuss this plan →" if en else "預約方案諮詢 →") if details else ("View plan details →" if en else "了解方案詳情 →")
+        href = ("contact.html?plan=essential" if details and pid == "elite" else ("contact.html?plan=" + pid if details else "services.html#" + pid))
+        label = ("Book a Consultation →" if en else "預約方案諮詢 →") if details and pid == "elite" else ("Discuss this plan →" if en else "預約方案諮詢 →") if details else ("View plan details →" if en else "了解方案詳情 →")
         result.append(f'<article class="{cls}" data-plan="{pid}"{attrs}>{badge}<h3>{title}</h3>{price}<ul>{items}</ul>{promise}<a class="ib-plan-link" href="{href}">{label}</a></article>')
     return "".join(result)
 
