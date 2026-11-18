@@ -25,11 +25,11 @@ def cards(lang: str, details: bool) -> str:
         badge = ""
         promise = ""
         if pid == "elite" and details:
-            badge = '<span class="ib-elite-tag">' + ("TOP PICK · REFUND PROMISE" if en else "主推方案 · Top30 退費承諾") + "</span>"
+            badge = '<span class="ib-elite-tag">' + ("PREFERRED · TOP 30 GUARANTEE" if en else "首選方案 · Top30 錄取保障") + "</span>"
             promise = ('<div class="ib-elite-promise"><span class="ib-elite-promise-label">'
                        + ("TOP 30 ADMISSION COMMITMENT" if en else "Top30 錄取承諾")
                        + "</span><strong>"
-                       + ("No Top 30 admission? US$4,000 back." if en else "未獲 Top30 錄取，退 US$4,000")
+                       + ("Top 30 admission guarantee — if not admitted, US$4,000 back!" if en else "保障學生錄取方案，若未能錄取，退 US$4,000！")
                        + "</strong><small>"
                        + ("Applies when no master's offer is received from any agreed Top 30 U.S. university. See written agreement." if en else "未獲任何雙方約定的美國 Top30 大學碩士錄取時適用；詳見書面合約。")
                        + "</small></div>")
