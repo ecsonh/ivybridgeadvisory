@@ -300,3 +300,23 @@ header .ib-header-brand .ib-header-crest{width:52px!important;height:52px!import
 header .ib-header-brand .ib-header-crest img{display:block;width:100%;height:100%;object-fit:contain}
 @media(max-width:1199px){header .ib-header-brand .ib-header-crest{width:46px!important;height:46px!important;min-width:46px;flex-basis:46px}}
 @media(max-width:480px){header .ib-header-brand .ib-header-crest{width:44px!important;height:44px!important;min-width:44px;flex-basis:44px}}
+
+
+/* Elite Top30 featured package: applies only to plan cards and comparison table. */
+.ib-detail-grid>.ib-detail[data-plan="comprehensive"]::before{display:none!important}
+.ib-detail-grid>.ib-detail[data-plan="comprehensive"],.ib-services-main #plan-details .ib-detail[data-plan="comprehensive"]{border:1px solid #dee6ec!important;background:#fff!important;box-shadow:0 3px 14px rgba(17,46,74,.035)!important;transform:none!important}
+.ib-services-main #plan-details .ib-detail-grid{align-items:stretch}
+.ib-services-main #plan-details .ib-detail[data-plan="elite"],.ib-detail-grid>.ib-detail.ib-elite-feature{position:relative;isolation:isolate;border:2px solid #c49a55!important;background:linear-gradient(155deg,#fffdf7 0%,#fff 62%)!important;box-shadow:0 14px 38px rgba(24,48,73,.16)!important;transform:translateY(-8px);overflow:visible;padding-top:34px}
+.ib-elite-tag{display:inline-flex;align-items:center;align-self:flex-start;padding:7px 12px;background:#17324c;color:#fff;font-size:11px;font-weight:800;letter-spacing:.08em;border-radius:30px;margin-bottom:14px}
+.ib-elite-promise{display:grid;gap:5px;padding:15px 14px;margin:10px 0 16px;background:#f5ead5;border:1px solid #d6bc8e;border-radius:10px;color:#193551;line-height:1.45}
+.ib-elite-promise-label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;font-weight:800;color:#866329}
+.ib-elite-promise strong{font-size:clamp(15px,1.55vw,19px);line-height:1.4;color:#112e4a}
+.ib-elite-promise small{font-size:11px;color:#665b4c;line-height:1.6}
+.ib-services-main #plan-details .ib-detail[data-plan="elite"] .ib-plan-link{display:block;text-align:center;background:#17324c;color:white;text-decoration:none;padding:13px 10px;border-radius:7px;box-shadow:0 4px 11px rgba(17,46,74,.12)}
+.ib-services-main #plan-details .ib-detail[data-plan="elite"] .ib-plan-link:hover{background:#234965}
+.ib-compare th.ib-featured,.ib-compare td.ib-featured{background:#fbf3e4!important;border-left:1px solid #d9b77e;border-right:1px solid #d9b77e}
+.ib-compare thead th.ib-featured{background:#17324c!important;color:#fff!important}
+.ib-elite-terms{border-left:3px solid #c49a55;padding:10px 15px;margin:12px 0;background:#fff9ee;color:#5d5140;font-size:12px;line-height:1.8}
+html[lang="en"] .ib-plan[data-plan="elite"]{background:#fffaf1;border:2px solid #c49a55;box-shadow:0 8px 25px rgba(17,46,74,.1)}
+@media(max-width:850px){.ib-services-main #plan-details .ib-detail[data-plan="elite"],.ib-detail-grid>.ib-detail.ib-elite-feature{transform:none;margin:0}}
+@media(prefers-reduced-motion:reduce){.ib-detail-grid>.ib-detail.ib-elite-feature{transition:none}}
