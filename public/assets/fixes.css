@@ -318,8 +318,9 @@ header .ib-header-brand .ib-header-crest img{display:block;width:100%;height:100
 .ib-elite-promise-label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;font-weight:800;color:#866329}
 .ib-elite-promise strong{font-size:clamp(15px,1.55vw,19px);line-height:1.4;color:#112e4a}
 .ib-elite-promise small{font-size:11px;color:#665b4c;line-height:1.6}
-.ib-services-main #plan-details .ib-detail[data-plan="elite"] .ib-plan-link{display:block;text-align:center;background:#17324c;color:white;text-decoration:none;padding:13px 10px;border-radius:7px;box-shadow:0 4px 11px rgba(17,46,74,.12)}
-.ib-services-main #plan-details .ib-detail[data-plan="elite"] .ib-plan-link:hover{background:#234965}
+.ib-services-main #plan-details .ib-detail[data-plan="elite"] .ib-plan-link{display:inline-block;align-self:flex-start;width:auto;text-align:left;background:transparent;color:#164e73;text-decoration:underline;text-underline-offset:4px;padding:0;border-radius:0;box-shadow:none;font-size:inherit}
+.ib-services-main #plan-details .ib-detail[data-plan="elite"] .ib-plan-link:hover{background:transparent;color:#123c5c;text-decoration-thickness:2px}
+.ib-services-main #plan-details .ib-detail[data-plan="elite"] .ib-plan-link:focus-visible{outline:2px solid #b48847;outline-offset:4px}
 .ib-compare th.ib-featured,.ib-compare td.ib-featured{background:#fbf3e4!important;border-left:1px solid #d9b77e;border-right:1px solid #d9b77e}
 .ib-compare thead th.ib-featured{background:#17324c!important;color:#fff!important}
 .ib-elite-terms{border-left:3px solid #c49a55;padding:10px 15px;margin:12px 0;background:#fff9ee;color:#5d5140;font-size:12px;line-height:1.8}
