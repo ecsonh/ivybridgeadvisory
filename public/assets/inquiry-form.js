@@ -39,10 +39,20 @@
       body:JSON.stringify(values)
     });
     const result=await response.json().catch(()=>({}));
-    if(!response.ok||result.ok!==true)throw Error('delivery_failed');
+    if(!response.ok||result.ok!==true){
+      if(response.status===503)throw Error('service_unavailable');
+      if(response.status===422)throw Error('invalid_fields');
+      throw Error('delivery_failed');
+    }
     location.assign(en?'inquiry-sent.html':'inquiry-sent.html');
-  }catch{
-    if(status)status.textContent=t('很抱歉，資料尚未成功送出。請檢查網路連線後重試，或透過 LINE／Email 聯絡我們。您填寫的內容仍保留在此頁。','Sorry, the inquiry was not sent. Please retry or contact us through LINE/email. Your entered information is preserved.');
+  }catch(error){
+    const unavailable=error.message==='service_unavailable';
+    const invalid=error.message==='invalid_fields';
+    if(status)status.textContent=unavailable
+      ? t('目前無法寄送表單，郵件服務尚未啟用。請先透過 LINE 或 Email 聯絡我們。您的資料仍保留在此頁。','The inquiry email service is not yet enabled. Please contact us by LINE or email. Your entries are preserved.')
+      : invalid
+      ? t('請確認必填欄位內容並重試，您的資料仍保留在此頁。','Please check your required fields and try again. Your entries are preserved.')
+      : t('寄送失敗。請稍後重試，或透過 LINE／Email 聯絡我們。您的資料仍保留在此頁。','The inquiry could not be sent. Please try again or contact us by LINE/email. Your entries are preserved.');
     sending=false;
     form.removeAttribute('aria-busy');
     if(submit)submit.disabled=false;
