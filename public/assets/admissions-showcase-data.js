@@ -3,6 +3,62 @@
    Publish as verified IvyBridge outcomes only after both are confirmed. */
 window.IVYBRIDGE_ADMISSIONS=[
   {
+    "id": "chicago-bio-immunoengineering-2026",
+    "school": "University of Chicago",
+    "zh": "芝加哥大學",
+    "program": "Master of Engineering — Bio- and Immunoengineering",
+    "zhProgram": "工程碩士 · 生物與免疫工程",
+    "year": "Fall 2026",
+    "field": "stem",
+    "fields": ["stem", "health"],
+    "poster": "assets/admissions/chicago-bio-immunoengineering-2026.jpg",
+    "source": "user-provided",
+    "permissionConfirmed": false,
+    "ivybridgeInvolvementConfirmed": false
+  },
+  {
+    "id": "chicago-mapps-anthropology-2026",
+    "school": "University of Chicago",
+    "zh": "芝加哥大學",
+    "program": "Master of Arts Program in the Social Sciences (MAPSS) — Anthropology",
+    "zhProgram": "社會科學文學碩士 · 人類學方向",
+    "year": "Fall 2026",
+    "field": "social",
+    "scholarshipUSD": 30000,
+    "poster": "assets/admissions/chicago-mapps-anthropology-2026.jpg",
+    "source": "user-provided",
+    "permissionConfirmed": false,
+    "ivybridgeInvolvementConfirmed": false
+  },
+  {
+    "id": "columbia-mph-health-policy-2026",
+    "school": "Columbia University",
+    "zh": "哥倫比亞大學",
+    "program": "Master of Public Health — Health Policy and Management",
+    "zhProgram": "公共衛生碩士 · 衛生政策與管理",
+    "year": "August 2026",
+    "field": "health",
+    "fields": ["health", "social"],
+    "poster": "assets/admissions/columbia-mph-health-policy-2026.jpg",
+    "source": "user-provided",
+    "permissionConfirmed": false,
+    "ivybridgeInvolvementConfirmed": false
+  },
+  {
+    "id": "upenn-impa-2026",
+    "school": "University of Pennsylvania",
+    "zh": "賓夕法尼亞大學",
+    "program": "International Master of Public Administration (I-MPA)",
+    "zhProgram": "國際公共管理碩士 · I-MPA",
+    "year": "Fall 2026",
+    "field": "social",
+    "poster": "assets/admissions/upenn-impa-2026.jpg",
+    "source": "user-provided",
+    "permissionConfirmed": false,
+    "ivybridgeInvolvementConfirmed": false
+  },
+
+  {
     "id": "harvard-education-2026",
     "school": "Harvard University",
     "zh": "哈佛大學",
