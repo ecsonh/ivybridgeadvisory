@@ -102,6 +102,8 @@
      const control=el('div','ib-admissions-expand-control');
      const toggle=el('button','ib-admissions-expand-toggle');
      toggle.type='button';
+     if(!container.id)container.id='ib-featured-admission-gallery';
+     toggle.setAttribute('aria-controls',container.id);
      toggle.setAttribute('aria-expanded','false');
      toggle.textContent=t('展示更多錄取案例（'+extraCount+'） ＋','Show more admission posters ('+extraCount+') +');
      let expanded=false;
