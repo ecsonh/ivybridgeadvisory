@@ -86,6 +86,161 @@
      button.addEventListener('click',()=>open(index,button));
      const caption=el('div','ib-poster-card-caption');
      caption.append(el('span','ib-poster-year',item.year),el('h3','',title(item)),el('p','',program(item)));
+     if(Number.isFinite(item.scholarshipUSD)&&item.scholarshipUSD>0){
+       caption.append(el('span','ib-poster-scholarship',t('獎學金 US
+     link.href=caseLink(item);
+     caption.append(link);
+     article.append(button,caption);
+     return article;
+   });
+   // Four posters stay visible; later additions automatically enter the expandable gallery.
+   const visibleCount=4;
+   const extraCount=Math.max(0,cards.length-visibleCount);
+   cards.forEach((card,index)=>{if(index>=visibleCount)card.hidden=true;});
+   container.replaceChildren(...cards);
+   if(extraCount){
+     const control=el('div','ib-admissions-expand-control');
+     const toggle=el('button','ib-admissions-expand-toggle');
+     toggle.type='button';
+     toggle.setAttribute('aria-expanded','false');
+     toggle.textContent=t('展示更多錄取案例（'+extraCount+'） ＋','Show more admission posters ('+extraCount+') +');
+     let expanded=false;
+     toggle.addEventListener('click',()=>{
+       expanded=!expanded;
+       cards.slice(visibleCount).forEach(card=>{card.hidden=!expanded;});
+       toggle.setAttribute('aria-expanded',String(expanded));
+       toggle.textContent=expanded?t('收起錄取案例 −','Show fewer posters −'):t('展示更多錄取案例（'+extraCount+'） ＋','Show more admission posters ('+extraCount+') +');
+     });
+     control.append(toggle);
+     container.after(control);
+   }
+ });
+ document.querySelectorAll('[data-admission-library]').forEach(container=>{
+   const section=container.closest('section')||document;
+   const group=section.querySelector('[data-admission-filters]');
+   const count=section.querySelector('[data-admission-count]');
+   let selected='all';
+   const render=()=>{
+     const records=data.filter(item=>selected==='all'||item.field===selected||(Array.isArray(item.fields)&&item.fields.includes(selected)));
+     const nodes=records.map(item=>{
+       const link=el('a','ib-admission-list-row');
+       link.href=caseLink(item);
+       const icon=el('span','ib-admission-list-initial',item.school.split(' ').map(s=>s[0]).slice(0,2).join(''));
+       const info=el('span','ib-admission-list-info');
+       info.append(el('strong','',title(item)),el('small','',program(item)));
+       link.append(icon,info,el('span','ib-admission-list-year',item.year),el('span','ib-admission-list-arrow','↗'));
+       return link;
+     });
+     container.replaceChildren(...nodes);
+     if(count)count.textContent=t('顯示 '+records.length+' 個錄取海報資料','Showing '+records.length+' admission-poster entries');
+     if(!nodes.length)container.append(el('p','ib-story-empty',t('此類別尚無資料。','No entries in this category yet.')));
+   };
+   group?.querySelectorAll('button[data-admission-field]').forEach(btn=>{
+     btn.addEventListener('click',()=>{
+       selected=btn.dataset.admissionField;
+       group.querySelectorAll('button').forEach(button=>button.setAttribute('aria-pressed',String(button===btn)));
+       render();
+     });
+   });
+   render();
+ });
+ const detail=document.querySelector('[data-admission-detail]');
+ if(detail){
+   const id=new URLSearchParams(location.search).get('id');
+   const entry=data.find(item=>item.id===id);
+   if(entry){
+     const old=document.querySelector('[data-story-detail]');
+     if(old)old.hidden=true;
+     detail.hidden=false;
+     document.title=title(entry)+' · '+program(entry)+' | IvyBridge';
+     const top=el('div','ib-admission-detail-heading');
+     top.append(el('span','ib-editorial-eyebrow','ADMISSION LETTER · '+entry.year),
+       el('h2','',title(entry)),el('p','',program(entry)));
+     const proof=el('p','ib-admissions-proof-note',proofText);
+     const panel=el('div','ib-admission-detail-grid');
+     const pic=image(entry,'ib-admission-detail-poster');
+     const caption=el('div','ib-admission-detail-copy');
+     caption.append(el('h3','',t('錄取海報與學程資訊','Admissions poster & program')),
+       el('p','',t('圖片保留提供者原始排版與已遮蔽之個資，點擊下方連結可在新分頁查看原圖。','The uploaded image preserves its original design and existing privacy redactions. Open it in a new tab to inspect.')));
+     const imgLink=el('a','ib-admissions-all-link',t('開啟完整錄取海報 ↗','Open full admissions poster ↗'));
+     imgLink.href=file(entry);imgLink.target='_blank';imgLink.rel='noopener noreferrer';
+     if(entry.letterOnly)caption.append(el('p','ib-admissions-proof-note',t('此案例目前提供的是原始錄取信截圖（非制式海報），放大檢視的清晰度受來源圖片限制。','This case currently includes an original admission-letter screenshot rather than a designed poster; zoom clarity depends on the source resolution.')));
+     caption.append(imgLink,el('p','ib-admissions-proof-note',t('本頁不表示 IvyBridge 與錄取學校存在官方合作關係，也不保證相同錄取結果。','No institutional partnership or similar admissions outcome is implied.')));
+     panel.append(pic,caption);
+     const back=el('a','ib-admissions-back',t('← 返回所有案例','← Back to case library'));
+     back.href='all-cases.html';
+     detail.append(top,proof,panel,back);
+   }
+ }
+})();
+,'Scholarship US
+     link.href=caseLink(item);
+     caption.append(link);
+     article.append(button,caption);
+     return article;
+   });
+   container.replaceChildren(...cards);
+ });
+ document.querySelectorAll('[data-admission-library]').forEach(container=>{
+   const section=container.closest('section')||document;
+   const group=section.querySelector('[data-admission-filters]');
+   const count=section.querySelector('[data-admission-count]');
+   let selected='all';
+   const render=()=>{
+     const records=data.filter(item=>selected==='all'||item.field===selected||(Array.isArray(item.fields)&&item.fields.includes(selected)));
+     const nodes=records.map(item=>{
+       const link=el('a','ib-admission-list-row');
+       link.href=caseLink(item);
+       const icon=el('span','ib-admission-list-initial',item.school.split(' ').map(s=>s[0]).slice(0,2).join(''));
+       const info=el('span','ib-admission-list-info');
+       info.append(el('strong','',title(item)),el('small','',program(item)));
+       link.append(icon,info,el('span','ib-admission-list-year',item.year),el('span','ib-admission-list-arrow','↗'));
+       return link;
+     });
+     container.replaceChildren(...nodes);
+     if(count)count.textContent=t('顯示 '+records.length+' 個錄取海報資料','Showing '+records.length+' admission-poster entries');
+     if(!nodes.length)container.append(el('p','ib-story-empty',t('此類別尚無資料。','No entries in this category yet.')));
+   };
+   group?.querySelectorAll('button[data-admission-field]').forEach(btn=>{
+     btn.addEventListener('click',()=>{
+       selected=btn.dataset.admissionField;
+       group.querySelectorAll('button').forEach(button=>button.setAttribute('aria-pressed',String(button===btn)));
+       render();
+     });
+   });
+   render();
+ });
+ const detail=document.querySelector('[data-admission-detail]');
+ if(detail){
+   const id=new URLSearchParams(location.search).get('id');
+   const entry=data.find(item=>item.id===id);
+   if(entry){
+     const old=document.querySelector('[data-story-detail]');
+     if(old)old.hidden=true;
+     detail.hidden=false;
+     document.title=title(entry)+' · '+program(entry)+' | IvyBridge';
+     const top=el('div','ib-admission-detail-heading');
+     top.append(el('span','ib-editorial-eyebrow','ADMISSION LETTER · '+entry.year),
+       el('h2','',title(entry)),el('p','',program(entry)));
+     const proof=el('p','ib-admissions-proof-note',proofText);
+     const panel=el('div','ib-admission-detail-grid');
+     const pic=image(entry,'ib-admission-detail-poster');
+     const caption=el('div','ib-admission-detail-copy');
+     caption.append(el('h3','',t('錄取海報與學程資訊','Admissions poster & program')),
+       el('p','',t('圖片保留提供者原始排版與已遮蔽之個資，點擊下方連結可在新分頁查看原圖。','The uploaded image preserves its original design and existing privacy redactions. Open it in a new tab to inspect.')));
+     const imgLink=el('a','ib-admissions-all-link',t('開啟完整錄取海報 ↗','Open full admissions poster ↗'));
+     imgLink.href=file(entry);imgLink.target='_blank';imgLink.rel='noopener noreferrer';
+     if(entry.letterOnly)caption.append(el('p','ib-admissions-proof-note',t('此案例目前提供的是原始錄取信截圖（非制式海報），放大檢視的清晰度受來源圖片限制。','This case currently includes an original admission-letter screenshot rather than a designed poster; zoom clarity depends on the source resolution.')));
+     caption.append(imgLink,el('p','ib-admissions-proof-note',t('本頁不表示 IvyBridge 與錄取學校存在官方合作關係，也不保證相同錄取結果。','No institutional partnership or similar admissions outcome is implied.')));
+     panel.append(pic,caption);
+     const back=el('a','ib-admissions-back',t('← 返回所有案例','← Back to case library'));
+     back.href='all-cases.html';
+     detail.append(top,proof,panel,back);
+   }
+ }
+})();
+)+item.scholarshipUSD.toLocaleString('en-US')));
+     }
      const link=el('a','ib-poster-detail-link',t('查看錄取資訊 ↗','View details ↗'));
      link.href=caseLink(item);
      caption.append(link);
