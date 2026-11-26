@@ -93,8 +93,9 @@
      article.append(button,caption);
      return article;
    });
-   // Four posters stay visible; later additions automatically enter the expandable gallery.
-   const visibleCount=4;
+   // Keep the original four posters and two new highlights visible (4 + 2).
+   // All other posters, including future additions, are revealed by Show More.
+   const visibleCount=6;
    const extraCount=Math.max(0,cards.length-visibleCount);
    cards.forEach((card,index)=>{if(index>=visibleCount)card.hidden=true;});
    container.replaceChildren(...cards);
