@@ -86,13 +86,37 @@
      button.addEventListener('click',()=>open(index,button));
      const caption=el('div','ib-poster-card-caption');
      caption.append(el('span','ib-poster-year',item.year),el('h3','',title(item)),el('p','',program(item)));
+     if (Number.isFinite(item.scholarshipUSD) && item.scholarshipUSD > 0) {
+       const amount=item.scholarshipUSD.toLocaleString('en-US');
+       caption.append(el('span','ib-poster-scholarship',t('獎學金 US$','Scholarship US$')+amount));
+     }
      const link=el('a','ib-poster-detail-link',t('查看錄取資訊 ↗','View details ↗'));
      link.href=caseLink(item);
      caption.append(link);
      article.append(button,caption);
      return article;
    });
+   const visibleCount=6;
+   const extraCount=Math.max(0,cards.length-visibleCount);
+   cards.forEach((card,index)=>{if(index>=visibleCount)card.hidden=true;});
    container.replaceChildren(...cards);
+   if(extraCount>0){
+     const control=el('div','ib-admissions-expand-control');
+     const toggle=el('button','ib-admissions-expand-toggle');
+     toggle.type='button';
+     if(!container.id)container.id='ib-featured-admission-gallery';
+     toggle.setAttribute('aria-controls',container.id);
+     let expanded=false;
+     const update=()=>{
+       cards.slice(visibleCount).forEach(card=>{card.hidden=!expanded;});
+       toggle.setAttribute('aria-expanded',String(expanded));
+       toggle.textContent=expanded?t('收起錄取案例 −','Show fewer posters −'):t('展示更多錄取案例（'+extraCount+'） ＋','Show more admission posters ('+extraCount+') +');
+     };
+     toggle.addEventListener('click',()=>{expanded=!expanded;update();});
+     control.append(toggle);
+     container.after(control);
+     update();
+   }
  });
  document.querySelectorAll('[data-admission-library]').forEach(container=>{
    const section=container.closest('section')||document;

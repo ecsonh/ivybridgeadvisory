@@ -24,7 +24,10 @@ window.IVYBRIDGE_ADMISSIONS=[
     "zhProgram": "生物統計學碩士",
     "year": "2025–2026",
     "field": "stem",
-    "fields": ["stem", "health"],
+    "fields": [
+      "stem",
+      "health"
+    ],
     "img": "harvard-biostatistics-2026.png",
     "poster": "assets/admissions/harvard-biostatistics-2026.png",
     "source": "user-provided",
@@ -59,64 +62,125 @@ window.IVYBRIDGE_ADMISSIONS=[
     "permissionConfirmed": false,
     "ivybridgeInvolvementConfirmed": false
   },
-{
-  "id": "northwestern-communication-2026",
-  "school": "Northwestern University",
-  "zh": "西北大學",
-  "program": "Master of Science in Communication — Custom Leadership Program",
-  "zhProgram": "傳播學理學碩士 · Custom Leadership Program",
-  "year": "Fall 2026",
-  "field": "business",
-  "poster": "assets/admissions/northwestern-communication-2026.webp",
-  "source": "user-provided",
-  "permissionConfirmed": false,
-  "ivybridgeInvolvementConfirmed": false
-},
-{
-  "id": "yale-biostatistics-2025",
-  "school": "Yale University",
-  "zh": "耶魯大學",
-  "program": "Master of Science in Public Health — Biostatistics (Standard Pathway)",
-  "zhProgram": "公共衛生生物統計理學碩士",
-  "year": "Fall 2025",
-  "field": "health",
-  "fields": [
-    "health",
-    "stem"
-  ],
-  "poster": "assets/admissions/yale-biostatistics-2025.webp",
-  "letterOnly": true,
-  "featured": false,
-  "source": "user-provided",
-  "permissionConfirmed": false,
-  "ivybridgeInvolvementConfirmed": false
-},
-{
-  "id": "harvard-medical-mmh-2026",
-  "school": "Harvard Medical School",
-  "zh": "哈佛醫學院",
-  "program": "Master of Science in Media, Medicine, and Health",
-  "zhProgram": "媒體、醫學與健康理學碩士",
-  "year": "Fall 2026",
-  "field": "health",
-  "poster": "assets/admissions/harvard-medical-mmh-2026.webp",
-  "letterOnly": true,
-  "featured": false,
-  "source": "user-provided",
-  "permissionConfirmed": false,
-  "ivybridgeInvolvementConfirmed": false
-},
-{
-  "id": "duke-robotics-2026",
-  "school": "Duke University",
-  "zh": "杜克大學",
-  "program": "Master of Engineering in Robotics and Autonomy",
-  "zhProgram": "機器人與自主系統工程碩士",
-  "year": "Fall 2026",
-  "field": "stem",
-  "poster": "assets/admissions/duke-robotics-2026.webp",
-  "source": "user-provided",
-  "permissionConfirmed": false,
-  "ivybridgeInvolvementConfirmed": false
-}
+  {
+    "id": "columbia-mph-health-policy-2026",
+    "school": "Columbia University",
+    "zh": "哥倫比亞大學",
+    "program": "Master of Public Health — Health Policy and Management",
+    "zhProgram": "公共衛生碩士 · 衛生政策與管理",
+    "year": "August 2026",
+    "field": "health",
+    "fields": [
+      "health",
+      "social"
+    ],
+    "poster": "assets/admissions/columbia-mph-health-policy-2026.jpg",
+    "source": "user-provided",
+    "permissionConfirmed": false,
+    "ivybridgeInvolvementConfirmed": false
+  },
+  {
+    "id": "upenn-impa-2026",
+    "school": "University of Pennsylvania",
+    "zh": "賓夕法尼亞大學",
+    "program": "International Master of Public Administration (I-MPA)",
+    "zhProgram": "國際公共管理碩士 · I-MPA",
+    "year": "Fall 2026",
+    "field": "social",
+    "poster": "assets/admissions/upenn-impa-2026.jpg",
+    "source": "user-provided",
+    "permissionConfirmed": false,
+    "ivybridgeInvolvementConfirmed": false
+  },
+  {
+    "id": "chicago-bio-immunoengineering-2026",
+    "school": "University of Chicago",
+    "zh": "芝加哥大學",
+    "program": "Master of Engineering — Bio- and Immunoengineering",
+    "zhProgram": "工程碩士 · 生物與免疫工程",
+    "year": "Fall 2026",
+    "field": "stem",
+    "fields": [
+      "stem",
+      "health"
+    ],
+    "poster": "assets/admissions/chicago-bio-immunoengineering-2026.jpg",
+    "source": "user-provided",
+    "permissionConfirmed": false,
+    "ivybridgeInvolvementConfirmed": false
+  },
+  {
+    "id": "chicago-mapps-anthropology-2026",
+    "school": "University of Chicago",
+    "zh": "芝加哥大學",
+    "program": "Master of Arts Program in the Social Sciences (MAPSS) — Anthropology",
+    "zhProgram": "社會科學文學碩士 · 人類學方向",
+    "year": "Fall 2026",
+    "field": "social",
+    "scholarshipUSD": 30000,
+    "poster": "assets/admissions/chicago-mapps-anthropology-2026.jpg",
+    "source": "user-provided",
+    "permissionConfirmed": false,
+    "ivybridgeInvolvementConfirmed": false
+  },
+  {
+    "id": "northwestern-communication-2026",
+    "school": "Northwestern University",
+    "zh": "西北大學",
+    "program": "Master of Science in Communication — Custom Leadership Program",
+    "zhProgram": "傳播學理學碩士 · Custom Leadership Program",
+    "year": "Fall 2026",
+    "field": "business",
+    "poster": "assets/admissions/northwestern-communication-2026.webp",
+    "source": "user-provided",
+    "permissionConfirmed": false,
+    "ivybridgeInvolvementConfirmed": false
+  },
+  {
+    "id": "yale-biostatistics-2025",
+    "school": "Yale University",
+    "zh": "耶魯大學",
+    "program": "Master of Science in Public Health — Biostatistics (Standard Pathway)",
+    "zhProgram": "公共衛生生物統計理學碩士",
+    "year": "Fall 2025",
+    "field": "health",
+    "fields": [
+      "health",
+      "stem"
+    ],
+    "poster": "assets/admissions/yale-biostatistics-2025.webp",
+    "letterOnly": true,
+    "featured": false,
+    "source": "user-provided",
+    "permissionConfirmed": false,
+    "ivybridgeInvolvementConfirmed": false
+  },
+  {
+    "id": "harvard-medical-mmh-2026",
+    "school": "Harvard Medical School",
+    "zh": "哈佛醫學院",
+    "program": "Master of Science in Media, Medicine, and Health",
+    "zhProgram": "媒體、醫學與健康理學碩士",
+    "year": "Fall 2026",
+    "field": "health",
+    "poster": "assets/admissions/harvard-medical-mmh-2026.webp",
+    "letterOnly": true,
+    "featured": false,
+    "source": "user-provided",
+    "permissionConfirmed": false,
+    "ivybridgeInvolvementConfirmed": false
+  },
+  {
+    "id": "duke-robotics-2026",
+    "school": "Duke University",
+    "zh": "杜克大學",
+    "program": "Master of Engineering in Robotics and Autonomy",
+    "zhProgram": "機器人與自主系統工程碩士",
+    "year": "Fall 2026",
+    "field": "stem",
+    "poster": "assets/admissions/duke-robotics-2026.webp",
+    "source": "user-provided",
+    "permissionConfirmed": false,
+    "ivybridgeInvolvementConfirmed": false
+  }
 ];

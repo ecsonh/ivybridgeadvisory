@@ -220,3 +220,18 @@ body.ib-modal-active{overflow:hidden}
 .ib-admissions-final-cta .ib-admissions-cta-actions .ib-admissions-services-link{background:transparent;color:#f7e8c9;border:1px solid #d1ad70}
 .ib-admissions-final-cta .ib-admissions-cta-actions .ib-admissions-services-link:hover,.ib-admissions-final-cta .ib-admissions-cta-actions .ib-admissions-services-link:focus-visible{background:rgba(255,255,255,.1);color:#fff}
 @media(max-width:700px){.ib-admissions-final-cta .ib-admissions-cta-actions{width:100%;justify-content:stretch}.ib-admissions-final-cta .ib-admissions-cta-actions a{flex:1 1 100%}}
+
+/* Expandable admissions gallery: keep a compact four-poster first view. */
+.ib-admission-poster-track > .ib-poster-card[hidden]{display:none!important}
+.ib-admissions-expand-control{display:flex;justify-content:center;margin:24px 0 8px}
+.ib-admissions-expand-toggle{font:700 14px/1.4 inherit;appearance:none;border:1px solid #b89559;border-radius:999px;background:#fff;color:#163651;padding:13px 25px;cursor:pointer;box-shadow:0 3px 12px rgba(17,46,74,.08);transition:background .18s,box-shadow .18s}
+.ib-admissions-expand-toggle:hover{background:#f5ecdc;box-shadow:0 6px 16px rgba(17,46,74,.12)}
+.ib-admissions-expand-toggle:focus-visible{outline:3px solid #ad8247;outline-offset:3px}
+.ib-poster-scholarship{display:block;font-size:12px;font-weight:800;color:#8a6128;background:#fff5de;border-radius:5px;padding:5px 8px;margin:0 0 10px}
+@media(max-width:680px){
+  .ib-admission-poster-track{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .ib-admissions-expand-toggle{width:100%;max-width:360px}
+}
+@media(max-width:400px){
+  .ib-admission-poster-track{grid-template-columns:1fr}
+}
